@@ -1,0 +1,29 @@
+
+table,td,th{
+    
+    background-color: beige;
+    border: 1px black solid ;
+    border-collapse:collapse;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+}
+
+
+th{
+    
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    background-color: bisque;
+}
+
+.caja1{
+    margin-right: 15px;
+    float:left
+}
+
+
+
+
+

@@ -1,0 +1,61 @@
+h1{
+    color: red;
+    text-align: center;
+}
+
+figure + p{
+
+    font-weight: bold; 
+}
+
+h2{
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    font-style: italic;
+    text-align: center;
+    margin: 2%;
+}
+
+
+
+a{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+
+
+img{
+margin: auto;
+display: block;
+width: 100px;
+height: 100px;
+border: 3px black solid;   
+transition: 500ms linear;
+}
+
+img.agrandar:hover{
+border: 3px aqua solid;
+width: 200px;
+height: 200px; 
+transition: 500ms linear;   
+}
+
+
+
+a:link{
+color: rgb(81, 168, 30);
+}
+
+a:active{
+color: blueviolet;
+}
+
+a:visited{
+color: brown;
+}
+

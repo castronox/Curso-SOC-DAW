@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    margin-bottom: 10px;
+}
+html{
+    background-color: pink;
+}
+body{
+    font-family: arial;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px grey;
+}
+h1,h2{
+    color: red;
+    text-shadow: 2px 2px 2px purple;
+}
+figure{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+figure img{
+    width: 100%;
+}
+
+
+
