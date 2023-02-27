@@ -1,0 +1,33 @@
+header,nav,main,aside,footer{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+header{
+height: 100px;
+}
+
+nav{
+    
+height: 50px;
+}
+aside{
+    height: 500px;
+    width: 20%;
+    display: inline-block;
+}
+
+main{
+    display: inline-block;
+    height: 500px;
+    width: 73%;
+}
+
+
+
+
+
+
+
