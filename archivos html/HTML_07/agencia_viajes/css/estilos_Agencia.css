@@ -3,9 +3,10 @@
     padding: 0;
     }
 
-
+.gradient_fondo{
+    background-image: radial-gradient(circle farthest-side, #f8edd1, #f7c02b);
+}
 body,header,nav,main,aside,footer{
-
     border: 1px black solid;
     padding: 0.5%;
     margin: 0.5%;
@@ -19,6 +20,7 @@ header{
 }
 
 nav{
+    vertical-align: top;
     padding: 8px;
     display: inline-block;
     height: 165px;
@@ -29,13 +31,13 @@ nav{
 main{
     display: inline-block;
     height: 500px ;
-    width: 70%;
+    width: 80%;
 }
 
 aside{
     display: inline-block;
     height: 500px;
-    width: 25%;
+    width: 15%;
 }
 
 li{
@@ -50,4 +52,16 @@ width: 158px;
 height: 158px;
 
 }
+
+.nav_img{
+
+    width: 130px;
+}
+
+figure>.nav_img{
+    margin-left: 78px;
+    margin-right: 78px;
+}
+
+
 
