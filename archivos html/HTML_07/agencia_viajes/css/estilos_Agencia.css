@@ -106,9 +106,9 @@ li {
 }
 
 .post-destino:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
     transform-style: preserve-3d;
-/*transition: 1s;*/
+    transition: 1s;
 }
 
 .nav_img {
@@ -242,36 +242,37 @@ main>h1 {
 
 }
 
-.font_Rubik_mono_one{
+.font_Rubik_mono_one {
 
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-.font_roboto_mono{
+.font_roboto_mono {
 
     font-family: 'Roboto Mono', monospace;
 }
 
-.caja_texto{
-    padding-left: 30% ;
+.caja_texto {
+    padding-left: 30%;
     padding-right: 30%;
 
 }
 
-.bordes{
+.bordes {
     border-radius: 15px;
 }
 
-.alinea_izqda{
+.alinea_izqda {
 
     margin-left: 13%;
 }
 
-.alinea_drcha{
+.alinea_drcha {
 
     margin-right: 9%;
 }
-#alinear_img_piloto{
+
+#alinear_img_piloto {
 
     margin-left: 5.5%;
 }
