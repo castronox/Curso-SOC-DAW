@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;1,100&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!--FIN FUENTES-->
@@ -26,10 +27,11 @@
 
     <header>
 
-        <figure id="logo">
+        <a href="index.html"><figure id="logo">
             <img src="img/flyh.svg" title="img_logo_flyh" alt="Imagen del logo flyh">
         </figure>
-        <figure id="flyh_viajes">
+        </a>
+        <figure class="centrar_letras_header">
             <img src="img/flyh viajes.svg" title="Letras_flyh" alt="Letras del encabezado de flyh viajes">
         </figure>
     </header>
@@ -38,17 +40,17 @@
         <hr class="separacion" />
         <h1 id="h1nav" class="font_bebas_neue">¡Nuestros viajes!</h1>
         <ul>
-            <li><a href="#">
+            <li><a href="paris.html">
                     <figure class="post-destino">
                         <img class="nav_img" src="img/paris_logo.svg" title="paris" alt="paris_logo" />
                     </figure>
                 </a></li>
-            <li><a href="#">
+            <li><a href="alemania.html">
                     <figure class="post-destino">
                         <img class="nav_img" src="img/alemania_logo.svg" title="alemania" alt="alemania_logo" />
                     </figure>
                 </a></li>
-            <li><a href="#">
+            <li><a href="barcelona.html">
                     <figure class="post-destino">
                         <img class="nav_img" src="img/barcelona_logo.svg" title="barcelona" alt="barcelona_logo" />
                     </figure>
@@ -57,7 +59,8 @@
         <hr class="separacion" />
     </nav>
     <main>
-        <h1>¡Los valores que nos representan!</h1>
+        <figure id="alinear_img_piloto"><img class="bordes espaciado " src="img/piloto_azafatas.svg" alt=""></figure>
+        <h1><br/> ¡Los valores que nos representan!</h1>
         <article class="gradient_fondo">
             <figure class="imagenes_main">
                 <img class="img_rotar_main" src="img/article_1_celebra10.svg" title="10 años"
@@ -126,6 +129,8 @@
             <img class="img_rotar_main" src="img/facebook_icon.svg" title="Facebook link"
                 alt="Icono grafico de Facebook.">
         </figure>
+
+        <p class="font_roboto_mono"><br/>Flyh viajes. Todos los derechos reservados.</p>
     </footer>
 
 

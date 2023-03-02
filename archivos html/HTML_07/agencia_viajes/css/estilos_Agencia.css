@@ -83,15 +83,24 @@ li {
     width: 100%;
 }
 
-#flyh_viajes {
+.centrar_letras_header {
 
     vertical-align: middle;
     display: inline-block;
-    width: 70%;
+    width: 60%;
 
 }
 
-#flyh_viajes>img {
+.centrar_letras_header2 {
+
+    vertical-align: middle;
+    display: inline-block;
+    width: 25%;
+    margin-right: 56%;
+
+}
+
+.centrar_letras_header>img {
 
     width: 100%;
 }
@@ -231,4 +240,38 @@ main>h1 {
     font-family: 'Bebas Neue', cursive;
     color: #046193;
 
+}
+
+.font_Rubik_mono_one{
+
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.font_roboto_mono{
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+.caja_texto{
+    padding-left: 30% ;
+    padding-right: 30%;
+
+}
+
+.bordes{
+    border-radius: 15px;
+}
+
+.alinea_izqda{
+
+    margin-left: 13%;
+}
+
+.alinea_drcha{
+
+    margin-right: 9%;
+}
+#alinear_img_piloto{
+
+    margin-left: 5.5%;
 }
