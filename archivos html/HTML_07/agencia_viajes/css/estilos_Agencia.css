@@ -1,67 +1,234 @@
 * {
-    margin: 0;
-    padding: 0;
-    }
-
-.gradient_fondo{
-    background-image: radial-gradient(circle farthest-side, #f8edd1, #f7c02b);
+    margin: 0%;
+    padding: 0%;
 }
-body,header,nav,main,aside,footer{
-    border: 1px black solid;
+
+.gradient_color {
+    background-image: radial-gradient(circle farthest-side, #f8edd1, #5373e654);
+}
+
+.gradient_fondo {
+    background: linear-gradient(90deg, #f8edd1 0%, #f7c12ba4 100%);
+}
+
+body,
+header,
+nav,
+main,
+aside,
+footer {
+
+    border-radius: 26px;
     padding: 0.5%;
-    margin: 0.5%;
+    margin: auto;
     text-align: center;
 }
 
-header{ 
-    display: inline-block;
-    height: 159px;
-    width: 159px;
-}
 
-nav{
+
+nav {
     vertical-align: top;
     padding: 8px;
-    display: inline-block;
-    height: 165px;
+    margin: auto;
     width: 75%;
+    margin-bottom: 2%;
+
 
 }
 
-main{
+main {
+    margin: auto;
     display: inline-block;
-    height: 500px ;
+    height: 70%;
     width: 80%;
+    margin-right: 5%;
 }
 
-aside{
+aside {
+
+
+    margin-left: 5%;
+    width: 10%;
+    margin-top: 3%;
+    border-radius: 26px;
+    border-top: 1px rgba(0, 0, 0, 0.082) solid;
+    justify-content: center;
+    border-left: 1px rgba(0, 0, 0, 0.082) solid;
     display: inline-block;
-    height: 500px;
+    color: rgb(12, 10, 4);
+    font-family: 'Roboto Mono', monospace;
+    height: 14%;
     width: 15%;
+    padding-right: 19%;
+    padding-left: 19%;
+    box-shadow: 0px 0px rgb(5, 1, 1), 0.5em 0.2em 0.3em rgba(0, 66, 128, 0.568);
 }
 
-li{
-    
+li {
+
     display: inline-block;
-    padding: 23px;
+
 
 }
-.logo{
+
+#logo {
     display: inline-block;
-width: 158px;
-height: 158px;
+    width: 12%;
+    vertical-align: middle;
+    margin-left: 8%;
+}
+
+#logo>img {
+
+    width: 100%;
+}
+
+#flyh_viajes {
+
+    vertical-align: middle;
+    display: inline-block;
+    width: 70%;
 
 }
 
-.nav_img{
+#flyh_viajes>img {
 
-    width: 130px;
+    width: 100%;
 }
 
-figure>.nav_img{
-    margin-left: 78px;
-    margin-right: 78px;
+.post-destino:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+/*transition: 1s;*/
+}
+
+.nav_img {
+    width: 63%;
+
+}
+
+article {
+    margin-left: 7%;
+    border-radius: 26px;
+    border-top: 1px rgba(0, 0, 0, 0.082) solid;
+    justify-content: center;
+    border-left: 1px rgba(0, 0, 0, 0.082) solid;
+    display: inline-block;
+    color: rgb(12, 10, 4);
+    font-family: 'Roboto Mono', monospace;
+    height: 14%;
+    width: 15%;
+    padding: 5%;
+    box-shadow: 0px 0px rgb(5, 1, 1), 0.5em 0.2em 0.3em rgba(128, 98, 0, 0.568);
+}
+
+.imagenes_main {
+    display: inline-block;
+}
+
+.imagenes_main>img {
+
+    width: 100%;
+    margin-bottom: 1em;
 }
 
 
 
+
+
+figure {
+
+    width: 100%;
+}
+
+.img_rotar_main:hover {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: 2.5s;
+}
+
+form {
+
+    background-color: #6cb6e000;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    border: none;
+    color: #f7c12ba4;
+    font-size: 1em;
+    resize: none;
+}
+
+form button {
+    border-radius: 15px;
+    background-color: #046193a4;
+    padding: 10px 45px 10px 45px;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+form button:hover {
+    background-color: #046193;
+
+
+}
+
+textarea {
+    resize: none;
+}
+
+#h1nav {
+    letter-spacing: 10px;
+    margin: 3%;
+
+
+}
+
+.separacion {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+figure {
+    display: inline;
+}
+
+footer>figure>img {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100px;
+}
+
+aside>h1 {
+    color: #046193;
+    margin: 12%;
+    margin-bottom: 21%;
+
+}
+
+main>h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #046193;
+    margin-left: 6.5%;
+    margin-bottom: 5%;
+    letter-spacing: 10px;
+
+
+}
+
+.font_bebas_neue {
+    font-family: 'Bebas Neue', cursive;
+    color: #046193;
+
+}

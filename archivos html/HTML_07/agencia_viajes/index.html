@@ -6,40 +6,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/archivos html/HTML_07/agencia_viajes/css/estilos_Agencia.css">
-    <title>Document</title>
+
+    <!--FUENTES GOOGLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;1,100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FIN FUENTES-->
+
+
+    <link rel="stylesheet" href="css/estilos_Agencia.css">
+    <title>FLYH VIAJES</title>
 </head>
 
-<body class="gradient_fondo">
+<body class="gradient_color">
+
+
     <header>
-        <figure>
 
-            <img class="logo" src="/archivos html/HTML_07/agencia_viajes/img/flyh.svg" alt="">
+        <figure id="logo">
+            <img src="img/flyh.svg" title="img_logo_flyh" alt="Imagen del logo flyh">
+        </figure>
+        <figure id="flyh_viajes">
+            <img src="img/flyh viajes.svg" title="Letras_flyh" alt="Letras del encabezado de flyh viajes">
+        </figure>
     </header>
-    </figure>
-    <nav>
 
+    <nav>
+        <hr class="separacion" />
+        <h1 id="h1nav" class="font_bebas_neue">¡Nuestros viajes!</h1>
         <ul>
             <li><a href="#">
-                    <figure>
-                        <img class="nav_img" src="/archivos html/HTML_07/agencia_viajes/img/paris_logo.svg" title="paris" alt="paris_logo" />
+                    <figure class="post-destino">
+                        <img class="nav_img" src="img/paris_logo.svg" title="paris" alt="paris_logo" />
                     </figure>
                 </a></li>
-                <li><a href="#">
-                    <figure>
-                        <img class="nav_img" src="/archivos html/HTML_07/agencia_viajes/img/alemania_logo.svg" title="alemania" alt="alemania_logo" />
+            <li><a href="#">
+                    <figure class="post-destino">
+                        <img class="nav_img" src="img/alemania_logo.svg" title="alemania" alt="alemania_logo" />
                     </figure>
                 </a></li>
-                <li><a href="#">
-                    <figure>
-                        <img class="nav_img" src="/archivos html/HTML_07/agencia_viajes/img/barcelona_logo.svg" title="barcelona" alt="barcelona_logo" />
+            <li><a href="#">
+                    <figure class="post-destino">
+                        <img class="nav_img" src="img/barcelona_logo.svg" title="barcelona" alt="barcelona_logo" />
                     </figure>
                 </a></li>
         </ul>
+        <hr class="separacion" />
     </nav>
-    <main>main</main>
-    <aside>aside</aside>
-    <footer>footer</footer>
+    <main>
+        <h1>¡Los valores que nos representan!</h1>
+        <article class="gradient_fondo">
+            <figure class="imagenes_main">
+                <img class="img_rotar_main" src="img/article_1_celebra10.svg" title="10 años"
+                    alt="celebracion de 10 años volando.">
+            </figure>
+            <br />FlyH es una agencia de viajes que se dedica a ofrecer una experiencia de viaje única y personalizada a
+            sus clientes. Fundada hace más de 10 años, la agencia se ha especializado en la organización de viajes a
+            medida para sus clientes, adaptándose a sus necesidades y gustos personales para asegurar una experiencia de
+            viaje inolvidable. La agencia cuenta con un equipo de profesionales altamente capacitados que se encargan de
+            planificar cada detalle del viaje para garantizar que todo salga a la perfección.
+        </article>
+
+        <article class="gradient_fondo">
+
+            <figure class="imagenes_main">
+                <img class="img_rotar_main" src="img/article_2_ticket.svg" title="Pasaporte" alt="Pasaporte_imagen">
+            </figure>
+
+            <br />Uno de los principales valores de FlyH es la atención personalizada que ofrece a sus clientes. La
+            agencia se preocupa por conocer las necesidades de cada uno de sus clientes y les ofrece una experiencia de
+            viaje única y adaptada a sus preferencias. Para lograr esto, la agencia cuenta con un equipo de expertos en
+            viajes que trabajan en estrecha colaboración con sus clientes para entender sus necesidades y crear un
+            itinerario personalizado<br /> que les permita disfrutar al máximo de su viaje.
+
+        </article>
+
+        <article class="gradient_fondo">
+
+            <figure class="imagenes_main">
+                <img class="img_rotar_main" src="img/viajar_juntos.svg" title="Viajar Juntos"
+                    alt="celebracion de años volando.">
+            </figure>
+
+            Además, FlyH ofrece una amplia gama de servicios que incluyen la organización de vuelos, reservas de hotel,
+            alquiler de coches, tours y excursiones, entre otros. La agencia se encarga de todos los detalles del viaje,
+            lo que permite a sus clientes relajarse y disfrutar de su experiencia de viaje sin preocupaciones. FlyH
+            también cuenta con un servicio de atención al cliente excepcional, que está disponible las 24 horas del día
+            para atender cualquier consulta o problema que puedan surgir durante el viaje.
+        </article>
+
+        <hr class="separacion" />
+    </main>
+
+    <aside>
+
+        <h1>¡Contactanos sin compromiso!</h1>
+
+        <form class="separacion">
+            <input name="nombre" type="text" placeholder="Nombre" />
+            <input name="email" type="email" placeholder="Correo electrónico" />
+            <textarea name="consulta" placeholder="¿Cuál es el motivo de tu consulta?" rows="6"></textarea>
+            <button id="enviar" name="enviar" type="submit" class="btn">ENVIAR</button>
+        </form>
+    </aside>
+
+    <footer>
+        <hr class="separacion">
+        <figure class="icono">
+            <img class="img_rotar_main" src="img/instagram_icon.svg" title="Instagram link"
+                alt="Icono grafico de instagram.">
+        </figure>
+        <figure class="icono">
+            <img class="img_rotar_main" src="img/tumblr_icon.svg" title="Tumblr link" alt="Icono grafico de Tumblr.">
+        </figure>
+        <figure>
+            <img class="img_rotar_main" src="img/facebook_icon.svg" title="Facebook link"
+                alt="Icono grafico de Facebook.">
+        </figure>
+    </footer>
 
 
 
