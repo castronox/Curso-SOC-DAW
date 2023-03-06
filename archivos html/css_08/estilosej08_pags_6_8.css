@@ -1,0 +1,21 @@
+
+h1:only-of-type{
+    font-style: italic;
+}
+
+p:first-of-type{
+    text-decoration: underline;
+}
+
+p:last-of-type{
+    text-decoration: line-through;
+}
+p:nth-of-type(2){
+
+    text-transform: uppercase;
+}
+
+p:nth-last-of-type(2){
+
+    color:red;
+}

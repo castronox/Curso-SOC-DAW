@@ -1,0 +1,16 @@
+:first-child{
+    text-decoration: underline;
+}
+h2:only-child{
+    text-decoration: line-through;
+}
+p:nth-child(2){
+
+    text-transform: uppercase;
+}
+p:nth-last-child(2){
+    color: red;
+}
+p:last-child{
+    color: blue;
+}

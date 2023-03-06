@@ -1,0 +1,10 @@
+label::before{
+    content: 'Indique ';
+}
+
+label::after{
+    
+    content: url('img/warning_icon.svg');
+    
+}
+
