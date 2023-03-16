@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    
+    form{
+        min-width: 60%;
+        border: 1px solid black;
+    }
+
+    form, h1{
+        
+        margin: 6%;     
+    }
+
+    fieldset, label, input, option{
+        margin: 3%;
+    }
+
+    legend{        
+        margin: 0% 2% 2% 2% ;
+    }
+
+    label,select, option{
+        display: inline-block;
+        min-width: 70px;  
+    }
+    button{
+        margin: 3%;
+    }
+    .min_width_20{
+        min-width: 20px ;
+        max-width: 20px;
+    }
+    #cajaTexto{
+        padding: 20%;
+    }
+    </style>
+
+    <title>Formulario ejercicio A</title>
+</head>
+<body>
+    
+
+
+<form action="">
+    <h1>User input form</h1>
+    
+    <fieldset>
+        
+        <legend>&nbsp; Personal Particular &nbsp;</legend>
+
+        <label for="nombre">Name:</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <br />
+
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd">
+
+        <br />
+
+        <label for="genero">Gender:</label>
+        <input type="radio" name="male" id="male"><label for="">Hombre</label>
+        
+        <input type="radio" name="women" id="women"><label for="">Mujer</label>
+
+        <br />
+
+        <label for="age">Age:</label>
+        <select name="mayor_que" id="mayor_que">
+            <option value="15">Mayor de 15</option>
+
+        </select>
+
+    </fieldset>
+    <fieldset>
+        <legend>&nbsp;Languages&nbsp;</legend>
+
+    <input type="checkbox"> <label for="">Java</label>
+    <input type="checkbox"> <label for="">C / C+</label>
+    <input type="checkbox"> <label for="">C#</label>
+
+
+    </fieldset>
+    <fieldset>
+        <legend>&nbsp;Instruction &nbsp;</legend>
+        <input placeholder="Enter your instruction here..." type="text" name="" id="cajaTexto">
+    </fieldset>
+
+    <button type="submit">SEND NUDES</button>
+    &nbsp;
+    <button type="reset">CLEAR</button>
+
+</form>
+
+
+
+
+
+</body>
+</html>
