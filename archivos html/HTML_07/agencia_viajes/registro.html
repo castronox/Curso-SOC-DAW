@@ -4,15 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=+, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/estilos_Agencia.css">
+
+    <style>
+        body{
+            
+            justify-content: center;
+            
+        }
+        form{
+            margin: 10% 20% 10% 20%;
+            max-width: 60%;                
+        }
+
+        fieldset{
+            padding: 6% 16% 6% 16%;
+            margin-bottom: 3%;
+        }
+
+        select{
+            padding: 3%;
+            margin: 3%;
+            border-radius: 25px;
+        }
+
+        hr{
+            margin: 6%;
+        }
+
+
+        label,legend, select, option {
+
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        form>input{
+            background: linear-gradient(90deg, #473b17 0%, #72682da4 100%);
+            text-decoration-color: aliceblue;
+        }
+
+
+
+    </style>
     <title>Registro</title>
 
 </head>
-<body>
 
+<body class="gradient_color">
+
+    <header>
+
+        <a href="index.html"><figure id="logo">
+            <img src="img/flyh.svg" title="img_logo_flyh" alt="Imagen del logo flyh">
+        </figure>
+        </a>
+        <figure class="centrar_letras_header">
+            <img src="img/flyh viajes.svg" title="Letras_flyh" alt="Letras del encabezado de flyh viajes">
+        </figure>
+    </header>
+
+    <nav>
+        <hr class="separacion" />
+        <h1 id="h1nav" class="font_bebas_neue">¡Nuestros viajes!</h1>
+        <ul>
+            <li><a href="paris.html">
+                    <figure>
+                        <img class="nav_img post-destino" src="img/paris_logo.svg" title="paris" alt="paris_logo" />
+                    </figure>
+                </a></li>
+            <li><a href="alemania.html">
+                    <figure>
+                        <img class="nav_img post-destino" src="img/alemania_logo.svg" title="alemania" alt="alemania_logo" />
+                    </figure>
+                </a></li>
+            <li><a href="barcelona.html">
+                    <figure>
+                        <img class="nav_img post-destino" src="img/barcelona_logo.svg" title="barcelona" alt="barcelona_logo" />
+                    </figure>
+                </a></li>
+        </ul>
+        <hr class="separacion" />
+    </nav>
+
+<section>
     <form action="">
             <fieldset>
-                    <legend>Datos de registro:</legend>
+                    <legend>&nbsp; Datos de registro &nbsp;</legend>
 
                     <label for="txt_nombre"> Nombre:</label>
                     <input type="text" name="nombre" id="nombre">
@@ -173,5 +250,6 @@
             <input type="submit" value="Enviar">
     </form>
     
+</section>
 </body>
 </html>

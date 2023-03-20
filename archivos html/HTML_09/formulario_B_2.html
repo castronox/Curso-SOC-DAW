@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    
+    form{
+        min-width: 60%;
+        border: 1px solid black;
+    }
+
+    form, h1{
+        
+        margin: 3%;     
+    }
+
+    fieldset, label, input, option{
+        margin: 1%;
+    }
+
+    legend{        
+        margin: 0% 2% 2% 2% ;
+    }
+
+    label{
+        display: inline-block;
+        min-width: 70px;  
+    }
+    #dni{
+        max-width: 90px;
+    }
+    </style>
+
+    <title>Formulario ejercicio B</title>
+</head>
+<body>
+    
+
+
+<form action="">
+    <h1>User input form</h1>
+    
+    <fieldset>
+        
+        <legend>&nbsp;Datos personales&nbsp;</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <br />
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="password" name="apellidos" id="apellidos">
+
+        <br /> 
+
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" id="dni">
+
+        <br />
+
+    </fieldset>
+
+    <fieldset>
+        <legend>&nbsp;Datos de conexión&nbsp;</legend>
+
+        <label for="User">Nombre de usuario:</label><br />
+        <input type="text" name="User" id="User">
+
+        <br />
+
+        <label for="pwd">Contraseña:</label><br />
+        <input type="password" name="pwd" id="pwd">
+
+        <br /> 
+
+        <label for="pwd">Repite la contraseña:</label><br />
+        <input type="password" name="pwd" id="pwd">
+
+        <br />
+
+    
+    </fieldset>
+
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

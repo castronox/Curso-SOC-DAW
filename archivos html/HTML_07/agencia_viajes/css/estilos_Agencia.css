@@ -276,3 +276,8 @@ main>h1 {
 
     margin-left: 5.5%;
 }
+
+button>a{
+    text-decoration: none;
+}
+
