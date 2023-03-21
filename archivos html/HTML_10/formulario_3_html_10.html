@@ -7,70 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3 HTML_10</title>
     <style>
-
-
-        form{
+        form {
             background-color: rgba(250, 235, 215, 0.459);
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(102, 65, 65);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             max-width: 800px;
             margin: auto;
             border: 3px dotted rgb(111, 111, 161);
             margin-top: 12%;
             padding: 3%;
-                
+
+
         }
-        label, input{
+
+        label,
+        input {
+            border-radius: 25px;
             margin: 0.5%;
             display: inline-block;
         }
-        label{
-            min-width: 19%;
-            margin: 2% 6% 2% 6% ;
-                }           
 
-        input{
+        label {
+            min-width: 20%;
+            margin: 2% 6% 2% 6%;
+        }
+
+        input {
             background-color: rgba(226, 43, 73, 0.144);
             padding: 2% 25% 2% 4%;
-            border:none;
+            border: none;
+
         }
-        select, option{
+
+        select,
+        option {
             margin: 3%;
             background-color: rgba(226, 43, 73, 0.144);
-            
-            margin-left: 2%; 
+            border-radius: 25px;
+            margin-left: 2%;
         }
-        option{
+
+        option {
             text-align: center;
         }
 
-
-        select{
-            border: 0;
-            margin-top: 2%;
-            padding:2% 6% 2% 6%  ;
+        button {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: none;
+            padding: 2.5%;
+            margin: 6%;
+            background-color: rgba(226, 43, 73, 0.144);
+            color: rgb(102, 65, 65);
         }
 
-        #textArea{
+        select {
+            border: 0;
+            margin-top: 2%;
+            padding: 2% 6% 2% 6%;
+        }
+
+        #textArea {
             margin-top: 3%;
-            padding: 0% 10% 13% 10%;
+            padding: 0% 25% 13% 20%;
             margin-bottom: 2%;
         }
 
-        #pais{
-            padding: 2% 28.9% 2% 4%;
+        #foto {
+            max-width: 20%;
         }
 
-        #foto{
-            max-width: 25%;   
+        .margin {
+            margin: 1%;
         }
 
-        .margin{
-            margin:1%;
-        }
-
-        #no{}
-        
-        </style>
+        #no {}
+    </style>
 </head>
 
 <body>
@@ -84,7 +95,7 @@
 
         <label for="">Contraseña</label>
         <input type="password" name="pwd" id="pwd">
-        <br/>
+        <br />
         <label for="">Sexo</label>
         <select name="genero" id="genero">
             <option value="male">Hombre</option>
@@ -96,13 +107,13 @@
         <br />
         <label for="">Subir tu foto</label>
         <input type="file" name="foto" id="foto">
-        <br/>
+        <br />
         <label for="">Cuentanos sobre ti</label>
         <input type="text" name="info" id="textArea" placeholder="Cuentanos algo sobre ti">
         <br />
         <label for="">Cuánto sabes de html 5?</label>
         <input type="range" name="exp5" id="exp5">
-        <br /> 
+        <br />
         <label for="" class="">Desea suscribirse al boletín?</label>
         <label for="si" class="margin">Si</label>
         <input type="radio" name="si" id="si" class="margin">
@@ -113,7 +124,7 @@
         <br />
         <label for="">He leído los términos y condiciones de uso.</label>
         <input type="checkbox" name="acepta" id="acepta">
-        <br/>
+        <br />
         <button type="submit">Enviar</button>
         <button type="reset">Cancelar / reset</button>
     </form>
