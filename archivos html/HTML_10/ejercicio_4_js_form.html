@@ -1,23 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inputs y outputs</title>
+
+    <style>
+        section,form{
+            border: 1px solid purple;
+            margin: 3% ;
+            padding: 3%;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        input, select{
+            border: 1px solid rgb(37, 182, 187);
+            margin: 3%;
+            padding: 2%;
+        }
+
+        button{
+            border: none;
+            background-color: rgb(60, 173, 238);
+            margin-left: 3%;
+            margin-right: 84%;
+            padding: 13px;
+        }
+        output{
+            text-align: center;
+            border: 4px dotted rgb(60, 173, 238);
+            padding:2% 3% 2% 2%;
+            margin-left: 3%;
+            margin-right: 84%;
+            
+        }
+    </style>
 </head>
+
 <body>
-    <form action=""></form>
-    <label for="">Inputs y outputs</label>
     <script>
-        function calcular(){
-            res.value = op1.value*op2.value
+        function calcular() {
+            res.value = op1.value * op2.value
+        }
+
+        function calculo() {
+            switch (operacion.value) {
+
+                case "suma": resultado.value = parseFloat(operando1.value)+parseFloat(operando2.value);
+                    break;
+                case "resta": resultado.value = operando1.value-operando2.value;
+                    break;
+                case "multi": resultado.value = operando1.value*operando2.value;
+                    break;                
+                default: resultado.value = operando1.value/operando2.value;
+            }
         }
     </script>
+
+    <form action="">
+    <label for="">Inputs y outputs</label>
+
     <input type="number" name="op1" id="op1" value="1" onchange="calcular();"> X
     <input type="number" name="op2" id="op2" value="1" onchange="calcular();"> =
     <output name="res" id="res" for="op1 op2"> 1 </output><br />
     </form>
+    <br /><br /><br />
+
+    <section>
+        <input type="number" name="operando1" id="operando1" value="0">
+        
+        <select name="operacion" id="operacion">
+            <option value="suma">+</option>
+            <option value="resta">-</option>
+            <option value="multi">X</option>
+            <option value="divi">/</option>
+        </select>
+
+        <input type="number" id="operando2" value="0">
+        <br />
+        <button onclick="calculo()">Calcular</button>
+        <br />
+        <output id="resultado">0</output>
+    
+    </section>
+
 </body>
 
 </html>
