@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 HTML 10</title>
+    <style>
+
+
+        form{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid blue;
+            margin-top: 12%;
+                
+        }
+        label, input{
+            margin: 0.5%;
+            display: inline-block;
+        }
+        label{
+            min-width: 15%;
+        }
+
+        input{
+            padding: 2% 40% 2% 4%;
+        }
+
+        fieldset{
+            margin: 4%;
+            padding: auto;
+        }
+
+        select{
+            padding: 2% 49.8% 2% 4%;
+        }
+
+        #textArea{
+            margin-top: 3%;
+            padding: 0% 10% 13% 10%;
+            margin-bottom: 2%;
+        }
+        
+        </style>
+</head>
+<body>
+
+<form action="">
+
+<fieldset>
+<legend>&nbsp; Datos Personales &nbsp;</legend> 
+<label for="nombre">Nombre</label>
+<input type="text" name="nombre" id="nombre">
+<br />
+<label for="pwd">Password:</label>
+<input type="password" name="pwd" id="pwd">
+<br />
+<label for="sexo">Sexo:</label>
+
+<label for="hombre">Hombre:</label>
+<input type="radio" name="hombre" id="hombre">
+
+<label for="mujer">Mujer:</label>
+<input type="radio" name="mujer" id="mujer">
+
+<label for="no_binario">No binario:</label>
+<input type="radio" name="no_binario" id="mno_binario">
+<br />
+
+<label for="experiencia">Experiencia:</label>
+<select name="exp" id="exp">
+    <option value="10-19años">De 10 a 19 años</option>
+</select>
+</fieldset>
+
+<fieldset>
+    <legend>&nbsp; Idiomas &nbsp;</legend>
+
+    <input type="checkbox" name="java" id="java">
+    <label for="java">Java</label>
+
+    <input type="checkbox" name="c/c++" id="c/c++">
+    <label for="java">C/C++</label>
+
+    <input type="checkbox" name="c#" id="c#">
+    <label for="java">C#</label>
+
+</fieldset>
+
+<fieldset>
+    <legend>&nbsp; Detalles &nbsp;</legend>
+    <input type="text" name="textArea" id="textArea" placeholder="Indica aqui los detalles...">
+</fieldset>
+
+
+</form>
+    
+</body>
+</html>
