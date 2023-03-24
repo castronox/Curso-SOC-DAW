@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Expresiones regulares.</title>
+
+    <style>
+        input:invalid{
+            border: 1px solid red;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <label for="">Cadena de texto "pepe"</label>
+    <input type="text" name="cadena_pepe" id="cadena_pepe" required="required" pattern="pepe"><br />
+
+    <label for="">Cadena de texto "pepe" o "juan"</label>
+    <input type="text" name="pepe_juan" id="pepe_juan" required="required" pattern="pepe|juan"><br />
+
+    <label for="">A,B,C mayúsculas o minúsculas</label>
+    <input type="text" name="abc_ABC" id="abc_ABC" required="required" pattern="[abcABC]"><br />
+
+    <label for="">A, B o C mayúsculas o minúsculas </label>
+    <input type="text" name="abc_ABC_2" id="abc_ABC_2" required="required" pattern="[a-cA-C]"><br />
+
+    <label for="">Cualquier cosa que no sea A, B o C</label>
+    <input type="text" name="cualquiera" id="cualquiera" required="required" pattern="[^abcABC]"><br />
+
+    <label for="vocal">Una vocal entre 2 caracteres cualquiera.</label>
+    <input type="text" name="vocal" id="vocal" required="required" pattern=".[aeiouAEIOU]."><br />
+
+    <label for="combinacion4">Combinación 4 letras guiones o números.</label>
+    <input type="text" name="combi4" id="combi4" required="required" pattern="\w\w\w\w"><br />
+
+    <label for="horas_minutos_1-">Horas y minutos, (malo)</label>
+    <input type="text" name="horas_min_1" id="horas_min_1" required="required" pattern="\d\d:\d\d"><br />
+
+    <label for="horas_min_2">Horas y minutos, (mejor)</label>
+    <input type="text" name="horas_min_2" id="horas_min_2" required="required" pattern="(([01]\d)|(2[0-3])):[0-5]\d"><br />
+
+    <label for="">Cadena de texto que comience por R</label>
+    <input type="text" name="comienza_r" id="comienza_r" required="required" pattern="R.*"><br />
+
+    <label for="">Textos que comienzan por A,B,C mayúscula o minúscula</label>
+    <input type="text" name="comienzan_abc_may_min" id="comienzan_abc_may_min" required="required" pattern="[abcABC]"><br />
+
+    <label for="">Textos que NO comienzan por A,B o C mayúscula o minúscula</label>
+    <input type="text" name="no_comienzan_abc_may_min" id="no_comienzan_abc_may_min" required="required" pattern="[^abcABC]"><br />
+
+    <label for="">Textos que contienen las letras de A a E mayúscula o minúscula</label>
+    <input type="text" name="a-e_mayus_min" id="a-e_mayus_min" required="required" pattern=".*[A-Ea-e]*."><br />
+
+    <label for="">Cadena de texto que comience por R:</label><br />
+    <input type="text" name="comienzan_por_R_1" id="comienzan_por_R_1" required="required" pattern="\d\d\d\d"><br />
+    <input type="text" name="comienzan_por_R_2" id="comienzan_por_R_2" required="required" pattern="\d{4}"><br />
+    <input type="text" name="comienzan_por_R_3" id="comienzan_por_R_3" required="required" pattern="[0-9][0-9][0-9][0-9]"><br />
+    <input type="text" name="comienzan_por_R_4" id="comienzan_por_R_4" required="required" pattern="[0-9]{4}"><br /><br />
+
+    <label for="">De 3 a 5 caracteres cualquiera</label>
+    <input type="text" name="3_5_cualquiera" id="3_5_cualquiera" required="required" pattern=".{3,5}"><br />
+    <label for="">3 o más letras (alfabeto inglés)</label>
+    <input type="text" name="3_o_mas_ingles" id="3_o_mas_ingles" required="required" pattern="[a-zA-Z]{3,}"><br />
+    <label for="">3 o más letras (SPANISH - CATALAN)</label>
+    <input type="text" name="3_o_mas_esp_cat" id="3_o_mas_esp_cat" required="required" pattern="[a-zñáéíóúàèòïüA-ZÑÇÁÉÍÓÚÀÈÒÏÜ]{3,}"><br />
+    <label for="">Nombres largos en mayúsculas (incluye espacios en blanco)</label>
+    <input type="text" name="nombres_may_largos_+_espacios" id="nombres_may_largos_+_espacios" required="required" pattern="[A-ZÑÇÁÉÍÓÚÀÈÒÏÜ]{2,}(\s[A-ZÑÇÁÉÍÓÚÀÈÒÏÜ]{2,})*"><br />
+    <label for="">Que contenga una palabra que COMIENCE por "Ant"</label>
+    <input type="text" name="acaba_en_Ant" id="acaba_en_Ant" required="required" pattern=".*\bAnt.*"><br /><br />
+
+    <label for="">3 palabras de 4 caracteres separados por espacios</label>
+    <input type="text" name="3_palabras_4_caracteres_espacio" id="3_palabras_4_caracteres_espacio" required="required" pattern="\w\w\w\w\s\w\w\w\w\s\w\w\w\w"><br />
+
+    <label for="">Escribe un correo de maximo 12 letras, una @ y 6 caracteres seguido de .com</label>
+    <input type="text" name="correo" id="correo" required="required" pattern="\w\w\w\w\w\w\w\w\w\w\w\w+@\w\w\w\w\w\w[.][c][o][m]"  
+</body>
+</html>
