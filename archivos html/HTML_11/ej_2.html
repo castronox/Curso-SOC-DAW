@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 html 11.</title>
+    <style>
+        input:invalid{
+            border: 1px solid red;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <label for=""> Un DNI de ocho números y una letra (cualquiera de A a Z).</label>
+    <input type="text" title="Escribe tu DNI con 8 numeros y una letra MAYUSCULA" name="dni" id="dni" required="required" pattern="[\d]{8}[A-Z]{1}" /> <br /> 
+    <label for="">Un DNI de ocho números y una letra (solamente las válidas).</label>
+    <input type="text" title="Escribe tu DNI con 8 numeros y una letra MAYUSCULA válida" name="dni_letra_valida" id="dni_letra_valida" required="required" pattern="[\d]{8}[.tTrRwWaAgGxXbBnNjJzZsSqQvVhHlLcCkKeE]{1}" /><br /> 
+    <label for=""> Un DNI, incluidos los que comienzan por letra XYZ.</label>
+    <input type="text" title="Escribe tu DNI con letra válida al principio, 8 numeros y una letra MAYUSCULA" name="dni_letra_valida_principio_final" id="dni_letra_valida_principio_final" required="required" pattern="[.xXyYzZ]{1}[\d]{8}[.tTrRwWaAgGxXbBnNjJzZsSqQvVhHlLcCkKeE]{1}" /><br />
+    <label for="">Una hora en formato hh:mm:ss</label>
+    <input type="text" title="Escribe una hora en formato formato hh:mm:ss" name="hora_formato_hh_mm_ss" id="hora_formato_hh_mm_ss" required="required" pattern="(([01]\d)|(2[0-3])):[0-5]\d:[0-5]\d" /><br />
+    <label for=""> Un número de teléfono como: +34 666 66 66 66</label>
+    <input type="text" title="Un número de teléfono como: +34 666 66 66 66" name="telefono" id="telefono" required="required" pattern="(.+34\s\d\d\d\s\d\d\s\d\d\s\d\d)" /><br />
+    <label for=""> Una fecha dd-mm-aaaa donde el día va del 01 al 31, el mes del 01 al 12
+        y el año de 1900 a 2100. No importa si aparecen días que no existan en
+        el calendario.</label>
+    <input type="text" title="Un número de teléfono como: +34 666 66 66 66" name="telefono" id="telefono" required="required" pattern="(([01]\d)|(2[0-9])|(3[0-1]))- /><br />
+</body>
+</html>
