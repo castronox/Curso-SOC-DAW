@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            background: url('dc_heroes.jpg') no-repeat;
+            background-size: 100%;
+        }
+        body{
+            font-family: arial, verdana;
+            color:white;
+        }
+        .wrapper{
+            width: 34.5%;
+            background-color: white;
+            margin: 50px auto 50px auto;
+            position: relative;
+            transform: rotateX(-20deg) rotateZ(-10deg);
+            border: solid 1px black;
+            padding: 30px 30px 100px 30px;
+            box-shadow: 5px 5px 5px rgba(60, 60, 60, 0.6);
+        }
+        .wrapper h1{
+
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            padding-left:1.5% ;
+            font-size: 50px;
+            font-variant: small-caps;
+        }
+        #controls{
+            position: absolute;
+            bottom: 20px;
+            width: 50%;
+            left: 25%;
+            background-color: rgba(255, 0, 0,0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #controls input[type="range"]{
+            width: 100px;
+            display: inline;
+        }
+        #controls button{
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+        }
+        ::cue{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Jugando con los videos</h1>
+        <video id="video" src="superheroes.mp4" loop="loop" autoplay="autoplay">
+
+            <track src="sh_es.vtt" default="default" kind="subtitles" 
+            stclang="es" label="Spanish" />
+            Tu navegador no escompatible con el video
+
+        </video>
+
+        <div id="controls">
+            <button type="button" onclick="video.play();">
+                <img src="play.png" height="50px" width="50px" />
+            </button>
+
+            <button type="button" onclick="video.pause();">
+                <img src="pause.png" height="50px" width="50px" />
+            </button>
+
+            <img src="volumen.png" height="50px" width="50px" />
+            <input type="range" min="0" max="1" step="0.5" value="1" onchange="video.volume = this.value; vol.innerHTML = parseInt(this.value*100)+'%';">
+            <span id="vol">100%</span>
+        </div>
+    </div>
+
+</body>
+</html>

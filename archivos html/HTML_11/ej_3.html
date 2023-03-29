@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares ej_3</title>
+    <style>
+        input:invalid{
+            border: 1px solid red;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Expresiones regulares buscadas en internet:</h1>
+
+    <label for="">1. Validar correo corto:(solo valida estructura)</label>
+    <input type="text" id="email_1" required="required" pattern="\S+@\S+\.\S+">
+
+    <label for="">2. Validacion encontrada stack overflow</label>
+    <input type="text" id="email_2" required="required" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}">
+
+    <label for="">3. Expresion regular para validar telefono</label>
+    <input type="text" id="validar_telf" required="required" pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}"><br /><br/>
+
+    <label for="">Expresion regular para fechas y años bisiestos.</label>
+    <input type="text" id="validar_fecha" required="required" pattern="^(?:(?:(?:0?[1-9]|1\d|2[0-8])[/](?:0?[1-9]|1[0-2])|(?:29|30)[/](?:0?[13-9]|1[0-2])|31[/](?:0?[13578]|1[02]))[/](?:0{2,3}[1-9]|0{1,2}[1-9]\d|0?[1-9]\d{2}|[1-9]\d{3})|29[/]0?2[/](?:\d{1,2}(?:0[48]|[2468][048]|[13579][26])|(?:0?[48]|[13579][26]|[2468][048])00))$">
+</body>
+
+
+</html>
