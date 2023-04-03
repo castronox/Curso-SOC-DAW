@@ -11,7 +11,7 @@ figure {
 .header {
     background-image: url("../img/frutalia_header_index.svg");
     max-height: 350px;
-    
+
 }
 
 .header_novedades {
@@ -50,7 +50,6 @@ nav ul a {
 
 nav>ul {
     display: flex;
-
     justify-content: center;
 
 }
@@ -118,9 +117,9 @@ nav a figure img {
 }
 
 .icono {
-    
+
     display: flex;
-    
+
 }
 
 .icono>img {
@@ -129,16 +128,28 @@ nav a figure img {
 
 /*SECCIÓN MAIN.*/
 
-section {
+main>section{ 
+    width: 100%;  
     display: flex;
-    margin: 2%;
+    flex-wrap: wrap;
+    margin: 4%;
+    
 }
+
+main section figure{
+min-width: 300px;
+
+}
+
+
+
 
 main h1 {
     color: beige;
     font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
     margin: auto;
+    text-align: center;
     margin-top: 6%;
 }
 
@@ -149,8 +160,7 @@ main {
     flex-wrap: wrap;
 }
 
-section figure figcaption {
-    display: flex;
+section figure figcaption img {
     flex-wrap: wrap;
     margin-right: 3%;
     color: beige;
@@ -158,23 +168,24 @@ section figure figcaption {
     margin-left: 14%;
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
+    
 }
 
 section p {
     color: beige;
     font-size: large;
-    flex-wrap: wrap;
     font-family: 'Quicksand', sans-serif;
     text-align: justify;
-    width: 100%;
-    display: flex;
-    margin: auto;
     margin-left: 2%;
     margin-right: 2%;
+    min-width: 300px;
 }
 
-img {
+section figure img {
+    border: 1px;
+    flex-basis:400px;
     border-radius: 25px;
+    
 }
 
 hr {
@@ -193,16 +204,16 @@ body {
 /* INICIO FOOTER*/
 
 footer {
-    margin-left: 20% ;
+    margin-left: 20%;
     margin-right: 20%;
 }
 
-footer article{
+footer article {
     margin-top: 2%;
 }
 
 
-footer b {    
+footer b {
     margin: auto;
     color: beige;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -282,8 +293,3 @@ input[type="submit"]:hover {
 .col-6 {
     width: calc(46% - 10px);
 }
-
-
-
-
-
