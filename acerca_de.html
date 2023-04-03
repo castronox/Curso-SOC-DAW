@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Acerca de</title>
+    <style>
+        body {
+            background-color: rgb(255, 87, 51);
+            color: rgb(32, 11, 6);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: rgb(223, 76, 45);
+        }
+
+        p {
+            color: rgb(191, 65, 38);
+        }
+
+        a {
+            color: rgb(159, 54, 32);
+        }
+
+        button {
+            background-color: rgb(128, 43, 26);
+            color: rgb(255, 87, 51);
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background-color: rgb(96, 33, 19);
+            color: rgb(255, 87, 51);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border-color: rgb(255, 87, 51);
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            background-color: rgb(64, 22, 13);
+        }
+
+        select {
+            background-color: rgb(223, 76, 45);
+            color: rgb(255, 87, 51);
+        }
+
+        option {
+            background-color: rgb(191, 65, 38);
+            color: rgb(255, 87, 51);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(191, 65, 38);
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 30px;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-family: inherit;
+            font-size: inherit;
+            border: 2px solid;
+            border-radius: 5px;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: rgb(223, 76, 45);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input[type="submit"],
+        input[type="button"],
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover,
+        button:hover {
+            background-color: rgb(159, 54, 32);
+            color: white;
+        }
+
+        input[type="submit"]:active,
+        input[type="button"]:active,
+        button:active {
+            transform: translateY(2px);
+        }
+
+        input[type="checkbox"]:checked+label,
+        input[type="radio"]:checked+label {
+            font-weight: bold;
+            color: rgb(223, 76, 45);
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(191, 65, 38);
+            color: white;
+            text-align: center;
+        }
+
+        address {
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Acerca de</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos una empresa dedicada a la venta de productos para el hogar.</p>
+        </section>
+
+        <section>
+            <h2>Nuestra historia</h2>
+            <p>
+                Comenzamos nuestra empresa en 1998, con el objetivo de ofrecer soluciones prácticas y accesibles para el
+                hogar.
+            </p>
+        </section>
+
+        <section>
+            <h2>Nuestro equipo</h2>
+            <ul>
+                <li>María García - CEO</li>
+                <li>Pedro Ruiz - Jefe de Ventas</li>
+                <li>Ana Pérez - Encargada de Marketing</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            <p>Av. Ejemplo 123, Ciudad de Ejemplo, PAÍS</p>
+        </address>
+    </footer>
+
+    <form action="#" method="post">
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label for="mensaje">Mensaje: </label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        </div>
+
+        <input type="checkbox" name="conocer" id="conocer" value="Conocer más acerca de la empresa">
+        <label for="conocer">Quiero conocer más acerca de la empresa.</label>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="button" value="Cancelar">
+        </div>
+    </form>
+</body>
+
+</html>

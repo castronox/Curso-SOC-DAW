@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Título de la página</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      display: flex;
+      margin: 2em;
+    }
+    article {
+      flex: 2;
+      padding-right: 2em;
+    }
+    article h2 {
+      border-bottom: 1px solid #333;
+    }
+    article time {
+      font-style: italic;
+    }
+    aside {
+      flex: 1;
+    }
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    aside li {
+      margin: 0.5em 0;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Encabezado de la página</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Título del artículo</h2>
+        <p><time datetime="2022-12-31">31 de diciembre de 2022</time></p>
+      </header>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+      <p>Aliquam id velit at libero sollicitudin tincidunt. Nullam eget eros sit amet sapien dignissim commodo. </p>
+
+      <footer>
+        <p>Escrito por <a href="#">Nombre del autor</a></p>
+      </footer>
+    </article>
+
+    <aside>
+      <h3>Barra lateral</h3>
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Derechos de autor © 2022 Nombre de la empresa</p>
+  </footer>
+</body>
+</html>
