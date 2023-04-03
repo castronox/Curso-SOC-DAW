@@ -1,52 +1,44 @@
 * {
     margin: 0%;
     padding: 0%;
-}
-
-.gradient_color {
+  }
+  
+  .gradient_color {
     background-image: radial-gradient(circle farthest-side, #f8edd1, #5373e654);
-}
-
-.gradient_fondo {
+  }
+  
+  .gradient_fondo {
     background: linear-gradient(90deg, #f8edd1 0%, #f7c12ba4 100%);
-}
-
-body,
-header,
-nav,
-main,
-aside,
-footer {
-
+  }
+  
+  body, header, nav, main, aside, footer {
     border-radius: 26px;
     padding: 0.5%;
     margin: auto;
     text-align: center;
-}
+  }
 
-
-
-nav {
+  main>h1{
+    margin: 2%;
+  }
+  
+  nav {
     vertical-align: top;
     padding: 8px;
     margin: auto;
     width: 75%;
     margin-bottom: 2%;
-
-
-}
-
-main {
+  }
+  
+  main {
     margin: auto;
     display: inline-block;
     height: 70%;
     width: 80%;
     margin-right: 5%;
-}
-
-aside {
-
-
+  }
+  
+  aside {
     margin-left: 5%;
     width: 10%;
     margin-top: 3%;
@@ -62,64 +54,54 @@ aside {
     padding-right: 19%;
     padding-left: 19%;
     box-shadow: 0px 0px rgb(5, 1, 1), 0.5em 0.2em 0.3em rgba(0, 66, 128, 0.568);
-}
-
-li {
-
+  }
+  
+  li {
     display: inline-block;
-
-
-}
-
-#logo {
+  }
+  
+  #logo {
     display: inline-block;
     width: 12%;
     vertical-align: middle;
     margin-left: 8%;
-}
-
-#logo>img {
-
+  }
+  
+  #logo>img {
     width: 100%;
-}
-
-.centrar_letras_header {
-
+  }
+  
+  .centrar_letras_header, .centrar_letras_header2 {
     vertical-align: middle;
     display: inline-block;
+  }
+  
+  .centrar_letras_header {
     width: 60%;
-
-}
-
-.centrar_letras_header2 {
-
-    vertical-align: middle;
-    display: inline-block;
+  }
+  
+  .centrar_letras_header2 {
     width: 25%;
     margin-right: 56%;
-
-}
-
-.centrar_letras_header>img {
-
+  }
+  
+  .centrar_letras_header>img {
     width: 100%;
-}
-
-.post-destino:hover {
+  }
+  
+  .post-destino:hover {
     transform: rotateY(360deg);
     transform-style: preserve-3d;
     transition: 1s;
-}
-
-.nav_img {
+  }
+  
+  .nav_img {
     width: 63%;
-
-}
-
-article {
+  }
+  
+  article, aside {
     margin-left: 7%;
     border-radius: 26px;
-    border-top: 1px rgba(0, 0, 0, 0.082) solid;
     justify-content: center;
     border-left: 1px rgba(0, 0, 0, 0.082) solid;
     display: inline-block;
@@ -129,41 +111,19 @@ article {
     width: 15%;
     padding: 5%;
     box-shadow: 0px 0px rgb(5, 1, 1), 0.5em 0.2em 0.3em rgba(128, 98, 0, 0.568);
-}
-
-.imagenes_main {
-    display: inline-block;
-}
-
-.imagenes_main>img {
-
-    width: 100%;
+  }
+  
+  .imagenes_main>img {
+    flex-basis: 100%;
     margin-bottom: 1em;
-}
-
-
-
-
-
-figure {
-
-    width: 100%;
-}
-
-.img_rotar_main:hover {
-    transform: rotate(360deg);
-    transform: rotate(360deg);
-    transition: 2.5s;
-}
-
-form {
-
+  }
+  
+  form {
     background-color: #6cb6e000;
     margin: 0 auto;
-}
-
-form input,
-form textarea {
+  }
+  
+  form input, form textarea {
     border-radius: 15px;
     margin-bottom: 15px;
     font-family: "Roboto", sans-serif;
@@ -174,9 +134,9 @@ form textarea {
     color: #f7c12ba4;
     font-size: 1em;
     resize: none;
-}
-
-form button {
+  }
+  
+  form button {
     border-radius: 15px;
     background-color: #046193a4;
     padding: 10px 45px 10px 45px;
@@ -184,100 +144,174 @@ form button {
     font-size: 1em;
     color: white;
     font-family: "Roboto", sans-serif;
-}
-
-form button:hover {
+  }
+  
+  form button:hover {
     background-color: #046193;
-
-
-}
-
-textarea {
-    resize: none;
-}
-
-#h1nav {
+  }
+  
+  #h1nav {
     letter-spacing: 10px;
     margin: 3%;
-
-
-}
-
-.separacion {
+  }
+  
+  .separacion {
     margin-top: 2%;
     margin-bottom: 2%;
-}
-
-
-figure {
+  }
+  
+  figure {
     display: inline;
-}
+  }
 
-footer>figure>img {
+  
+  footer>figure>img {
     margin-left: 3%;
     margin-right: 3%;
     width: 100px;
-}
-
-aside>h1 {
-    color: #046193;
-    margin: 12%;
-    margin-bottom: 21%;
-
-}
-
-main>h1 {
+  }
+  
+  aside>h1, main>h1 {
     font-family: 'Bebas Neue', cursive;
     color: #046193;
-    margin-left: 6.5%;
-    margin-bottom: 5%;
     letter-spacing: 10px;
-
-
-}
-
-.font_bebas_neue {
-    font-family: 'Bebas Neue', cursive;
-    color: #046193;
-
-}
-
-.font_Rubik_mono_one {
-
+  }
+  
+  .font_Rubik_mono_one {
     font-family: 'Rubik Mono One', sans-serif;
-}
-
-.font_roboto_mono {
-
-    font-family: 'Roboto Mono', monospace;
-}
-
-.caja_texto {
-    padding-left: 30%;
-    padding-right: 30%;
-
-}
-
-.bordes {
+  }
+  
+  .box, .bordes {
     border-radius: 15px;
-}
-
-.alinea_izqda {
-
+  }
+  
+  .alinea_izqda, #alinear_img_piloto {
     margin-left: 13%;
-}
-
-.alinea_drcha {
-
+  }
+  
+  .alinea_drcha {
     margin-right: 9%;
-}
-
-#alinear_img_piloto {
-
-    margin-left: 5.5%;
-}
-
-button>a{
+  }
+  
+  button > a {
     text-decoration: none;
-}
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body,
+    header,
+    nav,
+    main,
+    aside,
+    footer {
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+    }
+  
+  
+    nav {
+      width: 100%;
+      padding: 5%;
+      margin-bottom: 5%;
+    }
+  
+  
+    main {
+      width: 100%;
+      margin-right: 0;
+      display: block;
+      height: auto;
+    }
+  
+  
+    aside {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 5%;
+      border-radius: 0;
+      border: none;
+      justify-content: center;
+      display: block;
+      height: auto;
+      text-align: center;
+      padding: 5% 0;
+    }
+  
+  
+    li {
+      display: block;
+      text-align: center;
+    }
+  
+  
+    #logo {
+      margin: auto;
+      display: block;
+      width: 50%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  
+  
+    .centrar_letras_header,
+    .centrar_letras_header2 {
+      display: block;
+      width: 100%;
+      margin-bottom: 5%;
+    }
+  
+  
+    .centrar_letras_header2 {
+      margin-right: 0;
+    }
+  
+  
+    .nav_img {
+      width: 30%;
+    }
+  
+  
+    article,
+    aside {
+      margin-left: 0;
+      width: 100%;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      padding: 5% 0;
+      text-align: center;
+    }
+  
+  
+    .imagenes_main>img {
+      margin-bottom: 5%;
+    }
+  
+  
+    form input,
+    form textarea {
+      font-size: 0.8em;
+    }
+  
+  
+    footer>figure>img {
+      margin: 2%;
+      width: 80px;
+    }
+  
+  
+    aside>h1,
+    main>h1 {
+      font-size: 1.5em;
+      letter-spacing: 5px;
+    }
 
+    .ocultar_imagen{
+      visibility: hidden;
+    }
+  }
+
+
+  
+  

@@ -59,8 +59,10 @@
         <hr class="separacion" />
     </nav>
     <main>
-        <figure id="alinear_img_piloto"><img class="bordes espaciado " src="img/piloto_azafatas.svg" alt=""></figure>
-        <h1><br/> ¡Los valores que nos representan!</h1>
+        <figure id="alinear_img_piloto">
+            <img class="bordes espaciado alinea_drcha ocultar_imagen " src="img/piloto_azafatas.svg" alt="">
+        </figure>
+        <h1 class="">¡Los valores que nos representan!</h1>
         <article class="gradient_fondo">
             <figure class="imagenes_main">
                 <img class="img_rotar_main" src="img/article_1_celebra10.svg" title="10 años"
@@ -110,7 +112,7 @@
 
         <form class="separacion">
             <input name="nombre" type="text" placeholder="Nombre" />
-            <input name="email" type="email" placeholder="Correo electrónico" />
+            <input name="email" type="email" placeholder="Correo electrónico" pattern="\S+@\S+\.\S+" />
             <textarea name="consulta" placeholder="¿Cuál es el motivo de tu consulta?" rows="6"></textarea>
             <button id="enviar" name="enviar" type="submit" class="btn">ENVIAR</button>
         </form>
