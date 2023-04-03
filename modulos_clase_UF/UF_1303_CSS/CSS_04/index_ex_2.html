@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+            function mostrar(color){
+
+                res.style.backgroundColor = color; // cambia el color del div con id='res'
+                hex.innerHTML = color; // escribe el color en el div  con id = 'hex'
+
+
+            var r = color.substr(1,2);  //toma 2 digitos del canal Rojo
+            var g = color.substr(3,2);  //toma los 2 digitos del canal Verde
+            var b = color.substr(5,2);  //toma 2 digitos del canal Azul
+
+            //calcula los valores en decimal y genera el texto que se muentra en el div id='rgb'
+            rgb.innerHTML = 'rgb('+parseInt(r,16)+','+parseInt(g,16)+','+parseInt(b,16)+')';
+            }
+    </script>
+
+    <input type="color" value="#FFFFFF" onchange="mostrar(this.value);" />
+    <div id="res" style="height:90px; width:90px; border: solid 1px #000;"></div>
+    <div id="hex">#FFFFFF</div>
+    <div id="rgb">#rgb(255,255,255)</div>
+</body>
+</html>
