@@ -3,82 +3,328 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de contacto</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        form {
+        header {
+            background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
             display: flex;
-            flex-direction: column;
-            margin: 2em;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        label {
-            margin-bottom: 0.5em;
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1b94cc;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            padding: 0.5em;
-            border: solid 1px #ccc;
-            border-radius: 0.5em;
-            margin-bottom: 1em;
-            font-size: 1em;
+        nav ul li a:hover {
+            color: #00becc;
         }
 
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #333;
+        .formulario {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
-        button[type="submit"] {
-            background-color: #333;
+        .formulario form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .formulario label,
+        .formulario input,
+        .formulario input[type="submit"] {
+            margin: 5px;
+        }
+
+        .formulario label {
+            font-weight: bold;
+            color: #1b94cc;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario input[type="submit"],
+        .formulario select {
+            padding: 8px;
+            border: 2px solid #007acc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario select {
+            flex: 1;
+        }
+
+        .formulario input[type="submit"] {
+            background-color: #007acc;
             color: #fff;
-            border: none;
-            border-radius: 0.5em;
-            padding: 0.5em 1em;
-            margin-top: 1em;
-            cursor: pointer;
             font-weight: bold;
+            cursor: pointer;
         }
 
-        button[type="submit"]:hover {
-            background-color: #666;
+        .formulario input[type="submit"]:hover {
+            background-color: #0068b3;
         }
 
-        .error {
-            color: red;
-            font-size: 0.8em;
-            margin-bottom: 0.5em;
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                justify-content: center;
+            }
         }
+        html {
+            background-color: rgb(123, 226, 228);
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #1b94cc;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 26px;
+            color: rgb(125, 177, 178);
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 18px;
+            color: rgb(126, 164, 165);
+            margin-bottom: 5px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0px 0px 5px rgb(125, 189, 190);
+        }
+        .form-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 30px;
+            background-color: rgb(127, 140, 140);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: rgb(126, 152, 153);
+        }
+        @media only screen and (max-width: 768px) {
+            .container {
+                margin-top: 50px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+                /* Footer */
+                footer {
+            
+            background-color: #0093E9;
+            background-image: linear-gradient(190deg, #e4e5e9 0%, #80D0C7 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .redes-sociales a img {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            width: 5%;
+            margin-bottom: 0.5%;
+        }
+
+        .redes-sociales a:hover {
+            color: #007acc;
+        }
+
+        hr{
+            margin-top: 1%;
+        }
+        
     </style>
+
 </head>
 
 <body>
-    <form>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
+    <header>
+        <figure>
+            <img src="img/salford_icon.svg" alt="">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experiencias.html">Reservas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Salford</h1>
+        <div class="formulario">
+            <form action="#">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z ]+" required>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
-        <span class="error">Introduce una dirección de correo electrónico válida.</span>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label for="phone">Teléfono:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
-        <span class="error">Introduce un número de teléfono válido en formato xxx-xxx-xxxx.</span>
+                <input type="submit" value="Suscribirme">
+            </form>
+        </div>
+    </header>
 
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Enviar mensaje</button>
-    </form>
+    <div class="container">
+
+        <h1>Tienes preguntas? Salford responde!</h1>
+
+        <form action="#" method="post">
+
+            <div class="form-control"> <label for="name">Nombre completo</label> <input type=\"text" id="name"
+                    name="name" required>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-control">
+                <label for="gender">Género</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="O">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+
+            <div class="form-control">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-control">
+                <label for="address">Dirección</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-control">
+                <label for="city">Ciudad</label>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div class="form-control">
+                <label for="state">Provincia/Estado</label>
+                <input type="text" id="state" name="state">
+            </div>
+
+            <div class="form-control">
+                <label for="zip">Código postal</label>
+                <input type="text" id="zip" name="zip">
+            </div>
+
+            <div class="form-control">
+                <label for="country">País</label>
+                <input type="text" id="country" name="country">
+            </div>
+
+            <div class="form-control">
+                <label for="subject\">Asunto</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-control">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+            </div>
+
+            <div class="form-control">
+                <input type="submit" value="Enviar" class="btn-submit">
+            </div>
+
+        </form>
+
+    </div>
+<hr />
+    <footer>
+        <div class="redes-sociales">
+            <a href="#"><img src="img/instagram_icon.svg" alt=""></a>
+            <a href="#"><img src="img/facebook_icon.svg" alt=""></a>
+            <a href="#"><img src="img/tumblr_icon.svg" alt=""></a>
+        </div>
+        <p>&copy; Experiencias en Barco 2021. Todos los derechos reservados.</p>
+    </footer>
+
+
 </body>
 
 </html>

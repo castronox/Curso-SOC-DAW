@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Reserva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            background-color: rgb(123, 226, 228);
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1b94cc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00becc;
+        }
+
+        .formulario {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .formulario form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .formulario label,
+        .formulario input,
+        .formulario input[type="submit"] {
+            margin: 5px;
+        }
+
+        .formulario label {
+            font-weight: bold;
+            color: #1b94cc;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario input[type="submit"],
+        .formulario select {
+            padding: 8px;
+            border: 2px solid #007acc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"],
+        .formulario select {
+            flex: 1;
+        }
+
+        .formulario input[type="submit"] {
+            background-color: #007acc;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .formulario input[type="submit"]:hover {
+            background-color: #0068b3;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #1b94cc;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 26px;
+            color: rgb(125, 177, 178);
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 18px;
+            color: rgb(126, 164, 165);
+            margin-bottom: 5px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0px 0px 5px rgb(125, 189, 190);
+        }
+        .form-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 30px;
+            background-color: rgb(127, 140, 140);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: rgb(126, 152, 153);
+        }
+        @media only screen and (max-width: 768px) {
+            .container {
+                margin-top: 50px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+                        /* Footer */
+                        footer {
+            
+            background-color: #0093E9;
+            background-image: linear-gradient(190deg, #e4e5e9 0%, #80D0C7 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .redes-sociales a img {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            width: 5%;
+            margin-bottom: 0.5%;
+        }
+
+        .redes-sociales a:hover {
+            color: #007acc;
+        }
+
+        hr{
+            margin-top: 1%;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="img/salford_icon.svg" alt="">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experiencias.html">Reservas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Salford</h1>
+        <div class="formulario">
+            <form action="#">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z ]+" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="submit" value="Suscribirme">
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form-header">
+            <h1>Formulario de Reserva</h1>
+            <h2>Seleccione el tipo de reserva que desea hacer</h2>
+        </div>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" pattern="[0-9]{7,8}" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{7,10}">
+            </div>
+            <div class="form-group">
+                <label for="zip">Código postal</label>
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5,6}">
+            </div>
+            <div class="form-group">
+                <label for="reservation-type">Tipo de reserva</label>
+                <select name="reservation-type" id="reservation-type">
+                    <option value="exploracion-marina">Exploración Marina</option>
+                    <option value="pesca-deportiva">Pesca Deportiva</option>
+                    <option value="cena-romantica">Cena Romántica</option>
+                </select>
+            </div>
+            <div class="form-button">
+                <button type="submit">Enviar reserva</button>
+            </div>
+        </form>
+
+    </div>
+    <hr />
+    <footer>
+        <div class="redes-sociales">
+            <a href="#"><img src="img/instagram_icon.svg" alt=""></a>
+            <a href="#"><img src="img/facebook_icon.svg" alt=""></a>
+            <a href="#"><img src="img/tumblr_icon.svg" alt=""></a>
+        </div>
+        <p>&copy; Experiencias en Barco 2021. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
