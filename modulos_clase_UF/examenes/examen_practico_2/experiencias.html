@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Reserva</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html {
             background-color: rgb(123, 226, 228);
         }
+
         body {
             font-family: Arial, sans-serif;
         }
+
         header {
             background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
             padding: 10px;
@@ -47,12 +54,14 @@
         }
 
         .formulario {
+            
             display: flex;
             flex-wrap: wrap;
             align-items: center;
         }
 
         .formulario form {
+            
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -103,6 +112,7 @@
                 justify-content: center;
             }
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -112,29 +122,36 @@
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             margin-top: 100px;
         }
+
         .form-header {
             text-align: center;
             margin-bottom: 40px;
         }
+
         h1 {
-            font-size: 36px;
+            font-family: 'Bubbler One', sans-serif;
+            font-size:5em;
             color: #1b94cc;
             margin-bottom: 10px;
         }
+
         h2 {
             font-size: 26px;
             color: rgb(125, 177, 178);
             margin-bottom: 10px;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             font-size: 18px;
             color: rgb(126, 164, 165);
             margin-bottom: 5px;
         }
+
         input {
             display: block;
             width: 100%;
@@ -143,14 +160,18 @@
             border-radius: 5px;
             border: none;
         }
+
         input:focus {
             outline: none;
             box-shadow: 0px 0px 5px rgb(125, 189, 190);
         }
+
         .form-button {
             text-align: center;
             margin-top: 20px;
+            
         }
+
         button {
             border: none;
             border-radius: 5px;
@@ -161,25 +182,30 @@
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
         }
+
         button:hover {
             background-color: rgb(126, 152, 153);
         }
+
         @media only screen and (max-width: 768px) {
             .container {
+                margin: 2%;
                 margin-top: 50px;
                 padding: 10px;
             }
+
             h1 {
                 font-size: 28px;
             }
+
             h2 {
                 font-size: 22px;
             }
         }
 
-                        /* Footer */
-                        footer {
-            
+        /* Footer */
+        footer {
+
             background-color: #0093E9;
             background-image: linear-gradient(190deg, #e4e5e9 0%, #80D0C7 100%);
             color: #fff;
@@ -201,12 +227,12 @@
             color: #007acc;
         }
 
-        hr{
+        hr {
             margin-top: 1%;
         }
-        
     </style>
 </head>
+
 <body>
     <header>
         <figure>
@@ -283,4 +309,5 @@
     </footer>
 
 </body>
+
 </html>

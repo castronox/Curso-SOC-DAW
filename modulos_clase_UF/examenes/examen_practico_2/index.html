@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap" rel="stylesheet">
     <title>Salford</title>
     <link rel="stylesheet" href="estilos.css">
     <style>
@@ -15,7 +18,9 @@
 
         body {
             font-family: Arial, sans-serif;
+            background-color: #80d0c75b;
         }
+
         /* Header */
         header {
             background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
@@ -51,6 +56,8 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: center;
+            margin-top: 2%;
         }
 
         .formulario form {
@@ -74,6 +81,7 @@
         .formulario input[type="text"],
         .formulario input[type="email"],
         .formulario input[type="submit"],
+        .formulario input[type="date"],
         .formulario select {
             padding: 8px;
             border: 2px solid #007acc;
@@ -106,10 +114,20 @@
         }
 
         /* Main */
+        h1 {
+            font-family: 'Bubbler One', sans-serif;
+            font-size: 5em;
+        }
+
         h1,
         h2,
         h3 {
             color: #1b94cc;
+
+        }
+
+        video{
+            flex-basis: 600px;
         }
 
         section {
@@ -124,7 +142,8 @@
         }
 
         .presentacion {
-            background-color: #fafafa;
+            background-image: url(img/fondo_video.svg);
+            
         }
 
         .presentacion h2 {
@@ -155,14 +174,14 @@
             margin-top: 5%;
             padding: 2% 2% 2% 2%;
             border-radius: 25px;
-            
+
             width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
 
         .reservas {
-            background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
+            background-color: #80d0c75b;
             color: #fff;
         }
 
@@ -178,9 +197,7 @@
 
         /* Footer */
         footer {
-            
-            background-color: #0093E9;
-            background-image: linear-gradient(190deg, #e4e5e9 0%, #80D0C7 100%);
+            background-color: #80d0c75b;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -199,7 +216,6 @@
         .redes-sociales a:hover {
             color: #007acc;
         }
-        
     </style>
 </head>
 
@@ -234,6 +250,13 @@
 
         <section class="presentacion">
             <h2>¿Qué ofrecemos?</h2>
+            <video width="420" height="240" poster="img/fondo_video.svg" controls>
+                
+                <source src="img/Vídeo promocional Azul Oscuro Producciones para agencias de viaje.mp4"
+                    type="video/mp4" >
+
+                Tu navegador no soporta este formato de video.
+            </video>
             <p>Ofrecemos una gran variedad de experiencias en barco, desde paseos diurnos hasta expediciones de varios
                 días. Además, contamos con paquetes personalizados para bodas, eventos especiales y actividades
                 corporativas.</p>
@@ -272,7 +295,7 @@
         <section class="reservas">
             <h2>Reserva ahora</h2>
             <p>Para reservar alguna de nuestras experiencias en barco, por favor completa el siguiente formulario:</p>
-            <div class="formulario-reservas">
+            <div class="formulario">
                 <form action="#">
                     <label for="nombre-reservas">Nombre:</label>
                     <input type="text" id="nombre-reservas" name="nombre-reservas" pattern="[a-zA-Z ]+" required>
