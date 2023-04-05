@@ -58,6 +58,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     margin-left: 10px;
+    margin-bottom: 4%;
 }
 
 .formulario label,
