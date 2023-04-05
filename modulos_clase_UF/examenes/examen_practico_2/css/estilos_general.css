@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Lexend Tera', sans-serif;
+    color: #14507a;
+    background-color: #80d0c75b;
+}
+
+
+
+/* Header */
+header {
+    background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1b94cc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00becc;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.formulario form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.formulario label,
+.formulario input,
+.formulario input[type="submit"] {
+    margin: 5px;
+}
+
+.formulario input[type="submit"]{
+    max-width: 150px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #1b94cc;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="submit"],
+.formulario input[type="date"],
+.formulario select {
+    padding: 8px;
+    border: 2px solid #007acc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select {
+    flex: 1;
+}
+
+.formulario input[type="submit"] {
+    background-color: #007acc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #0068b3;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/*---Fin Header---*/
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #80d0c75b;
+    color: #14507a;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.redes-sociales a img {
+    color: #14507a;
+    margin-right: 10px;
+    width: 5%;
+    margin-bottom: 0.5%;
+}
+
+hr {
+    margin-top: 1%;
+}
+/*---Fin Footer---*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,110 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Lexend+Tera:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos_general.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
         html {
             background-color: rgb(123, 226, 228);
         }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-image: linear-gradient(160deg, #e4e5e9 0%, #80D0C7 100%);
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #1b94cc;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #00becc;
-        }
-
-        .formulario {
-            
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .formulario form {
-            
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-left: 10px;
-        }
-
-        .formulario label,
-        .formulario input,
-        .formulario input[type="submit"] {
-            margin: 5px;
-        }
-
-        .formulario label {
-            font-weight: bold;
-            color: #1b94cc;
-        }
-
-        .formulario input[type="text"],
-        .formulario input[type="email"],
-        .formulario input[type="submit"],
-        .formulario select {
-            padding: 8px;
-            border: 2px solid #007acc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .formulario input[type="text"],
-        .formulario input[type="email"],
-        .formulario select {
-            flex: 1;
-        }
-
-        .formulario input[type="submit"] {
-            background-color: #007acc;
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .formulario input[type="submit"]:hover {
-            background-color: #0068b3;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                justify-content: center;
-            }
-        }
 
         .container {
             max-width: 800px;
@@ -203,45 +108,19 @@
             }
         }
 
-        /* Footer */
-        footer {
 
-            background-color: #0093E9;
-            background-image: linear-gradient(190deg, #e4e5e9 0%, #80D0C7 100%);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-
-        .redes-sociales a img {
-            color: #fff;
-            margin-right: 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            width: 5%;
-            margin-bottom: 0.5%;
-        }
-
-        .redes-sociales a:hover {
-            color: #007acc;
-        }
-
-        hr {
-            margin-top: 1%;
-        }
     </style>
 </head>
 
 <body>
     <header>
         <figure>
-            <img src="img/salford_icon.svg" alt="">
+            <img src="img/salford_icon.svg" title="salford_icon" alt="icono_salford">
         </figure>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="experiencias.html">Reservas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -249,10 +128,10 @@
         <div class="formulario">
             <form action="#">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z ]+" required>
+                <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z ]+" required="required">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required="required">
 
                 <input type="submit" value="Suscribirme">
             </form>
@@ -266,15 +145,15 @@
         <form action="" method="post">
             <div class="form-group">
                 <label for="name">Nombre completo</label>
-                <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required>
+                <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required="required">
             </div>
             <div class="form-group">
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required="required">
             </div>
             <div class="form-group">
                 <label for="dni">DNI</label>
-                <input type="text" id="dni" name="dni" pattern="[0-9]{7,8}" required>
+                <input type="text" id="dni" name="dni" pattern="[0-9]{7,8}" required="required">
             </div>
             <div class="form-group">
                 <label for="phone">Teléfono</label>
@@ -301,11 +180,11 @@
     <hr />
     <footer>
         <div class="redes-sociales">
-            <a href="#"><img src="img/instagram_icon.svg" alt=""></a>
-            <a href="#"><img src="img/facebook_icon.svg" alt=""></a>
-            <a href="#"><img src="img/tumblr_icon.svg" alt=""></a>
+            <a href="#"><img src="img/instagram_icon.svg" title="ig_icon" alt="icono_instagram"></a>
+            <a href="#"><img src="img/facebook_icon.svg" title="fc_icon" alt="icono_facebook"></a>
+            <a href="#"><img src="img/tumblr_icon.svg" title="tmblr_icon" alt="tumblr_icon"></a>
         </div>
-        <p>&copy; Experiencias en Barco 2021. Todos los derechos reservados.</p>
+        <p>&copy; Salford Experiencias en Barco 2023. Todos los derechos reservados.</p>
     </footer>
 
 </body>
