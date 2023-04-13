@@ -97,15 +97,15 @@
                 <legend>&nbsp; Datos de registro &nbsp;</legend>
 
                 <label for="txt_nombre"> Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" pattern="[a-zA-Z ]+" required="required">
 
 
 
                 <label for="txt_apellido_1"> Primer apellido:</label>
-                <input type="text" name="apellido1" id="apellido1">
+                <input type="text" name="apellido1" id="apellido1" pattern="[a-zA-Z ]+" required="required">
 
                 <label for="txt_apellido_2"> Segundo apellido:</label>
-                <input type="text" name="apellido2" id="apellido2">
+                <input type="text" name="apellido2" id="apellido2" pattern="[a-zA-Z ]+" required="required">
                 <br />
                 <br />
 
@@ -243,7 +243,7 @@
                 <hr />
 
                 <label for="txt_usuario">Usuario:</label>
-                <input id="txt_usuario" type="text" placeholder="Ingresa un nombre de usuario..." name="usuario" autofocus="autofocus" autocomplete="off">
+                <input id="txt_usuario" type="text" placeholder="Ingresa un nombre de usuario..." name="usuario" autofocus="autofocus" autocomplete="off" pattern="[a-zA-Z ]+" required="required">
 
                 <label for="pwd_clave">Clave:</label>
                 <input id="pwd_clave" type="password" placeholder="Añade una contraseña..." name="pwd" maxlength="8"><br />

@@ -9,9 +9,13 @@ figure {
 }
 
 .header {
-    background-image: url("../img/frutalia_header_index.svg");
+    background-image:url('../img/naranja_.svg'),url('../img/kiwi_.svg'),url("../img/frutalia_header_index.svg");
+    background-repeat: no-repeat;
+    background-size: 10% 40% ,10% 40%, 100% 100%;
+    background-position: 23% 75%, 78% 83%;
     max-height: 350px;
-
+    
+    
 }
 
 .header_novedades {
@@ -50,6 +54,7 @@ nav ul a {
 
 nav>ul {
     display: flex;
+
     justify-content: center;
 
 }
@@ -117,9 +122,9 @@ nav a figure img {
 }
 
 .icono {
-
+    
     display: flex;
-
+    
 }
 
 .icono>img {
@@ -128,39 +133,30 @@ nav a figure img {
 
 /*SECCIÓN MAIN.*/
 
-main>section{ 
-    width: 100%;  
+section {
     display: flex;
-    flex-wrap: wrap;
-    margin: 4%;
-    
+    margin: 2%;
 }
-
-main section figure{
-min-width: 300px;
-
-}
-
-
-
 
 main h1 {
     color: beige;
     font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
     margin: auto;
-    text-align: center;
     margin-top: 6%;
 }
 
 main {
     background-color: #f98bffb6;
     background-image: linear-gradient(45deg, #f98bff65 0%, #2bd1ff70 52%, #2bff87c2 90%);
+    
     display: flex;
     flex-wrap: wrap;
 }
 
-section figure figcaption img {
+
+section figure figcaption {
+    display: flex;
     flex-wrap: wrap;
     margin-right: 3%;
     color: beige;
@@ -168,24 +164,23 @@ section figure figcaption img {
     margin-left: 14%;
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
-    
 }
 
 section p {
     color: beige;
     font-size: large;
+    flex-wrap: wrap;
     font-family: 'Quicksand', sans-serif;
     text-align: justify;
+    width: 100%;
+    display: flex;
+    margin: auto;
     margin-left: 2%;
     margin-right: 2%;
-    min-width: 300px;
 }
 
-section figure img {
-    border: 1px;
-    flex-basis:400px;
+img {
     border-radius: 25px;
-    
 }
 
 hr {
@@ -204,16 +199,16 @@ body {
 /* INICIO FOOTER*/
 
 footer {
-    margin-left: 20%;
+    margin-left: 20% ;
     margin-right: 20%;
 }
 
-footer article {
+footer article{
     margin-top: 2%;
 }
 
 
-footer b {
+footer b {    
     margin: auto;
     color: beige;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -293,3 +288,8 @@ input[type="submit"]:hover {
 .col-6 {
     width: calc(46% - 10px);
 }
+
+
+
+
+

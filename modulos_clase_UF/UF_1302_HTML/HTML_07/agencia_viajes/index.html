@@ -62,6 +62,14 @@
         <figure id="alinear_img_piloto">
             <img class="bordes espaciado alinea_drcha ocultar_imagen " src="img/piloto_azafatas.svg" alt="">
         </figure>
+
+        <video width="420" height="240" poster="img/fondo_video.svg" controls>
+                
+            <source src="img/Video_promocional.mp4"
+                type="video/mp4" >
+
+            Tu navegador no soporta este formato de video.
+        </video>
         <h1 class="">¡Los valores que nos representan!</h1>
         <article class="gradient_fondo">
             <figure class="imagenes_main">
@@ -123,7 +131,7 @@
         <h1>¡Entra si ya tienes cuenta!</h1>
 
         <form class="separacion">
-            <input name="nombre" type="text" placeholder="Nombre" />
+            <input name="nombre" type="text" placeholder="Nombre" pattern="[a-zA-Z ]+"/>
             <input name="password" type="password" placeholder="Contraseña" />
             
             <button id="enviar" name="enviar" type="submit" class="btn">Entrar</button><hr class="separacion" />

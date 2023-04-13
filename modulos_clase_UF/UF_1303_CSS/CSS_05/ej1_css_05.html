@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_1_css_05</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        img{
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+
+        }
+        hr{
+            margin: 4%;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+        section{            
+            margin: auto;            
+        }
+        section:first-of-type{
+            
+            background: linear-gradient(to right, white 0%, yellow 50%, red 100%);
+
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(2){
+
+            background: linear-gradient(45deg, rgba(255,0,0,0.5)0%, rgba(0,0,255,0.5)100%);
+
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(3){
+
+            background: repeating-linear-gradient(to right, white 0%, green 20%);
+
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(4){
+
+            background: radial-gradient(circle, white, blue);
+
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(5){
+
+            background: radial-gradient(ellipse, white,blue);
+
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(6){
+
+            background: repeating-radial-gradient(rgb(74, 160, 88), rgb(131, 179, 207) 10%, rgb(255, 255, 255) 15%);
+
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+        section:nth-of-type(7){
+
+            background: conic-gradient(#A100FFFF,#119CFDFF);
+            margin-top: 1%;        
+            border: 1px solid black;
+            width: 90%;
+            height: 15vh;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Tipos de linear Gradient</h1>
+        <hr />
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+
+
+    </main>
+</body>
+</html>
