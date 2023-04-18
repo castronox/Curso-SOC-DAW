@@ -72,6 +72,7 @@ nav ul li a:hover {
 }
 
 .formulario label {
+    vertical-align: baseline;
     font-weight: bold;
     color: #1b94cc;
 }
@@ -128,7 +129,9 @@ footer {
     color: #14507a;
     padding: 20px;
     text-align: center;
+
 }
+
 
 
 .redes-sociales a img {

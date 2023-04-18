@@ -8,24 +8,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Lexend+Tera:wght@600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Lexend+Tera:wght@600&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <title>Salford</title>
     <link rel="stylesheet" href="css/estilos_general.css">
     <style>
+                @font-face {
+            font-family: 'klavika_bold';
+            src: url('fonts/klavika-bold.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a{
+            text-decoration: none;
+            color: #14507a;
+        }
+
         h1 {
             font-family: 'Bubbler One', sans-serif;
             font-size: 5em;
+            color: #1b94cc;
+            
+            
         }
 
         h1,
         h2,
         h3 {
+            
             color: #1b94cc;
 
         }
 
-        video{
+        video {
             flex-basis: 600px;
         }
 
@@ -35,14 +54,16 @@
         }
 
         section p {
+            font-family: 'klavika_bold';
             margin-top: 30px;
             font-size: 1.2rem;
             line-height: 1.5;
+            text-align: justify;
         }
 
         .presentacion {
             background-image: url(img/fondo_video.svg);
-            
+
         }
 
         .presentacion h2 {
@@ -62,11 +83,14 @@
 
         .experiencias li h3 {
             margin-top: 20px;
+            text-align: center;
+            font-size: 1.5rem;
         }
 
         .experiencias li p {
             font-size: 1.1rem;
             line-height: 1.5;
+            text-align: justify;
         }
 
         .experiencias li img {
@@ -87,6 +111,7 @@
         .reservas h2,
         .reservas p {
             color: #14507a;
+            text-align: center;
         }
 
         .reservas select {
@@ -94,13 +119,42 @@
             background-color: #fff;
         }
 
+        main section form label {
+            vertical-align: baseline;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1b94cc;
+            margin-right: 10px;
+        }
 
+        input[type="text"],
+        input[type="email"],
+        select {
+            font-size: 1.2rem;
+            padding: 8px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #1b94cc;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <figure><a href="index.html"><img src="img/salford_icon.svg" title="salford_icon" alt="icono_salford"></a></figure>
+        <figure><a href="index.html"><img src="img/salford_icon.svg" title="salford_icon" alt="icono_salford"></a>
+        </figure>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -128,9 +182,8 @@
         <section class="presentacion">
             <h2>¿Qué ofrecemos?</h2>
             <video width="420" height="240" poster="img/fondo_video.svg" controls>
-                
-                <source src="img/Video_promocional.mp4"
-                    type="video/mp4" >
+
+                <source src="img/Video_promocional.mp4" type="video/mp4">
 
                 Tu navegador no soporta este formato de video.
             </video>
@@ -144,7 +197,8 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="img/experiencia1.jpg" title="exploracion_marina" alt="Experiencia_1_exploracion_marina">
+                        <img src="img/experiencia1.jpg" title="exploracion_marina"
+                            alt="Experiencia_1_exploracion_marina">
                         <h3>Exploración marina</h3>
                         <p>Un día de exploración de la vida marina. Observa tiburones, peces tropicales, tortugas y
                             mucho más.</p>
@@ -175,7 +229,8 @@
             <div class="formulario">
                 <form action="#">
                     <label for="nombre-reservas">Nombre:</label>
-                    <input type="text" id="nombre-reservas" name="nombre-reservas" pattern="[a-zA-Z ]+" required="required">
+                    <input type="text" id="nombre-reservas" name="nombre-reservas" pattern="[a-zA-Z ]+"
+                        required="required">
 
                     <label for="email-reservas">Email:</label>
                     <input type="email" id="email-reservas" name="email-reservas" required="required">
@@ -202,7 +257,9 @@
             <a href="#"><img src="img/facebook_icon.svg" title="fc_icon" alt="icono_facebook"></a>
             <a href="#"><img src="img/tumblr_icon.svg" title="tmblr_icon" alt="tumblr_icon"></a>
         </div>
-        <p>&copy; Salford Experiencias en Barco 2023. Todos los derechos reservados.</p>
+        <p>&copy; Salford Experiencias en Barco 2023. Todos los derechos reservados. <a href="index.html"> <span class="material-symbols-outlined">
+            home
+            </span></a>&nbsp;Vuelve a inicio.</p>
     </footer>
 
 

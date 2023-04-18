@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 06 Formasteado de texto</title>
+
+    <style>
+        /*Formateado de la pagina*/
+        *{
+            
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*Fin formateado de la pagina*/
+        body{
+            background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #F6F3FABD 1%, #4C00FCFF 92%);
+        }
+        /*Header*/
+        
+        header{
+            display:flex;
+            flex-direction: row-reverse;
+            min-height: 7em;
+            
+        }
+        header h1{
+            text-shadow: 4px 3px 9px rgb(0, 0, 0);
+            text-align: center;
+            flex: 2;
+            vertical-align: middle;
+            padding: 2%;
+            margin: 2%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(240, 152, 21);
+        }
+
+        main section{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+
+
+        }
+        main p{
+            margin: 1%;
+            padding: 2%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        
+
+        main section p{
+            text-indent: 7%;
+        }
+
+        p:first-letter{
+            color: rgb(255, 0, 0);
+            font-size: 2em;
+        }
+
+        main h1 {
+            text-shadow: 4px 3px 9px rgb(238, 158, 11);
+            text-align: center;
+            margin: 1%;
+            padding: 1.2%;
+            font-size: 5vw;
+            font-weight: 500;
+            
+        }
+        header nav {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            margin: 2%;
+            padding: 2%;
+            
+        }
+        header ul li{
+            justify-content: space-around;
+            padding: 1vh ;
+            display: inline-flex;
+            
+        }
+        header ul{
+            padding: 2%;
+        }
+
+        main section:nth-of-type(odd){
+            flex-direction: row-reverse;
+
+        }
+        p:nth-last-of-type(2){
+            vertical-align: baseline;
+        }
+
+        main section figure{
+            align-items: center;
+            padding: 2.9%;
+                
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+        <nav>
+            <ul>
+                <li>inicio</li>
+                <li>contacto</li>
+                <li>informacion</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Bloques de foto-texto, texto foto </h1>
+
+
+        <section>
+            <figure><img src="img/naranja_.png" alt=""></figure>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis modi aperiam magni illo quos, quam dignissimos cumque, at error quo, quibusdam ea consectetur iure. Corporis inventore aperiam animi debitis ad.</p>
+        </section>
+
+        <section>
+            <figure><img src="img/naranja_.png" alt=""></figure>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis modi aperiam magni illo quos, quam dignissimos cumque, at error quo, quibusdam ea consectetur iure. Corporis inventore aperiam animi debitis ad.</p>
+        </section>
+
+
+
+    </main>
+    <footer>
+
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_07 EJ 1</title>
+
+    <style>
+        @font-face {
+            font-family: 'klavika_bold';
+            src: url('fonts/klavika-bold.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'klavika_italic';
+            src: url('fonts/klavika-light-italic.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'klavika';
+            src: url('fonts/klavika-regular-italic.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        
+
+        p.normal {
+            font-weight: normal;
+            font-style: normal;
+            font-family: 'klavika', sans-serif;
+        }
+
+        p.italic {
+            font-weight: normal;
+            font-style: italic;
+            font-family: 'klavika_italic', sans-serif;
+        }
+
+        p.bold {
+            font-weight: bold;
+            font-style: normal;
+            font-family: 'klavika_bold', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="normal">
+        Esta es la versión normal de la fuente "klavika". Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam condimentum lectus vitae fermentum bibendum. Curabitur vestibulum aliquam dolor, vitae pretium mauris
+        semper ac.
+    </p>
+    <p class="italic">
+        Esta es la versión itálica de la fuente "klavika". Sed quis pellentesque quam, sit amet blandit justo. Donec sed
+        luctus ex. Aliquam vitae commodo nisl. Sed et enim mollis, malesuada arcu sed, placerat elit.
+    </p>
+    <p class="bold">
+        Esta es la versión negrita de la fuente "klavika". Cras nibh nibh, commodo eu mauris ac, bibendum hendrerit
+        ipsum. Quisque tincidunt justo dolor, a elementum turpis accumsan sed. Integer semper, lectus blandit semper
+        viverra, mi leo mattis urna, eget dignissim ligula lectus at enim.
+    </p>
+</body>
+
+</html>
