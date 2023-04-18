@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeBook</title>
+    <style>
+        * {
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            list-style: none;
+            text-decoration: none;
+        }
+        img{
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: 'klavica';
+            src: url("fonts/klavika-bold.otf");
+        }
+
+
+        /*header*/
+        header {
+            height: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #3b5998;
+        }
+
+        header>h1 {
+            font-family: klavica;
+            font-size: xxx-large;
+            color: #ffff;
+            display: flex;
+            flex: 1;
+            line-height: 135px;
+            margin-left: 2%;
+            
+            
+        }
+
+        header
+        section
+        form
+        {
+            
+            min-width: 20%;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        form,
+        label,
+        button {
+            color: #ffffffb6;
+            display: inline-flex;
+            
+            margin: 2.3%;
+            padding: 0.8px;
+
+        }
+
+        header,
+        a {
+            color: #ffffff8c;
+        }
+
+        
+        div,
+        label,
+        input {
+            
+            display: block;
+            padding: 1%;
+            margin-bottom: 1.5%;
+            
+
+        }
+
+        button {
+            
+            color: #ffff;
+            margin-bottom: 2.9em;
+            padding: 0.3em 1em 0.3em 1em;
+            margin-left: 1%;
+            background-color: #617db8;
+        }
+
+        input[type="checkbox"],[type="radio"] {
+            display: inline;
+        }
+
+        #cerrar_sesion {
+            color: #ffffff8c;
+        }
+
+        /*Fin - header*/
+
+        /*INICIO - MAIN */
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            background-image: linear-gradient(360deg, #3b58985d, #ffff);
+        }
+
+        h3,
+        figure {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #233e77;
+            margin: 3%;
+        }
+
+        main,
+        section {
+            margin: auto;     
+        }
+
+        .registro {
+            display: inline;
+        }
+
+        .caja_registro {
+            display: inline-block;
+            flex-wrap: wrap;
+            min-width: 380px;
+        }
+
+        #new_pwd_registro,
+        input[type="email"] {
+
+            padding-right:180px;
+
+        }
+        .anchura{
+            border:1.5px solid #3b58984f;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .miid::placeholder {
+            
+            padding-right:385px;
+            text-overflow: ellipsis;
+        }
+        h2{
+            font-family: Verdana, Geneva, sans-serif;
+            margin-top: 2.5%;
+            padding: 1%;
+            font-size: xx-large;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 1%;
+        }
+        hr{
+            margin-top: -6.5%;
+        }
+            
+        .negro{
+            color: rgb(0, 0, 0);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .fuente_small{
+            font-size: x-small;
+        }
+        .enlace_nacimiento{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .caja{
+            display: flex;
+            margin: 1%;
+        }
+
+        .caja_bloque{
+            display: flex;
+            margin: 1%;
+            display: inline-block;
+        }
+        .color_face{
+            color: #3b5998;
+        }
+        .inline_box{
+            display: inline;
+        }
+        .privacidad{
+            max-width: 265px;
+        }
+        .boton_terminado{
+            background-image: linear-gradient(360deg, #448053, #4fb157);
+            border: 0.5px solid rgb(40, 66, 40);
+            border-radius: 0.5px;
+            padding: 15px 45px 15px 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+            text-shadow: #070707 3px 1px 5px;
+        }
+        .imagen_mapa{
+            margin-left: 3%;
+            margin-top: 2%;
+        }
+
+        @media (max-width: 768px) {
+        form,
+        label,
+        button {
+            color: #ffffffb6;
+            display: inline-block;
+            flex-wrap: wrap;
+            margin: 2.3%;
+            padding: 0.8px;
+
+        } 
+        
+        h1{
+            margin-top: 12%;
+        }
+
+        hr{
+            margin-top: -3.5%;
+        }
+        main{
+            padding-left: 2%;
+        }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>fakebook</h1>
+
+        <section id="">
+            <form action="#">
+
+                <div>
+
+                    <div>
+                        <label for="email">Correo o telefono</label>
+                        <input type="text" name="correo_telefono" id="correo_telefono">
+                    </div>
+
+                    <div>
+                        <label for="cerrar_sesion" id="cerrar_sesion"><input type="checkbox" name="cerrar_sesion"
+                                id="cerrar_sesion">&nbsp;No cerrar sesión</label>
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="pwd">Contraseña</label>
+                    <input type="password" name="pwd" id="pwd">
+                    <a href="#"> Has olvidado tu contraseña?</a>
+                </div>
+                <div>
+                <button type="submit">Entrar</button>
+            </div>
+            </form>
+
+        </section>
+
+    </header>
+
+    <main>
+        <section class="imagen_mapa">
+
+            <h3>Facebook te ayuda a comuniucarte y <br />compartir con las personas que forman parte<br /> de tu vida
+            </h3>
+            <figure>
+                <img src="img/mapa.png" alt="mapa_del_facebook">
+            </figure>     
+        </section>
+
+        <section class="caja_registro">
+            <h2>Registrarte</h2><br/>
+            <p>Es gratis y lo será siempre.</p>
+            <form class="registro" action="">
+
+                <div>
+                    <input type="text" class="registro anchura" name="nombres" id="nombres" placeholder="Nombre">
+                    <input type="text" class="registro anchura" name="apellidos" id="apellidos" placeholder="Apellidos">
+                </div>
+
+                <div>
+                    <input type="email" class="miid anchura" placeholder="Correo  electrónico o número de movil">
+                </div>
+                <div>
+                    <input type="email" class="miid anchura" placeholder="Vuelve a introducir el correo electrónico o el ...">
+                </div>
+                <div class="inline_box">
+                    <input id="new_pwd_registro" class="anchura" type="password" placeholder="Contraseña nueva">
+                </div>
+
+                
+                <h4 class="negro">Fecha de nacimiento</h4>
+
+                    <div class="caja">
+                        
+                    <select name="ano" id="ano">
+                        <option value="1980">Jan</option>
+                        <option value="1981">Feb</option>
+                        <option value="1982">Mar</option>
+                        <option value="1988">Apr</option>
+                        <option value="1991">May</option>
+                        <option value="1983">Jun</option>
+                        <option value="1984">Jul</option>
+                        <option value="1985">Aug</option>
+                        <option value="1986">Sep</option>
+                        <option value="1987">Oct</option>
+                        <option value="1989">Nov</option>
+                        <option value="1990">Dec</option>
+                        
+                    </select>
+            
+                    <select name="day" id="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    
+                    
+                    <select name="ano" id="ano">
+                        <option value="1980">1980</option>
+                        <option value="1981">1981</option>
+                        <option value="1982">1982</option>
+                        <option value="1983">1983</option>
+                        <option value="1984">1984</option>
+                        <option value="1985">1985</option>
+                        <option value="1986">1986</option>
+                        <option value="1987">1987</option>
+                        <option value="1988">1988</option>
+                        <option value="1989">1989</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        
+            
+                    </select>
+                <div class="registro"> 
+                <a class="fuente_small enlace_nacimiento color_face" href="#">¿Porque tengo que dar mi<br/> fecha de nacimiento </a>
+                </div>
+                </div>
+                
+                <div class="inline_box">
+                
+                    <label for="hombre" class="negro inline_box" id=""><input type="radio" name="radio_hombre"
+                        id="">&nbsp;Hombre</label>
+
+                    <label for="mujer" class="negro inline_box" id=""><input type="radio" name="radio_mujer"
+                            id="">&nbsp;Mujer</label>
+                    
+                </div>
+
+                <div>
+                    <p class="negro fuente_small privacidad">Al hacer clic en Terminado, acepta las <a class="color_face" href="#">Condiciones</a> y confirmas que has leído nuestra <a class="color_face" href="#">Política de datos</a>, incluido el <a href="" class="color_face">Uso de las cookies</a></a></p>
+                </div>
+
+                <div><button class="boton_terminado">Terminado</button></div>
+
+                <hr />
+
+                <div>
+                    <p class="fuente_small" ><a class="color_face" href="#">Crea una página </a>para un pedrsonaje público, un grupo de músico o un negocio</p>
+                </div>
+
+
+
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
