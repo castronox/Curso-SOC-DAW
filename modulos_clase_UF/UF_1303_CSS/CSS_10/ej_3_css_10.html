@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_3_CSS_10</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    body{
+        margin: auto;
+        max-width: 1600px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    form{
+        min-width: 40%;
+        border: 1px solid black;
+    }
+
+    form{
+        
+        margin: 3%;     
+    }
+
+    fieldset, label, input, option, select{
+        margin: 2%;
+    }
+
+
+
+    label,select{
+        display: inline-block;
+        min-width: 170px;  
+    }
+    button{
+        padding: 4%;
+        margin :2%;
+    }
+
+
+
+        .sin_borde{
+            border: 0;
+        }
+        .bold{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-style:oblique;
+        }
+        input:focus{
+            outline: solid 5px red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset class="sin_borde">
+            <h1>Entrada de datos</h1>
+        </fieldset>
+        
+        <fieldset class="sin_borde bold">
+            
+            <label for="">Parametros</label>
+        </fieldset>
+
+        <fieldset class="sin_borde">
+            <div>
+                <label for="">Preguntas:</label>
+                <input type="number">
+            </div>
+            
+            <div>
+                <label for="">Descuento por error:</label>
+                <select>
+                    <option>0%</option>
+                    <option>5%</option>
+                    <option>20%</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="sin_borde bold">
+            <label for="">Resultados</label>
+        </fieldset>
+        <fieldset class="sin_borde">
+            <div>
+                <label for="">Aciertos:</label>
+                <input type="number">
+            </div>
+            
+            <div>
+                <label for="">Errores:</label>
+                <input type="number">
+            
+            </div>
+
+            <div>
+                <button>calcular</button>
+            </div>
+        </fieldset>
+
+
+
+        <div>
+
+
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+header{
+    display: flex;
+    
+    background-image: url(img/fondo_header.png);
+
+}
+
+
+
+.container{
+
+    display: flex;
+    flex: 1;    
+
+}
+
+header figure{
+text-align: left;
+}
+
+.font_rock{
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    color: #545454;
+}
+
+img{
+
+    width: 100%;
+}
+
+#logo{
+    max-width: 130px;
+}
+
+header figure{
+
+    justify-content: flex-start;
+}
+
+div:first-of-type{
+    text-align: left;
+}
+
+#titulo{
+    text-align: center;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+figure{
+    min-width: 100px; 
+    max-width: 250px;  
+}
+
+figure figcaption{
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+    color: #545454;
+    display: flex; 
+    justify-content: center;
+}
+
+
+
+
+
+figure{
+    flex: 1;
+}
