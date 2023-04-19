@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 1 css</title>
+    <style>
+        td ,th{
+            
+            padding:10px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        thead, th{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 3px 3px 3px black;
+            color: white;
+            background-color: red;
+        }
+        tbody tr:nth-of-type(1){
+            background-color:#eee;    
+        }
+        tbody tr:nth-of-type(4){
+            background-color:#eee;    
+        }
+
+        tbody tr:nth-of-type(5){
+            background-color:#faa;
+                font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <table border="1">
+        
+        <caption>Titulo de la tabla</caption>
+    <thead>
+            <tr>
+                <th rowspan="2">Alumno</th>
+                <th colspan="3">Notas</th>
+                
+            </tr>
+            <tr>
+                <td>Teoria</td>
+                <td>Practica</td>
+                <td>Final</td>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Margaria flores</td>
+            <td rowspan="2">5</td>
+            <td rowspan="2">7</td>
+            <td rowspan="2">6</td>
+        </tr>
+        
+        <tr>
+        </tr>
+
+        <tr>
+            <td>Juan martín</td>
+            <td>8</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Pedro López</td>
+            <td>6</td>
+            <td>6</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Promedio</td>
+            <td>6.33</td>
+            <td>6.33</td>
+            <td>6.33</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>

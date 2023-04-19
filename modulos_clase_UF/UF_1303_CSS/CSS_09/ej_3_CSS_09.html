@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <title>EJ_3_CSS_09</title>
+
+    <style>
+        caption {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: xx-large;
+            margin: 3%;
+
+        }
+
+        table {
+            margin: auto;
+            font-size: 100%;
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid black;
+            padding: 2vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        tr td:nth-of-type(1) {
+            border-radius: 5px 0px 0px 5px;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+            font-size: smaller;
+
+
+        }
+
+        tbody tr td:first-child {
+            background: rgb(46, 222, 32);
+            background: linear-gradient(238deg, rgba(46, 222, 32, 1) 25%, rgba(247, 255, 0, 1) 99%);
+
+        }
+
+        thead tr td:nth-of-type(2) {
+            background: rgb(46, 222, 32);
+            background: linear-gradient(20deg, rgba(46, 222, 32, 1) 25%, rgba(247, 255, 0, 1) 99%);
+
+        }
+
+        thead tr td:nth-of-type(3) {
+            background: rgb(46, 222, 32);
+            background: linear-gradient(20deg, rgba(46, 222, 32, 1) 25%, rgba(247, 255, 0, 1) 99%);
+
+        }
+
+        thead tr td:nth-of-type(4) {
+            background: rgb(46, 222, 32);
+            background: linear-gradient(20deg, rgba(46, 222, 32, 1) 25%, rgba(247, 255, 0, 1) 99%);
+
+        }
+
+        thead tr td:nth-of-type(5) {
+            background: rgb(46, 222, 32);
+            background: linear-gradient(20deg, rgba(46, 222, 32, 1) 25%, rgba(247, 255, 0, 1) 99%);
+
+        }
+
+        thead tr td {
+            border-radius: 5px 5px 0px 0px;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+            font-size: smaller;
+        }
+
+        tbody tr td {
+            background-color: rgba(169, 235, 169, 0.349);
+        }
+
+        tfoot tr td {
+            border: 0;
+            font-size: x-large;
+            font-weight: bolder;
+            color: rgb(64, 212, 64);
+            text-shadow: 4px 2px 4px rgb(2, 44, 12);
+        }
+
+        tfoot tr td:first-of-type {
+            color: black;
+            text-shadow: 0px 0px 0px;
+
+        }
+
+        span {
+
+            color: green;
+        }
+
+
+        .sin_estilo {
+
+            border: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table class="borde">
+        <caption>Tabla a reproducir EJ_3 CSS_09</caption>
+        <thead>
+            <tr>
+                <td class="sin_estilo" colspan="2"></td>
+                <td>Inicial</td>
+                <td>Media</td>
+                <td>Negocios</td>
+                <td>Deluxe</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">Espacio</td>
+                <td>512 MB</td>
+                <td>1 GB</td>
+                <td>2 GB</td>
+                <td>4 GB</td>
+            </tr>
+            <tr>
+                <td colspan="2">Ancho de banda</td>
+                <td>50 GB</td>
+                <td>100 GB</td>
+                <td>150 GB</td>
+                <td>Ilimitado</td>
+            </tr>
+            <tr>
+                <td colspan="2">Bases de datos Maria DB</td>
+                <td>Ilimitado</td>
+                <td>Ilimitado</td>
+                <td>Ilimitado</td>
+                <td>Ilimitado</td>
+            </tr>
+            <tr>
+                <td colspan="2">Bases de datos MySQL</td>
+                <td>1</td>
+                <td>5</td>
+                <td>10</td>
+                <td>Ilimitado</td>
+            </tr>
+            <tr>
+                <td colspan="2">PHP</td>
+                <td>
+                    <span class="material-symbols-outlined">
+                        done_outline
+                    </span>
+                </td>
+
+                <td>
+                    <span class="material-symbols-outlined">
+                        done_outline
+                    </span>
+                </td>
+
+                <td>
+                    <span class="material-symbols-outlined">
+                        done_outline
+                    </span>
+                </td>
+
+                <td>
+                    <span class="material-symbols-outlined">
+                        done_outline
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Precio por mes</td>
+                <td>2,99€</td>
+                <td>4,99€</td>
+                <td>6,99€</td>
+                <td>19,99€</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

@@ -109,7 +109,19 @@
                 font-size: 22px;
             }
         }
-
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
 
     </style>
 </head>
@@ -137,6 +149,36 @@
             </form>
         </div>
     </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Experiencia</th>
+                <th>Niños</th>
+                <th>Adultos</th>
+                <th>Jubilados/Pensionistas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cena romántica</td>
+                <td>$40</td>
+                <td>$80</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>Exploración Marina</td>
+                <td>$25</td>
+                <td>$50</td>
+                <td>$40</td>
+            </tr>
+            <tr>
+                <td>Pesca Deportiva</td>
+                <td>$30</td>
+                <td>$60</td>
+                <td>$50</td>
+            </tr>
+        </tbody>
+    </table>
     <div class="container">
         <div class="form-header">
             <h1>Formulario de Reserva</h1>
