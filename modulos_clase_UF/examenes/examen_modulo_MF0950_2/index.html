@@ -11,13 +11,17 @@
 <body >
 
     <header class="background_color">
-        <section>
+    <section>   
         <h1><a href="index.html">KLAY NOX SHOES</a></h1>
-        <figure>
+    </section>
+    
+    <section>
+        <figure>            
             <a href="index.html"><img src="img/klay_nox_logo_solo.svg" title="klay_nox_logo_header" alt="imagen_de _marca"></a>
         </figure>
-        </section>
-        <section>
+    
+    </section>
+    <section>
         <nav>
             <ul>
                 <li><a href="registro.html">Registro</a></li>
@@ -26,6 +30,8 @@
                 <li><a href="index.html">Inicio</a></li>
             </ul>
         </nav>
+    </section>
+        <section>
         <form action="#">
             <fieldset>
             <label for="usuario">Usuario:</label>
@@ -37,10 +43,14 @@
             <input type="password" name="pwd" id="pwd">
             </fieldset>
 
-            <fieldset>
+            <fieldset id="recordar_sesion">
                 
-                <input type="checkbox" name="recordar_sesion" id="recordar_sesion">
-                <label for="recordar_sesion">Mantener sesion iniciada</label>
+                <label for="recordar_sesion"><input type="checkbox" name="recordar_sesion" id="recordar_sesion">
+                Mantener sesion iniciada</label>
+                
+            </fieldset>
+
+            <fieldset>
                 <button type="submit">Enviar</button>
             </fieldset>
         </form>

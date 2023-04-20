@@ -1,12 +1,4 @@
-.background_color {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-    background-image: radial-gradient(49% 81% at 45% 47%, #FFFBFB45 0%, #073AFF00 100%), radial-gradient(113% 91% at 17% -2%, #FFFFFFFF 1%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #000000FF 1%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #000000FF 1%, #F1EBEB00 99%), radial-gradient(142% 91% at 111% 84%, #FFFFFFFF 0%, #ECDEDEFF 100%);
-}
-
 * {
-
     padding: 0;
     margin: 0;
 }
@@ -16,113 +8,115 @@ ul {
 
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 header section h1 a {
-    
-    color: #3f3f3f;
-    
-}
-header section ul li a{
     color: #3f3f3f;
 }
-header section h1 a:visited{
+
+header section ul li a {
     color: #3f3f3f;
 }
-header section ul li a:visited{
+
+header section h1 a:visited {
+    color: #3f3f3f;
+}
+
+header section ul li a:visited {
     color: #ebecec;
 }
 
-img{
+img {
     width: 95%;
 }
 
 @font-face {
-
     font-family: 'klay_font';
     src: url("../fonts/Milyuna-regular.ttf");
 }
-@font-face {
 
+@font-face {
     font-family: 'klay_generic';
     src: url("../fonts/TaxiDriver.ttf");
 }
+
 header {
-    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(49% 81% at 45% 47%, #FFFBFB45 0%, #073AFF00 100%), radial-gradient(113% 91% at 17% -2%, #FFFFFFFF 1%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #000000FF 1%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #000000FF 1%, #F1EBEB00 99%), radial-gradient(142% 91% at 111% 84%, #FFFFFFFF 0%, #ECDEDEFF 100%);
+
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
     align-items: center;
-    
-
 }
-header section{
+
+header section {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-
 header figure img {
     margin: auto;
     display: flex;
+    width: 70%;
     flex: 1;
     flex-wrap: wrap;
     padding: 2.5%;
     justify-content: center;
     align-items: center;
-    width: 27%;
     transition: 1s;
-
-
 
 }
 
-header figure img:hover {
-    width: 27%;
+header img:hover {
+    width: 75%;
     filter: opacity(0.5);
-    overflow: hidden;
     transition: 1s;
 
 }
 
 header h1 {
-    
+
     color: #3f3f3f;
-    padding: 2.5%;
+    padding: 1.5%;
     justify-content: center;
     text-align: center;
     flex: 4;
     display: flex;
     font-family: 'klay_font';
-    font-size: 2.7vw;
-    text-shadow: 4px 3px 6px #6e6b6b;
+    font-size: 2.5vw;
+    text-shadow: 4px 3px 6px #d1cdcd;
     transition: 0.3s;
 
 }
-header h1:hover{
+
+header h1:hover {
     text-shadow: 9px 9px 9px;
     transition: 0.3s;
 }
-nav{
-    display: flex;
-    justify-content: center;
-    flex: 3;
-    margin: 2%;
 
+nav {
+    display: flex;
+    flex: 3;
 }
-nav ul li{
-    
+
+header nav ul li {
+
     margin: 2%;
     display: block;
-    
+    padding: 5px;
+
 }
 
 
-nav ul li a{
+
+
+nav ul li a {
     display: flex;
     text-shadow: 4px 3px 6px #6e6b6b;
     font-size: 1.4rem;
@@ -130,37 +124,33 @@ nav ul li a{
     font-family: 'klay_generic';
 }
 
-header form{  
+header form {
     flex: 2;
     display: block;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin:2%;
+    margin: 1%;
 }
-
-
 
 header form fieldset {
     border: none;
-    padding:2%;
-    margin: 1%;
-    
-    
-    
 }
 
-label,input{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:#d8d8d8;
-    font-size: 0.8rem;
-    min-width: 65px;
+label,
+input {
+    border: none;
+    border-radius: 5px;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #d8d8d8;
+    font-size: 0.9rem;
     display: flex;
-    margin-right: 1%;
-    padding: 1%;
+    margin: 1%;
+    padding: 5px;
 }
 
-header button{
+header button {
+    color: #3f3f3f;
     margin-top: 14%;
     border-radius: 3px;
     border: none;
@@ -171,68 +161,106 @@ header button{
     transition: 0.2s;
 }
 
-header button:hover{
+header button:hover {
+
+
     color: #ffffff;
-    background-color: #727272;
+    background-color: #bebaba;
     box-shadow: 6px 6px 6px #575757;
     transition: 0.2s;
-    
+
 }
-section:nth-of-type(1){
+
+header section:nth-of-type(1) {
     flex: 3;
     display: flex;
-    gap: 5%;
+
 }
-section:nth-of-type(2){
+
+header section:nth-of-type(2) {
     flex: 1;
     margin: 3%;
 }
 
-header section ul{
-margin-right: 90%;
+header section:nth-of-type(3) {
+    flex: 1;
+    margin: 3%;
 }
 
-@media (max-width: 769px){
-    header figure img{
-        width: 40%;
-    }
-    header img{
+header section:nth-of-type(4) {
+    flex: 1;
+    margin: 3%;
+}
+
+header section ul {
+    margin-right: 90%;
+}
+
+@media (max-width: 769px) {
+
+    header section figure,
+    img {
         visibility: hidden;
+        width: 0;
     }
-    header h1{
-        margin-left: 30%;
+
+    header h1 {
+
         font-size: 3rem;
     }
-    header{
+
+    a {}
+
+    header {
         display: block;
     }
-    header section:nth-of-type(2){
+
+    header section {
         display: flex;
+
+    }
+
+    header ul,
+    li {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 6px 6px 6px 6px;
+        margin:auto;
+        margin-left: 2%;
         
     }
-    header ul li{
-        padding-top: 6px;
-        padding-bottom: 6%;
-    }
-    
-    label,input{
+
+    label,
+    input {
         max-width: 20%;
     }
-    button{
-        margin-top:4%;
+
+
+    header section form {
+        
+        display: inline-block;
+        margin: 2%;
     }
 
-    header section ul{
-        margin-right: 30%;
-    }      
+    header form,
+    fieldset,
+    label,
+    input {
+        min-width: 90px;
+        display: flex;
+        padding: 5px;
+        margin: auto;
+    }
+
+    header form fieldset button {
+        display: inline-block;
+        margin-bottom: 5%;
+        margin-left: 37%;
+
+    }
 
 }
-
-
-
-
-
-
 
 @font-face {
 
