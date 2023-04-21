@@ -5,27 +5,10 @@
 
 ul {
     list-style-type: none;
-
 }
 
 a {
     text-decoration: none;
-}
-
-header section h1 a {
-    color: #3f3f3f;
-}
-
-header section ul li a {
-    color: #3f3f3f;
-}
-
-header section h1 a:visited {
-    color: #3f3f3f;
-}
-
-header section ul li a:visited {
-    color: #ebecec;
 }
 
 img {
@@ -54,6 +37,11 @@ header {
     align-items: center;
 }
 
+header section h1 a {
+    color: #3f3f3f;
+}
+
+
 header section {
     display: flex;
     align-items: center;
@@ -74,11 +62,15 @@ header figure img {
 }
 
 header img:hover {
-    width: 75%;
+    
     filter: opacity(0.5);
     transition: 1s;
 
-}
+
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;}
 
 header h1 {
 
@@ -105,24 +97,62 @@ nav {
     flex: 3;
 }
 
-header nav ul li {
+header section ul li a {
+    color: #3f3f3f;
+    
+}
 
-    margin: 2%;
-    display: block;
-    padding: 5px;
+header section h1 a:visited {
+    color: #3f3f3f;
+}
 
+header section ul li a:visited {
+    color: #ebecec;
 }
 
 
 
+header nav ul li {
 
-nav ul li a {
-    display: flex;
+    transition: 0.5s;
+    margin: 2%;
+    display: block;
+    padding: 10px 15px 10px 15px;
+
+}
+
+header section ul li:hover{
+    transition: 0.5s;
+    background-color: #6e6b6ba2;
+    padding: 9px 35px 9px 35px;
+    border-radius: 50px;
+}
+
+header nav ul li a {
+    
+    display:inline-flex;
     text-shadow: 4px 3px 6px #6e6b6b;
     font-size: 1.4rem;
     color: #d8d8d8;
     font-family: 'klay_generic';
 }
+
+header span{
+    color: #ebecec00;
+    display: none;
+    visibility: hidden;
+    transition: 0.3s;
+    
+}
+
+header li:hover span{
+    color: #ffffff;
+    display: inline-block;
+    visibility: visible;
+    transition: 0.6s;
+}
+
+
 
 header form {
     flex: 2;
@@ -137,7 +167,7 @@ header form fieldset {
     border: none;
 }
 
-label,
+header label,
 input {
     border: none;
     border-radius: 5px;
@@ -209,10 +239,11 @@ header section ul {
         font-size: 3rem;
     }
 
-    a {}
+
 
     header {
         display: block;
+        height: 55vw;
     }
 
     header section {
@@ -223,41 +254,22 @@ header section ul {
     header ul,
     li {
         display: flex;
+        flex-wrap: wrap;
         text-align: center;
         justify-content: center;
-        padding: 6px 6px 6px 6px;
-        margin:auto;
+        padding: 2%;
+        transition: 0.5s;
         margin-left: 2%;
+        font-size: 0.5rem;
         
     }
-
-    label,
-    input {
-        max-width: 20%;
+    header ul div{
+        display: flex;
+        margin-left: 17%;
     }
-
 
     header section form {
-        
-        display: inline-block;
-        margin: 2%;
-    }
-
-    header form,
-    fieldset,
-    label,
-    input {
-        min-width: 90px;
-        display: flex;
-        padding: 5px;
-        margin: auto;
-    }
-
-    header form fieldset button {
-        display: inline-block;
-        margin-bottom: 5%;
-        margin-left: 37%;
-
+        visibility: hidden;
     }
 
 }
