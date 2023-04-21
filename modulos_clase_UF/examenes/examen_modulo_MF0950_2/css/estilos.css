@@ -16,6 +16,12 @@ img {
 }
 
 @font-face {
+
+    font-family: 'klay_font';
+    src: url("../fonts/Milyuna-regular.ttf");
+}
+
+@font-face {
     font-family: 'klay_font';
     src: url("../fonts/Milyuna-regular.ttf");
 }
@@ -62,7 +68,7 @@ header figure img {
 }
 
 header img:hover {
-    
+
     filter: opacity(0.5);
     transition: 1s;
 
@@ -70,7 +76,8 @@ header img:hover {
     -webkit-transform: rotateY(180deg);
     -webkit-transform-style: preserve-3d;
     transform: rotateY(360deg);
-    transform-style: preserve-3d;}
+    transform-style: preserve-3d;
+}
 
 header h1 {
 
@@ -92,14 +99,14 @@ header h1:hover {
     transition: 0.3s;
 }
 
-nav {
+header nav {
     display: flex;
     flex: 3;
 }
 
 header section ul li a {
     color: #3f3f3f;
-    
+
 }
 
 header section h1 a:visited {
@@ -121,7 +128,7 @@ header nav ul li {
 
 }
 
-header section ul li:hover{
+header section ul li:hover {
     transition: 0.5s;
     background-color: #6e6b6ba2;
     padding: 9px 35px 9px 35px;
@@ -129,23 +136,23 @@ header section ul li:hover{
 }
 
 header nav ul li a {
-    
-    display:inline-flex;
+
+    display: inline-flex;
     text-shadow: 4px 3px 6px #6e6b6b;
     font-size: 1.4rem;
     color: #d8d8d8;
     font-family: 'klay_generic';
 }
 
-header span{
+header span {
     color: #ebecec00;
     display: none;
     visibility: hidden;
     transition: 0.3s;
-    
+
 }
 
-header li:hover span{
+header li:hover span {
     color: #ffffff;
     display: inline-block;
     visibility: visible;
@@ -261,9 +268,10 @@ header section ul {
         transition: 0.5s;
         margin-left: 2%;
         font-size: 0.5rem;
-        
+
     }
-    header ul div{
+
+    header ul div {
         display: flex;
         margin-left: 17%;
     }
@@ -274,8 +282,3 @@ header section ul {
 
 }
 
-@font-face {
-
-    font-family: 'klay_font';
-    src: url("../fonts/Milyuna-regular.ttf");
-}
