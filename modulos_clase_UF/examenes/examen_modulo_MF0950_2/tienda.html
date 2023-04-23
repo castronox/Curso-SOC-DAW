@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>tienda</title>
     <style>
-        section:first-of-type{
+
+
+        main section:first-of-type{
             height: 6rem;
         }
-        .gallery {
+        section:nth-of-type(2){
             gap: 2%;
             display: flex;
             flex-wrap: wrap;
@@ -19,14 +21,14 @@
             align-items: center;
         }
 
-        .gallery a {
+        section:nth-of-type(2) a {
             
             flex-basis: calc(33.33% - 10px);
             margin-bottom: 20px;
             text-align: center;
         }
 
-        .gallery img {
+        section:nth-of-type(2) img {
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.349);
             border-radius: 13px;
             min-width: 10rem;
@@ -39,14 +41,14 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-container container">
+        <nav >
+            <section>
                 <input type="checkbox" name="" id="">
-                <div class="hamburger-lines">
+                <section class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
-                </div>
+                </section>
                 <ul class="menu-items">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -54,22 +56,22 @@
                     <li><a href="tienda.html">Tienda</a></li>
 
                 </ul>
-                <h1 class="logo">KN</h1>
-            </div>
+                <h1>KN</h1>
+            </section>
         </nav>
     </header>
     
     <main>
         <section></section>
         <section class="gallery">
-            <a href="producto1.html\"><img src="img/balenciaga_1.png" alt="Producto 1"></a>
-            <a href="producto2.html\"><img src="img/balenciaga_1.png" alt="Producto 2"></a>
-            <a href="producto3.html\"><img src="img/balenciaga_1.png" alt="Producto 3"></a>
-            <a href="producto4.html\"><img src="img/balenciaga_1.png" alt="Producto 4"></a>
-            <a href="producto5.html\"><img src="img/balenciaga_1.png" alt="Producto 5"></a>
-            <a href="producto6.html\"><img src="img/balenciaga_1.png" alt="Producto 6"></a>
-            <a href="producto7.html"><img src="img/balenciaga_1.png" alt="Producto 7"></a>
-            <a href="producto8.html\"><img src="img/balenciaga_1.png" alt="Producto 8"></a>
+            <a href="productos/producto_1.html"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 1"></a>
+            <a href="producto2.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 2"></a>
+            <a href="producto3.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 3"></a>
+            <a href="producto4.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 4"></a>
+            <a href="producto5.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 5"></a>
+            <a href="producto6.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 6"></a>
+            <a href="producto7.html"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 7"></a>
+            <a href="producto8.html\"><img class="sombreadeo"  src="img/balenciaga_1.png" alt="Producto 8"></a>
         </section>
 
     </main>

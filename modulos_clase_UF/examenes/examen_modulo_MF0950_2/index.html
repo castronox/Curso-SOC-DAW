@@ -12,35 +12,25 @@
     <title>Document</title>
 
     <style>
-        main h2, h1 {
+        main h2,
+        h1 {
             font-family: 'taxiDriver';
             text-align: center;
             margin-bottom: 3%;
             font-size: 6vw;
             color: rgb(255, 255, 255);
-            text-shadow: 6px 6px 6px rgba(70, 70, 70, 0.5);;
+            text-shadow: 6px 6px 6px rgba(70, 70, 70, 0.5);
+            ;
         }
 
-        main h2{
+        main h2 {
+            font-size: 4vw;
             color: rgb(68, 68, 68);
             margin-top: 4%;
         }
 
-        .imagen_banner{
-            background-image: url("img/fondo_klay_index.svg");
-            background-repeat:no-repeat ;
-            
-
-        }
-
-
-
-        .logo_branding {
-            text-align: center;
-            font-family: 'milyuna';
-            font-size: xx-large;
-            font-weight: bolder;
-            color: rgb(70, 70, 70);
+        main section:first-of-type {
+            height: 6rem;
         }
 
         main section figure,
@@ -53,21 +43,10 @@
         }
 
         main section {
-            
             width: 95%;
             display: flex;
             justify-content: center;
-            margin: 3%;
 
-        }
-
-        .distribucion div {
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 3%;
-            padding: 1%;
 
         }
 
@@ -76,10 +55,49 @@
         }
 
         figure {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        p{
+            color: #666666;
+        }
+
+
+
+        .distribucion{
+            transition: 0.7s;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 0.5%;
+        }
+
+        .distribucion div {
 
             display: flex;
-
+            align-items: center;
             justify-content: center;
+            margin: 3%;
+            padding: 1%;
+
+        }
+
+
+        .imagen_banner {
+            background-image: url("img/fondo_klay_index.svg");
+            background-repeat: no-repeat;
+
+
+        }
+
+        .logo_branding {
+            margin: auto;
+            text-align: center;
+            font-family: 'milyuna';
+            font-size: xx-large;
+            font-weight: bolder;
+            color: rgb(70, 70, 70);
         }
 
         @media (max-width: 768px) {
@@ -92,20 +110,24 @@
                 margin-top: 3.5%;
                 width: 80%;
             }
+
+            main section {
+                display: block;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-container container">
+        <nav>
+            <section>
                 <input type="checkbox" name="" id="">
-                <div class="hamburger-lines">
+                <section class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
-                </div>
+                </section>
                 <ul class="menu-items">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -113,22 +135,23 @@
                     <li><a href="tienda.html">Tienda</a></li>
 
                 </ul>
-                <h1 class="logo">KN</h1>
-            </div>
+                <h1>KN</h1>
+            </section>
         </nav>
     </header>
 
     <main>
+        <section></section>
 
 
         <section class="logo_branding imagen_banner">
-            <h1><br /><br />Klay Nox<br />Luxury & selected shoes</h1>
+            <h1><br /><br />Klay Nox<br />Calzado deportivo de lujo</h1>
 
         </section>
-        <hr />
+        
         <h2>Productos selectos, para gente selecta</h2>
 
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -146,7 +169,7 @@
             </div>
         </section>
 
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -164,7 +187,7 @@
             </div>
         </section>
 
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -182,7 +205,7 @@
             </div>
         </section>
 
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -200,7 +223,7 @@
             </div>
         </section>
 
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -217,7 +240,7 @@
                 </figure>
             </div>
         </section>
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -234,7 +257,7 @@
                 </figure>
             </div>
         </section>
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -251,7 +274,7 @@
                 </figure>
             </div>
         </section>
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -268,7 +291,7 @@
                 </figure>
             </div>
         </section>
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -285,7 +308,7 @@
                 </figure>
             </div>
         </section>
-        <section class="distribucion">
+        <section class="distribucion sombreadeo">
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, tempore recusandae quia nemo non
                     fugiat,
@@ -307,22 +330,23 @@
 
     </main>
     <footer>
-        <div class="footer-left">
+        <section>
             <img src="img/klay_nox_logo_solo.svg" alt="logo">
-        </div>
-        <div class="footer-center">
+        </section>
+        <section class="footer-center">
             <a href="https://www.facebook.com\"><i class="fab fa-tumblr"></i></a>
             <a href="https://www.facebook.com\"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com\"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <div class="footer-right">
+        </section>
+        <section class="footer-right">
             <form>
-                
-                <input type="email" id="email" name="email" placeholder="Suscribete a la newsletter!" required>
-                <button type="submit">Subscribe</button>
+
+                <input type="email" id="email" name="email" placeholder="Usuario" required>
+                <input type="password" name="pwd" id="pwd" placeholder="Contraseña" required>
+                <button type="submit">Inicia Sesion</button>
             </form>
-        </div>
+        </section>
     </footer>
 </body>
 
