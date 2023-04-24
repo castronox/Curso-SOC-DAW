@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Document</title>
+    <title>Balenciaga Sneakers</title>
     <style>
         .product-container {
             display: flex;
@@ -107,16 +107,27 @@
             height: 5rem;
         }
 
+        .centra_video video {
+            display: flex;
+            margin: auto;
+
+        }
 
         @media (max-width: 768px) {
             .product-container {
                 flex-direction: column;
             }
 
+            .centra_video video {
+                display: flex;
+                margin: auto;
+                max-width: 24rem;
+            }
+
 
             .product-image,
             .product-description {
-                flex-basis: 100%;
+                flex-basis: 70%;
                 margin-right: 0;
             }
         }
@@ -140,7 +151,7 @@
     <header>
         <nav>
             <section>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="hamburguesa" id="hamburguesa_desplegable">
                 <section class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
@@ -159,31 +170,35 @@
     </header>
     <main>
         <section class="espacio"></section>
+        <section class="centra_video"><video src="../video/balenciaga_video.mp4" controls></video></section>
         <div class="product-container">
             <div class="product-image">
-                <img src="../img/img_productos/balenciaga_shoe_1.svg" alt="Product Image">
-                <img src="../img/img_productos/balenciaga_shoe_2.svg" alt="Product Image">
+                <img src="../img/img_productos/balenciaga_shoe_1.svg" title="balenciaga_sneaker_1"
+                    alt="foto_balenciaga_sneaker_1">
+                <img src="../img/img_productos/balenciaga_shoe_2.svg" title="balenciaga_sneaker_2"
+                    alt="foto_balenciaga_sneaker_2">
             </div>
             <div class="product-description">
-                <h1>Product Title</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tincidunt lacus, vel
-                    interdum
-                    augue lobortis a. In eu enim at velit pulvinar molestie. Suspendisse malesuada tellus eu dolor
-                    venenatis, eget fermentum lorem mattis.</p>
-                <p>Price: $99.99</p>
+                <h1>Balenciaga sneakers. ID:3975-47654385</h1>
+                <p>Los sneakers Balenciaga son conocidos por su diseño moderno y vanguardista. Suelen estar fabricados
+                    con materiales de alta calidad, como piel o malla, y presentan detalles exclusivos, como cordones
+                    gruesos, suelas con formas innovadoras y logos de la marca en lugares destacados.</p>
+                <p>Precio: 799.99€</p>
             </div>
             <div class="product-purchase">
-                <h2>Buy Now</h2>
+                <h2>Comprar ahora</h2>
                 <ul>
-                    <li><a href="#">Add to Cart</a></li>
-                    <li><a href="#">Buy Now</a></li>
+                    <li><a href="#">Añadir al carrito</a></li>
+                    <li><a href="#">Comprar ahora</a></li>
                 </ul>
             </div>
         </div>
     </main>
     <footer>
         <section>
-            <img src="../img/klay_nox_logo_solo.svg" class="min_width_footer" alt="logo">
+            <figure>
+                <img src="../img/klay_nox_logo_solo.svg" class="min_width_footer" title="klay_nox_logo" alt="logo">
+            </figure>
         </section>
         <section class="footer-center">
             <a href="https://www.facebook.com\"><i class="fab fa-tumblr"></i></a>
@@ -194,7 +209,7 @@
         <section class="footer-right">
             <form>
 
-                <input type="email" id="email" name="email" placeholder="Usuario" required>
+                <input type="email" id="email" name="email" placeholder="Usuario" pattern="[a-zA-Z]{4,12}" required>
                 <input type="password" name="pwd" id="pwd" placeholder="Contraseña" required>
                 <button type="submit">Inicia Sesion</button>
             </form>
