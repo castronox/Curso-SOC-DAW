@@ -100,9 +100,14 @@
             transition: all 0.2s ease;
         }
 
-        main button[type="submit"]:hover,
-        button[type="reset"]:hover {
-            background-color: #3e8e41;
+        main form button[type="submit"],
+        button[type="reset"] {
+            background-color: #929394;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         main iframe {
@@ -182,7 +187,19 @@
     </header>
     <main>
         <section></section>
+
         <h1>Contacta con Klay Nox</h1>
+        <section>
+            <h2>Klay Nox S.L</h2>
+            <b>calle san bernardo<br>Manresa, 08691,BARCELONA<br>Telefono: 654 983 938</b>
+
+            <h2>España</h2>
+        </section>
+        <section>
+            <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=manresa+(Klay%20Nox)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                allowfullscreen="" loading="lazy"></iframe>
+        </section>
         <p>Clay Nox es una tienda online especializada en bambas deportivas de lujo. Como empresa, nuestro principal
             objetivo es ofrecer a nuestros clientes la mejor experiencia de compra posible, y por eso, nos aseguramos de
             proporcionar una página de contacto fácilmente accesible y con todas las herramientas necesarias para
@@ -205,17 +222,17 @@
             de compra sea lo más agradable posible.</p>
         <form method="post" action="">
             <fieldset>
-                <label for="name">Your Name (4-20 letters only):</label>
+                <label for="name">Nombre: (4-20 de 4 a 20 letras):</label>
                 <input type="text" id="name" name="name" required pattern="[A-Za-z]{4,20}">
             </fieldset>
             <fieldset>
-                <label for="email">Email Address:</label>
+                <label for="email">Correo electronico:</label>
                 <input type="email" id="email" name="email" required>
             </fieldset>
             <fieldset>
-                <label for="reason">Reason for contacting us:</label>
+                <label for="reason">Cual es el motivo de tu consulta?</label>
                 <select id="reason" name="reason" required>
-                    <option value="" selected disabled>Please select an option
+                    <option value="" selected disabled>Porfavor selecciona una opcion
                     </option>
                     <option value="Product inquiry">Product inquiry</option>
                     <option value="Technical support">Technical support</option>
@@ -226,23 +243,15 @@
                 </select>
             </fieldset>
             <fieldset>
-                <label for="message">Your Message (at least 10 characters):</label>
+                <label for="message">Escribe tu texto aqui! (Minimo 10 caracteres):</label>
                 <textarea id="message" name="message" required minlength="10"></textarea>
             </fieldset>
-            <button type="submit">Send</button>
+            
+            <button type="submit">Enviar</button>
             <button type="reset">Reset</button>
+            
         </form>
-        <section>
-            <h2>Klay Nox S.L</h2>
-            <b>calle san bernardo<br>Manresa, 08691,BARCELONA<br>Telefono: 654 983 938</b>
 
-            <h2>Location</h2>
-        </section>
-        <section>
-            <iframe
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=manresa+(Klay%20Nox)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                allowfullscreen="" loading="lazy"></iframe>
-        </section>
     </main>
 
     <footer>

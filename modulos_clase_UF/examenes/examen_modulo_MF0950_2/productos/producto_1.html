@@ -36,10 +36,10 @@
 
 
         .product-purchase {
-            margin:2%;
+            margin: 2%;
         }
 
-        .product-purchase li{
+        .product-purchase li {
             margin-top: 6%;
         }
 
@@ -102,7 +102,8 @@
         main a:hover {
             background-color: #111;
         }
-        .espacio{
+
+        .espacio {
             height: 5rem;
         }
 
@@ -120,18 +121,24 @@
             }
         }
 
-        footer img{
+        footer img {
             width: 30%;
         }
-        main h1,p{
+
+        main h1,
+        p {
             margin: 2%;
+        }
+
+        .min_width_footer {
+            min-width: 10rem;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav >
+        <nav>
             <section>
                 <input type="checkbox" name="" id="">
                 <section class="hamburger-lines">
@@ -152,44 +159,47 @@
     </header>
     <main>
         <section class="espacio"></section>
-    <div class="product-container">
-        <div class="product-image">
-            <img src="../img/balenciaga_1.png" alt="Product Image">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="../img/img_productos/balenciaga_shoe_1.svg" alt="Product Image">
+                <img src="../img/img_productos/balenciaga_shoe_2.svg" alt="Product Image">
+            </div>
+            <div class="product-description">
+                <h1>Product Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tincidunt lacus, vel
+                    interdum
+                    augue lobortis a. In eu enim at velit pulvinar molestie. Suspendisse malesuada tellus eu dolor
+                    venenatis, eget fermentum lorem mattis.</p>
+                <p>Price: $99.99</p>
+            </div>
+            <div class="product-purchase">
+                <h2>Buy Now</h2>
+                <ul>
+                    <li><a href="#">Add to Cart</a></li>
+                    <li><a href="#">Buy Now</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="product-description">
-            <h1>Product Title</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tincidunt lacus, vel interdum
-                augue lobortis a. In eu enim at velit pulvinar molestie. Suspendisse malesuada tellus eu dolor
-                venenatis, eget fermentum lorem mattis.</p>
-            <p>Price: $99.99</p>
-        </div>
-        <div class="product-purchase">
-            <h2>Buy Now</h2>
-            <ul>
-                <li><a href="#">Add to Cart</a></li>
-                <li><a href="#">Buy Now</a></li>
-            </ul>
-        </div>
-    </div>
-</main>
-<footer>
-    <section>
-        <img src="../img/klay_nox_logo_solo.svg" alt="logo">
-    </section>
-    <section class="footer-center">
-        <a href="https://www.facebook.com\"><i class="fab fa-tumblr"></i></a>
-        <a href="https://www.facebook.com\"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com\"><i class="fab fa-linkedin-in"></i></a>
-    </section>
-    <section class="footer-right">
-        <form>
-            
-            <input type="email" id="email" name="email" placeholder="Suscribete a la newsletter!" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
-</footer>
+    </main>
+    <footer>
+        <section>
+            <img src="../img/klay_nox_logo_solo.svg" class="min_width_footer" alt="logo">
+        </section>
+        <section class="footer-center">
+            <a href="https://www.facebook.com\"><i class="fab fa-tumblr"></i></a>
+            <a href="https://www.facebook.com\"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com\"><i class="fab fa-linkedin-in"></i></a>
+        </section>
+        <section class="footer-right">
+            <form>
+
+                <input type="email" id="email" name="email" placeholder="Usuario" required>
+                <input type="password" name="pwd" id="pwd" placeholder="Contraseña" required>
+                <button type="submit">Inicia Sesion</button>
+            </form>
+        </section>
+    </footer>
 
 </body>
 
