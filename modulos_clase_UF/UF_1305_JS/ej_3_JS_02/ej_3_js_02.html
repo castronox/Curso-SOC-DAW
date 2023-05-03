@@ -7,7 +7,7 @@
     <title>Ej_3_JavaScript_02</title>
 </head>
 <body>
-    <div id="d" style="border: solid 1px black; width: 50px; height:50px;"></div>
+    <div id="d" style="border: solid 1px black; width:50px; height:50px; "></div>
 
     <script>
         //Calcula un aleatorio de 0 a 255
@@ -15,14 +15,14 @@
             return Math.floor(Math.random()*256)
         }
 
-        //Colorea el divd de forma aleatoria
+        //Colorea el div 'd' de forma aleatoria
         function colorea(){
-            d.style.backgroundColor='rgb('+a()+','+a()','+a()+')';
+            d.style.backgroundColor='rgb('+a()+','+a()+','+a()+')';
         }
 
         //Programar la ejecucion de la funcion colorea cada 500 ms
 
-        setInterval (colorea, 500);
+        setInterval(colorea, 500);
     </script>
 </body>
 </html>

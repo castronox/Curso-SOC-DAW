@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 JavaScript 02</title>
+
+    <script>
+        function calcular(){
+            //RECUPERAR LOS VALORES DE LOS INPUTS.
+
+            var i = parseFloat(inicial.value);
+            var v = parseFloat(velocidad.value);
+            var t = parseFloat(tiempo.value);
+
+            //REALIZACION DEL CALCULO.
+
+            var calculo = i+v*t;
+
+            //MUESTRA EL RESULTADO
+
+            resultado.innerHTML = calculo;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora MRU</h1>
+
+    <label for="inicial">Posicion inicial:</label>
+    <input type="number" id="inicial" value="0">
+    <span>(m)</span> <br />
+
+    <label for="velocidad">Velocidad:</label>
+    <input type="number" id="velocidad" value="0">
+    <span>(m/s)</span> <br />
+
+    <label for="tiempo">Tiempo:</label>
+    <input type="number" id="tiempo" value="0">
+    <span>(s)</span> <br />
+
+    <button onclick="calcular();">Calcular</button> <br/>
+
+    <span>RESULTADO:</span>
+    <output id="resultado">0</output> <span> m</span>
+</body>
+</html>
