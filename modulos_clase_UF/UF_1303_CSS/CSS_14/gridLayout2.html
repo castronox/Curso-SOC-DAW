@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 2 CSS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        header,
+        footer,
+        main,
+        aside {
+            border: dashed 1px darkblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1,
+        figure,
+        article,
+        aside,
+        form {
+            border: dashed 1px darkred;
+            padding: 20px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: 20% auto;
+            grid-gap: 5px;
+        }
+
+        header{
+            background-color: #f99;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        aside{
+            background-color: #99f;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        main{
+            background-color: #9ff;
+        }
+        footer{
+            background-color: #f9f ;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+
+<body class="grid-container">
+<header>HEADER</header>
+<aside>ASIDE 1</aside>
+<main>MAIN</main>
+<footer>FOOTER</footer>
+</body>
+
+</html>
