@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_2_JavaScript_02</title>
+</head>
+<body>
+    <img src="img/encendida.png" alt="una bombilla!" id="bombilla"
+    onmouseenter="this.src='img/apagada.png';"
+    onmouseleave="this.src='img/encendida.png';"
+    height="200" width="200" />
+    <br />
+    <output id="info"></output>
+    <br />
+    <button onclick="info.innerHTML=bombilla.alt;">Info</button>
+</body>
+</html>

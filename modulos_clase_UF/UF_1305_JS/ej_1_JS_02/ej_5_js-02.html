@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_5_js02</title>
+</head>
+<body>
+    <script>
+        function confirmar(){
+
+            if (confirm('¿Seguro?'))
+            formulario.submit();
+        }
+    </script>
+
+    <h1>Baja de Usuario</h1>
+    <form method="post" id="formulario">
+        <label for="usuario">Usuario: </label>
+        <input type="text" name="usuario" />
+        <input type="button" value="Baja" onclick="confirmar();">
+    </form>
+</body>
+</html>

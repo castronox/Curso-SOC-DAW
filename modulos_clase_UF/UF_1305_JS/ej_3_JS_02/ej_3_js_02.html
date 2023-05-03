@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_3_JavaScript_02</title>
+</head>
+<body>
+    <div id="d" style="border: solid 1px black; width: 50px; height:50px;"></div>
+
+    <script>
+        //Calcula un aleatorio de 0 a 255
+        function a(){
+            return Math.floor(Math.random()*256)
+        }
+
+        //Colorea el divd de forma aleatoria
+        function colorea(){
+            d.style.backgroundColor='rgb('+a()+','+a()','+a()+')';
+        }
+
+        //Programar la ejecucion de la funcion colorea cada 500 ms
+
+        setInterval (colorea, 500);
+    </script>
+</body>
+</html>
