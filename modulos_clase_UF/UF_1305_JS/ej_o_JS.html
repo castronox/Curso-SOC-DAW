@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_0_JavaScript_</title>
+
+    <script>
+        function compara (){
+            var n1 = parseFloat(document.getElementById('num1').value);
+            var n2 = parseFloat(document.getElementById('num2').value);
+
+            if(n1==n2){
+                document.getElementById('resultado').innerHTML = 'IGUALES!';
+
+            }else{
+                document.getElementById('resultado').innerHTML = 'DIFERENTES X';
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+<h1>Comparaciones</h1>
+<span>Número 1:</span><input type="number" id="num1" /> <br />
+<span>Número 2:</span><input type="number" id="num2" /> <br />
+
+<input type="button" value="compara" onclick="compara();" />
+<p>resultado: <output id="resultado"></output></p>
+
+
+</body>
+</html>

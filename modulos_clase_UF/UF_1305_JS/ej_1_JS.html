@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1_JavaScript_</title>
+</head>
+<body>
+    <script>
+        
+        function calcular_perimetro(){
+        var radio = parseFloat(document.getElementById('radio').value);
+
+        const PI = 3.141592653;
+
+        resultado = 2*PI*radio;
+
+        document.getElementById('resultado_final').innerHTML = 'El resultado del perimetro es: ' + resultado;
+        }
+
+        function calcular_area(){
+        var radio = parseFloat(document.getElementById('radio').value);
+
+        const PI = 3.141592653;
+
+        resultado = PI*radio*radio;
+
+        document.getElementById('resultado_final').innerHTML = 'El resultado de área es: ' + resultado;
+        }
+
+        function calcular_diametro(){
+        var radio = parseFloat(document.getElementById('radio').value);
+
+        const PI = 3.141592653;
+
+        resultado = 2*radio;
+
+        document.getElementById('resultado_final').innerHTML = 'El resultado de diámetro es: ' + resultado;
+        }
+    </script>
+
+    <input type="number" id="radio" placeholder="Introduce el radio..."><br/>
+
+    <input type="button" onclick="calcular_perimetro();" value="Calcular perimetro."><br />
+    <input type="button" onclick="calcular_area();" value="Calcular Área.">
+    <input type="button" onclick="calcular_diametro();" value="Calcular diámetro.">
+    <br />
+    <output id="resultado_final"></output>
+</body>
+</html>
