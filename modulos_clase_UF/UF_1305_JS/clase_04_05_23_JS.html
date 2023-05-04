@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase_04_05_23_JS</title>
+</head>
+<body>
+    <script>
+        function saludar(){
+            var nombre=document.getElementById('inNombre').value;
+            document.getElementById('outSaludo').innerHTML='Hola ' + nombre;
+        }
+
+        function sumar(){
+
+
+            var a =document.getElementById('num_a').value;
+            var b =document.getElementById('num_b').value;
+            
+            var resultado = parseInt(a) + parseInt(b) ;
+
+            document.getElementById('resultado_suma').innerHTML = 'El resultado de la suma es: ' + resultado;
+        }
+    </script>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="inNombre">
+
+    <br />
+
+    <button onclick="saludar();">Saludar</button>
+
+    <br />
+
+    <output id="outSaludo"></output>
+
+
+    <br /><br />
+
+
+
+    <h3>Sumar</h3>
+    <label for="numero_1">Introduce un Numero: &nbsp;</label>
+    <input type="number" id="num_a">
+    <br />
+    <label for="numero_2">Introduce otro numero:</label>
+    <input type="number" id="num_b">
+
+    <button onclick="sumar();">Calcular</button>
+
+    <output id="resultado_suma"></output>
+
+</body>
+</html>
