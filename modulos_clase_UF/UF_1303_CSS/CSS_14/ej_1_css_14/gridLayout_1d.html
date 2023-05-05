@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout 2 CSS</title>
+    <title>Grid Layout ejercicio 1a</title>
 
     <style>
         * {
@@ -20,7 +20,8 @@
         header,
         footer,
         main,
-        aside {
+        aside,
+        section {
             border: dashed 1px darkblue;
             text-align: center;
             padding: 20px;
@@ -30,42 +31,55 @@
         figure,
         article,
         aside,
-        form {
+        .izqda,
+        .derecha {
             border: dashed 1px darkred;
             padding: 20px;
         }
 
         .grid-container{
             display: grid;
-            grid-template-columns: 20% auto;
+            grid-template-areas:
+    'izqda izqda header header header header'
+    'izqda izqda main main derecha derecha'
+    'izqda izqda footer footer derecha derecha';
             grid-gap: 5px;
         }
 
+        .izqda{
+            grid-area: izqda;
+        }
+        .derecha{
+            grid-area: derecha;
+
+        }
         header{
             background-color: #f99;
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-area: header;
+
         }
         aside{
             background-color: #99f;
-            grid-column-start: 1;
-            grid-column-end: 2;
+            grid-area: aside;
+
         }
         main{
             background-color: #9ff;
+            grid-area: main;
         }
         footer{
             background-color: #f9f ;
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-area: footer;
+
         }
     </style>
 </head>
 
 <body class="grid-container">
 <header>HEADER</header>
-<aside>ASIDE 1</aside>
+<section class="izqda">IZQUIERDA</section>
 <main>MAIN</main>
+<section class="derecha">DERECHA</section>
 <footer>FOOTER</footer>
 </body>
 

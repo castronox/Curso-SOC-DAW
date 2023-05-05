@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2_JavaScript_</title>
+    <script>
+
+
+        function calcular_area() {
+            const base = parseFloat(document.getElementById("base").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+
+            const resultado = (base * altura) / 2;
+
+
+
+            document.getElementById('resultado_final').innerHTML = 'El resultado de área es: ' + resultado;
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="number" id="base" placeholder="Introduce la base..."><br />
+    <input type="number" id="altura" placeholder="Introduce la altura..."><br />
+
+
+    <input type="button" onclick="calcular_area();" value="Calcula Área del triangulo.">
+    <br />
+    <p id="resultado_final"></p>
+</body>
+
+</html>

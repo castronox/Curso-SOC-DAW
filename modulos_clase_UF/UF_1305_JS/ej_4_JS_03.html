@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4_JavaScript_</title>
+    <script>
+
+
+        function calcular_temp() {
+            const km = parseFloat(document.getElementById("km").value);
+        
+            const resultado = km * 0.621371;
+
+            document.getElementById('resultado_final').innerHTML = 'El resultado de la conversión de ' + km + " Kilometros es : " + resultado + " millas.";
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="number" id="km" placeholder="Introduce los Km..."><br />
+    
+
+
+    <input type="button" onclick="calcular_temp();" value="Haz conversion de KM a Millas.">
+    <br />
+    <p id="resultado_final"></p>
+</body>
+
+</html>

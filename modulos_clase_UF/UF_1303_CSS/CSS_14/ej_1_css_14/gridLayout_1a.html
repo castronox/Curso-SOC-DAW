@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout ejercicio 1a</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        header,
+        footer,
+        main,
+        aside,
+        section {
+            border: dashed 1px darkblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1,
+        figure,
+        article,
+        aside,
+        .izqda,
+        .derecha {
+            border: dashed 1px darkred;
+            padding: 20px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-areas:
+    'header header header header header header'
+    'izqda izqda main main derecha derecha'
+    'footer footer footer footer footer footer';
+            grid-gap: 5px;
+        }
+
+        .izqda{
+            grid-area: izqda;
+        }
+        .derecha{
+            grid-area: derecha;
+
+        }
+        header{
+            background-color: #f99;
+            grid-area: header;
+
+        }
+        aside{
+            background-color: #99f;
+            grid-area: aside;
+
+        }
+        main{
+            background-color: #9ff;
+            grid-area: main;
+        }
+        footer{
+            background-color: #f9f ;
+            grid-area: footer;
+
+        }
+    </style>
+</head>
+
+<body class="grid-container">
+<header>HEADER</header>
+<section class="izqda">IZQUIERDA</section>
+<main>MAIN</main>
+<section class="derecha">DERECHA</section>
+<footer>FOOTER</footer>
+</body>
+
+</html>
