@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5_JavaScript_</title>
+</head>
+<body>
+    <script>
+        
+        function peseta_euro(){
+        var input = parseFloat(document.getElementById('input').value);
+
+        const euro_1 = 166.386;
+
+        resultado = input/euro_1;
+
+        document.getElementById('resultado_final').innerHTML = 'El resultado de ' + input + ' pesetas son: ' + resultado + ' Euros.';
+        }
+
+        function euro_peseta(){
+        var input = parseFloat(document.getElementById('input').value);
+
+        const euro_1 = 166.386;
+
+        resultado = input*euro_1;
+
+        document.getElementById('resultado_final').innerHTML = 'El resultado de ' + input + ' euros son: ' + resultado + ' Pesetas.';
+        }
+
+
+    </script>
+
+    <input type="number" id="input" placeholder="Introduce el dinero..."><br/>
+
+    <input type="button" onclick="peseta_euro();" value="Calcular de pesetas a euros"><br />
+    <input type="button" onclick="euro_peseta();" value="Calcular de euros a pesetas.">
+
+    <br />
+    <output id="resultado_final"></output>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6_JavaScript_</title>
+</head>
+
+<body>
+    <script>
+
+        function es_par() {
+            var input = parseFloat(document.getElementById('input').value);
+
+            if (input % 2 === 0) {
+                return document.getElementById('resultado_final').innerHTML = 'El resultado es par.';
+            } else {
+
+                return document.getElementById('resultado_final').innerHTML = 'El resultado es impar.';
+            }
+        }
+
+
+
+
+    </script>
+
+    <input type="number" id="input" placeholder="Introduce el dinero..."><br />
+
+    <input type="button" onclick="es_par();" value="Calcular si es par o impar."><br />
+
+
+    <br />
+    <output id="resultado_final"></output>
+</body>
+
+</html>

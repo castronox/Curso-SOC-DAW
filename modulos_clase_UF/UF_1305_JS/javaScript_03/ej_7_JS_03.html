@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7_JavaScript_</title>
+    <script>
+        
+        function calcular_precio(){
+        var largo = parseFloat(document.getElementById('largo').value);
+        var ancho = parseFloat(document.getElementById('ancho').value);
+        var alto = parseFloat(document.getElementById('alto').value);
+
+        var peso = parseFloat(document.getElementById('peso').value);
+        
+        var precio_envio = 2;
+        var resultado_peso_gramos = peso * 1000;
+        var coste_gramos = 0.1 / 100;
+        var precio_envio_peso = resultado_peso_gramos * coste_gramos;
+
+        var resultado_cm3 = largo * ancho * alto ;
+        var precio_cm3 = resultado_cm3 * 0.005;
+
+        var precio_final= precio_cm3 + precio_envio_peso + precio_envio;
+
+
+        document.getElementById('resultado_final').innerHTML = 'resultado: ' + resultado_cm3 + ' cm3. El precio del cubicaje es: ' + precio_cm3 + ' €, y el resultado del peso: ' + resultado_peso_gramos + ' gr. y el coste de envio es ' + precio_envio_peso + ' €. El coste general del envio es: ' + precio_final + ' €.';
+
+        }
+    </script>
+</head>
+<body>
+
+
+    <input type="number" id="largo" placeholder="Introduce el largo en cm..."><br/>
+    <input type="number" id="ancho" placeholder="Introduce el ancho en cm..."><br/>
+    <input type="number" id="alto" placeholder="Introduce el alto en cm..."><br/>
+
+    <input type="number" id="peso" placeholder="Introduce el peso en kg..."><br/>
+
+    <input type="button" onclick="calcular_precio();" value="Calcula el precio del envio."><br />
+    
+
+    <br />
+    <output id="resultado_final"></output>
+</body>
+</html>
