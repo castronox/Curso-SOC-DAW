@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_8_JavaScript_</title>
+    <script>
+        
+        function calcular_precio(){
+        var media_combusltible_carretera = parseFloat(document.getElementById('media_combusltible_carretera').value) / 100;
+        var media_combustible_ciudad = parseFloat(document.getElementById('media_combustible_ciudad').value / 100);
+        var precio_combustible = parseFloat(document.getElementById('precio_combustible').value);
+
+        var num_km_carretera = parseFloat(document.getElementById('num_km_carretera').value);
+        var num_km_ciudad = parseFloat(document.getElementById('num_km_ciudad').value);
+        
+        var km_totales = num_km_carretera + num_km_ciudad;
+        var litro_combustible = (km_totales / 100) * (media_combusltible_carretera + media_combustible_ciudad);
+        var coste_combustible = litro_combustible * precio_combustible;
+        var costeCarretera = num_km_carretera * media_combusltible_carretera * precio_combustible;
+        var costeCiudad = num_km_ciudad * media_combustible_ciudad * precio_combustible;
+
+        var precio_combustible_total = coste_combustible + costeCarretera + costeCiudad;
+
+
+        
+
+
+        document.getElementById('resultado_final').innerHTML = 'resultado: ' + precio_combustible_total;
+
+        }
+    </script>
+</head>
+<body>
+
+
+    <input type="number" id="media_combusltible_carretera" placeholder="media_carretera"><br/>
+    <input type="number" id="media_combustible_ciudad" placeholder="media_ciudad"><br/>
+    <input type="number" id="precio_combustible" placeholder="precio_combustible"><br/>
+
+    <input type="number" id="num_km_carretera" placeholder="num_km_carretera"><br/>
+    <input type="number" id="num_km_ciudad" placeholder="num_km_ciudad"><br/>
+
+    <input type="button" onclick="calcular_precio();" value="Calcula el precio del combustible."><br />
+    
+
+    <br />
+    <output id="resultado_final"></output>
+</body>
+</html>
