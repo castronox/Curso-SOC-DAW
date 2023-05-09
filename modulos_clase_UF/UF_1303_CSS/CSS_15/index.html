@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakendo Layout</title>
+
+    <style>
+        * {
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1em;
+        }
+
+        ul a {
+            text-decoration: none;
+        }
+
+
+
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 14rem;
+            background-image: url("img/game_header.svg");
+            background-position: 5rem 15rem 15rem 45rem;
+            margin-bottom: 2%;
+        }
+
+        footer{
+            background-image: url("img/game_footer.svg");
+            height: 18rem;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+        h1{margin-bottom: 2%;}
+
+        .galeria figure {
+            max-width: 10rem;
+
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            
+            grid-area: nav;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+
+
+        .galeria {
+            grid-area: galeria;
+            display: inline-flex;
+            margin: 3%;
+        }
+
+        .galeria figure{
+            margin: 0.21%;
+            
+        }
+
+        .imagen_nes {
+            
+            display: grid;
+            padding: 3%;
+            grid-area: foto;
+            margin-left: 3%;
+        }
+
+        #opiniones {
+            grid-area: opiniones;
+        }
+
+        #especificaciones {
+            
+            grid-area: specs;
+        }
+
+        #final_main{
+            margin: 2%; 
+            display: flex;
+            grid-area: final_m;
+        }
+        body {
+            grid-gap:10px;
+            display: grid;
+            
+            grid-template-columns:  30% 30% 30% auto;
+            grid-template-areas:
+                'header header header header'
+                'nav nav nav nav '
+                'foto main main main'
+                'foto galeria galeria galeria'
+                'final_m final_m final_m final_m'
+                'footer footer footer footer';
+
+            width: 85%;
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Fakendo Layout</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Origen</a></li>
+            <li><a href="#">Juegos</a></li>
+            <li><a href="#">Regiones</a></li>
+        </ul>
+    </nav>
+    <section class="imagen_nes">
+        <figure ><img src="img/snes_consola.webp" alt=""></figure>
+        <figure ><img src="img/snes_consola_2.jpg" alt=""></figure>
+        <figure ><img src="img/snes_mini.webp" alt=""></figure>
+
+    </section>
+
+    
+    <main> 
+    
+        <h1>Explicacion</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint similique minima ab nulla ipsam quibusdam
+        sit minus odit veniam atque rem labore provident, nemo aliquam animi ad in vero? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptas voluptatibus cupiditate iusto illo nesciunt id vitae. Obcaecati
+        consectetur soluta cupiditate doloribus error, omnis similique necessitatibus quia recusandae voluptas
+        maxime ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni iusto, quas nemo debitis
+        amet illo, corporis repellat commodi blanditiis dolore eveniet voluptas pariatur veritatis natus eos. Quos,
+        quasi esse? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex necessitatibus fugiat perspiciatis,
+        neque rem aut quasi? Illo asperiores facere exercitationem rem veniam alias, eaque aut dolor labore
+        similique voluptatibus voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        inventore rerum excepturi iure repudiandae, corrupti sed? Modi quas, quo cum quidem iure animi, totam fugiat
+        doloribus omnis commodi facilis fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam harum
+        est dolor? Vero minus maiores at consectetur corporis assumenda fugiat voluptates rerum quibusdam a,
+        repellendus ut vel ea asperiores voluptatibus!Lorem
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint similique minima ab nulla ipsam quibusdam
+        sit minus odit veniam atque rem labore provident, nemo aliquam animi ad in vero? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptas voluptatibus cupiditate iusto illo nesciunt id vitae. Obcaecati
+        consectetur soluta cupiditate doloribus error, omnis similique necessitatibus quia recusandae voluptas
+        maxime ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni iusto, quas nemo debitis
+        amet illo, corporis repellat commodi blanditiis dolore eveniet voluptas pariatur veritatis natus eos. Quos,
+        quasi esse? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex necessitatibus fugiat perspiciatis,
+        neque rem aut quasi? Illo asperiores facere exercitationem rem veniam alias, eaque aut dolor labore
+        similique voluptatibus voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        inventore rerum excepturi iure repudiandae, corrupti sed? Modi quas, quo cum quidem iure animi, totam fugiat
+        doloribus omnis commodi facilis fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam harum
+        est dolor? Vero minus maiores at consectetur corporis assumenda fugiat voluptates rerum quibusdam a,
+        repellendus ut vel ea asperiores voluptatibus!Lorem
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint similique minima ab nulla ipsam quibusdam
+        sit minus odit veniam atque rem labore provident, nemo aliquam animi ad in vero? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptas voluptatibus cupiditate iusto illo nesciunt id vitae. Obcaecati
+        consectetur soluta cupiditate doloribus error, omnis similique necessitatibus quia recusandae voluptas
+        maxime ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni iusto, quas nemo debitis
+        amet illo, corporis repellat commodi blanditiis dolore eveniet voluptas pariatur veritatis natus eos. Quos,
+        quasi esse? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex necessitatibus fugiat perspiciatis,
+        neque rem aut quasi? Illo asperiores facere exercitationem rem veniam alias, eaque aut dolor labore
+        similique voluptatibus voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        inventore rerum excepturi iure repudiandae, corrupti sed? Modi quas, quo cum quidem iure animi, totam fugiat
+        doloribus omnis commodi facilis fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam harum
+        est dolor? Vero minus maiores at consectetur corporis assumenda fugiat voluptates rerum quibusdam a,
+        repellendus ut vel ea asperiores voluptatibus!Lorem
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint similique minima ab nulla ipsam quibusdam
+        sit minus odit veniam atque rem labore        consectetur adipisicing elit. Voluptas voluptatibus cupiditate iusto illo nesciunt id vitae. Obcaecati
+        consectetur soluta cupiditate doloribus error, omnis similique necessitatibus quia recusandae voluptas
+        maxime ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni iusto, quas nemo debitis
+        amet illo, corporis repellat commodi blanditiis dolore eveniet voluptas pariatur veritatis natus eos. Quos,
+        quasi esse? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex necessitatibus fugiat perspiciatis,
+        neque rem aut quasi? Illo asperiores facere exercitationem rem veniam alias, eaque aut dolor labore
+        similique voluptatibus voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        inventore rerum excepturi iure repudiandae, corrupti sed? Modi quas, quo cum quidem iure animi, totam fugiat
+        doloribus omnis commodi facilis fugit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam harum
+        est dolor? Vero minus maiores at consectetur corporis assumenda fugiat voluptates rerum quibusdam a,
+        repellendus ut vel ea asperiores voluptatibus!Lorem
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint similique minima ab nulla ipsam quibusdam
+        sit minus odit veniam atque rem labore
+    </p>
+
+    <section class="galeria">
+        <figure><img src="img/metroid_snes.jpg" alt=""></figure>
+        <figure><img src="img/doom_snes.jpg" alt=""></figure>
+        <figure><img src="img/street_fight_snes.jpg" alt=""></figure>
+        <figure><img src="img/super_mario_snes.jpg" alt=""></figure>
+        <figure><img src="img/donkey_kong_snes.jpg" alt=""></figure>
+    </section>
+
+    <section id="final_main">
+    <section id="opiniones">
+        <h2>Opiniones</h2>
+
+        <h3>opinion 1:</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, assumenda reiciendis. Dolorem magni
+            consequatur dignissimos earum doloremque, adipisci nam debitis aliquam? Fugit deleniti eos minima sequi
+            velit nisi et consequatur.
+        </p>
+        <h3>opinion 2:</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quas odit dolorum magni incidunt,
+            obcaecati aspernatur perspiciatis error id itaque sunt assumenda illum asperiores sit saepe voluptate
+            odio! Quis, ratione?</p>
+
+        <h3>Opinion 3:</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam adipisci nam modi earum quia cum
+            corrupti magni. Recusandae delectus adipisci nobis hic explicabo magnam facere ab optio sapiente? Dolor,
+            omnis?</p>
+    </section>
+
+    <section id="especificaciones">
+
+        <br>
+        <h4>Especificaciones</h4><br>
+        <table>
+            <tr>
+                <td>Especificaciones indice</td>
+
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorum molestiae</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorum molestiae</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorum molestiae</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorum molestiae</td>
+            </tr>
+        </table>
+    </section>
+
+</section>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+</body>
+
+</html>

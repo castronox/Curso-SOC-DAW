@@ -7,14 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3_JavaScript_</title>
     <script>
+        // Obtener el elemento select
+        const select = document.getElementById('conversion');
 
+        // Obtener el input de valor de conversión
+        const valorInput = document.getElementById('valorConversion');
 
-        function calcular_temp() {
-            const temp = parseFloat(document.getElementById("grados").value);
-        
-            const resultado = (temp * 1.8) + 32;
+        // Obtener el botón de conversión
+        const botonConvertir = document.getElementById('botonConvertir');
 
-            document.getElementById('resultado_final').innerHTML = 'El resultado de la conversión de ' + temp + " grados Celsius es : " + resultado + " grados Farenheit";
+        // Obtener el elemento donde se mostrará el resultado
+        const resultadoDiv = document.getElementById('resultado');
+
+        // Añadir un evento click al botón de conversión
+        botonConvertir.addEventListener('click', function () {
+            // Obtener el valor seleccionado del select y el valor del input de valor de conversión
+            const seleccion = select.value;
+            const valor = valorInput.value;
+
+            // Utilizar un switch para llamar a la función correspondiente, pasando el valor como argumento
+            switch (seleccion) {
+                case 'celsiusToFahrenheit':
+                    const resultadoCelsiusToFahrenheit = celsiusToFahrenheit(valor);
+                    resultadoDiv.textContent = valor + ' grados Celsius son ' + resultadoCelsiusToFahrenheit + ' grados Fahrenheit';
+                    break;
+                case 'fahrenheitToCelsius':
+                    const resultadoFahrenheitToCelsius = fahrenheitToCelsius(valor);
+                    resultadoDiv.textContent = valor + ' grados Fahrenheit son ' + resultadoFahrenheitToCelsius + ' grados Celsius';
+                    break;
+                default:
+                    // Si no se seleccionó ninguna conversión, hacer algo aquí
+                    break;
+            }
+        });
+
+        // Función para convertir de Celsius a Fahrenheit
+        function celsiusToFahrenheit(celsius) {
+            return celsius * 1.8 + 32;
+        }
+
+        // Función para convertir de Fahrenheit a Celsius
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) / 1.8;
         }
 
 
@@ -23,14 +57,16 @@
 </head>
 
 <body>
+    <select id="conversion">
+        <option value="celsiusToFahrenheit">Celsius a Fahrenheit</option>
+        <option value="fahrenheitToCelsius">Fahrenheit a Celsius</option>
+    </select>
 
-    <input type="number" id="grados" placeholder="Introduce los grados Cº..."><br />
-    
+    <input type="number" id="valorConversion" placeholder="Valor">
 
+    <button id="botonConvertir">Convertir</button>
 
-    <input type="button" onclick="calcular_temp();" value="Haz conversion de Farenheit a Celsius.">
-    <br />
-    <p id="resultado_final"></p>
-</body>
+    <div id="resultado"></div>
+
 
 </html>
