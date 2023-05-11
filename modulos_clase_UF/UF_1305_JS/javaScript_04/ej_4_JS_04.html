@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calcularMeses() {
+            // Obtener los valores introducidos por el usuario
+            let f_inicio = new Date(document.getElementById("f_inicio").value);
+            let f_final = new Date(document.getElementById("f_final").value);
+
+            // Calcular el número de meses entre las dos fechas
+            let total = (f_final.getFullYear() - f_inicio.getFullYear()) * 12 + (f_final.getMonth() - f_inicio.getMonth());
+
+            // Mostrar el resultado al usuario
+            return document.getElementById('resultado_final').innerHTML = 'Han transcurrido: ' + total +  ' meses con las fechas indicadas.';
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <label for="f_inicio">Fecha de inicio:</label>
+        <input type="date" id="f_inicio" name="f_inicio"><br><br>
+
+        <label for="end_date">Fecha de fin:</label>
+        <input type="date" id="f_final" name="f_final"><br><br>
+
+        <input type="button" value="Calcular meses" onclick="calcularMeses()">
+
+        <p id="resultado_final"></p>
+    </form>
+</body>
+
+</html>

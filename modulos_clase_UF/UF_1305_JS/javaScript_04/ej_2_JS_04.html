@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2_JavaScript_04</title>
+</head>
+
+<body>
+    <script>
+
+        function es_par() {
+            var nota1 = parseFloat(document.getElementById('nota_1').value);
+            var nota2 = parseFloat(document.getElementById('nota_2').value);
+            var nota3 = parseFloat(document.getElementById('nota_3').value);
+
+            prom = (nota1 + nota2 + nota3) / 3;
+
+            if (prom >= 5) {
+                return document.getElementById('resultado_final').innerHTML = 'El resultado es ' + prom.toFixed(2) + ' aprovado!';
+            } else {
+
+                return document.getElementById('resultado_final').innerHTML = 'El resultado es ' + prom.toFixed(2) + ' suspendido!';
+            }
+        }
+
+
+
+
+    </script>
+
+    <input type="number" id="nota_1" placeholder="Nota 1"><br />
+    <input type="number" id="nota_2" placeholder="Nota 2"><br />
+    <input type="number" id="nota_3" placeholder="Nota 3"><br />
+
+    <input type="button" onclick="es_par();" value="Calcular si es par o impar."><br />
+
+
+    <br />
+    <output id="resultado_final"></output>
+</body>
+
+</html>
