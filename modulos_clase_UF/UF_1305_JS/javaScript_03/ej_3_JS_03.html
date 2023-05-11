@@ -1,72 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3_JavaScript_</title>
     <script>
-        // Obtener el elemento select
-        const select = document.getElementById('conversion');
 
-        // Obtener el input de valor de conversión
-        const valorInput = document.getElementById('valorConversion');
+        function estableceConversion() {
+            var valor = parseFloat(document.getElementById('valorConversion').value);
+            var eleccion = document.querySelector('select').value;
+            var resultado_conv;
 
-        // Obtener el botón de conversión
-        const botonConvertir = document.getElementById('botonConvertir');
-
-        // Obtener el elemento donde se mostrará el resultado
-        const resultadoDiv = document.getElementById('resultado');
-
-        // Añadir un evento click al botón de conversión
-        botonConvertir.addEventListener('click', function () {
-            // Obtener el valor seleccionado del select y el valor del input de valor de conversión
-            const seleccion = select.value;
-            const valor = valorInput.value;
-
-            // Utilizar un switch para llamar a la función correspondiente, pasando el valor como argumento
-            switch (seleccion) {
-                case 'celsiusToFahrenheit':
-                    const resultadoCelsiusToFahrenheit = celsiusToFahrenheit(valor);
-                    resultadoDiv.textContent = valor + ' grados Celsius son ' + resultadoCelsiusToFahrenheit + ' grados Fahrenheit';
-                    break;
-                case 'fahrenheitToCelsius':
-                    const resultadoFahrenheitToCelsius = fahrenheitToCelsius(valor);
-                    resultadoDiv.textContent = valor + ' grados Fahrenheit son ' + resultadoFahrenheitToCelsius + ' grados Celsius';
-                    break;
-                default:
-                    // Si no se seleccionó ninguna conversión, hacer algo aquí
-                    break;
+            if (eleccion === 'celsiusToFahrenheit') {
+                
+                resultado_conv = (valor * 9/5) + 32;
+                document.getElementById('resultado').innerHTML = "El resultado de celsius a fahrenheit son " + resultado_conv.toFixed(2) + "º Fahrenheit";
+            } else if (eleccion === 'fahrenheitToCelsius') {
+                
+                resultado_conv = (valor - 32) * 5/9;
+                document.getElementById('resultado').innerHTML = "El resultado de Fahrenheit a Celsius son " + resultado_conv.toFixed(2) + "º Celsius";
+            } else {
+                document.getElementById('resultado').innerHTML = "Nos seleccionado ningun valor...";
             }
-        });
-
-        // Función para convertir de Celsius a Fahrenheit
-        function celsiusToFahrenheit(celsius) {
-            return celsius * 1.8 + 32;
         }
-
-        // Función para convertir de Fahrenheit a Celsius
-        function fahrenheitToCelsius(fahrenheit) {
-            return (fahrenheit - 32) / 1.8;
-        }
-
-
     </script>
-
 </head>
-
 <body>
     <select id="conversion">
+        <option value="">Selecciona Conversión</option>
         <option value="celsiusToFahrenheit">Celsius a Fahrenheit</option>
         <option value="fahrenheitToCelsius">Fahrenheit a Celsius</option>
     </select>
-
+    <input type="button" value="conversion" onclick="estableceConversion();" id="conversion">
     <input type="number" id="valorConversion" placeholder="Valor">
-
-    <button id="botonConvertir">Convertir</button>
-
-    <div id="resultado"></div>
-
-
+    <p id="resultado"></p>
+</body>
 </html>
