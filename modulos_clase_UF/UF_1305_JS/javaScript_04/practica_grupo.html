@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 en grupo</title>
+
+    <script>
+
+        function calcula_mes() {
+            //AÑOS.
+            var a_inicio = parseFloat(document.getElementById('a_inicio').value);
+            var a_final = parseFloat(document.getElementById('a_final').value);
+            //MESES.
+            var m_inicio = parseFloat(document.getElementById('m_inicio').value);
+            var m_final = parseFloat(document.getElementById('m_final').value);
+
+                    var dif_anio = a_inicio - a_final;
+                    var dif_mes = m_final - m_inicio;
+
+                    var  meses = (dif_anio * 12) + dif_mes;
+
+                    resultado = Math.abs(meses);
+
+                    document.getElementById('resultado').innerHTML= 'El resultado son ' + resultado + 'meses.';
+        }
+            
+
+            
+
+        
+    </script>
+
+</head>
+
+<body>
+
+    <input type="text" placeholder="Introduce: año inicio" id="a_inicio" >
+    <input type="text" placeholder="Introduce: mes inicio" id="m_inicio">
+    <br />
+    <input type="text" placeholder="Introduce: año final" id="a_final" >
+    <input type="text" placeholder="Introduce: mes final" id="m_final">
+
+    <button onclick="calcula_mes();">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+
+</html>
