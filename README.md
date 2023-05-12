@@ -1,7 +1,2 @@
 # Curso-SOC-DAW Cristian Castro
-
-    Temas que se tratan dentro del curso
-    ==========================
-
-    Certificaciones del curso:
-    ---------------------------
+<h1>Temas del curso </h1>
