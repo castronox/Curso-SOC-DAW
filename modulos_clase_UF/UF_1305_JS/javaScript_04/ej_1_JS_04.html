@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 0 JS 05</title>
+    <style>
+
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0.5%;
+        }
+
+
+
+        section{
+            border: 1px solid rgba(0, 0, 0, 0.438);
+            border-radius: 15px;
+            max-width: 600px;
+            padding: 2%;
+            margin: auto;
+        }
+
+        input[ type="number" ]{
+            margin-left: 100px; 
+            padding-left: 33px;                  
+        }
+
+        select{
+            margin-left: 115px;
+            padding-left: 50px;
+        }
+
+        button{
+            margin-left: 25px;
+        }
+
+        span{
+            margin-right: 100px;
+        }
+    </style>
+
+    <script>
+        function calcularIVA() {
+            //Leer el precio del IVA introducido por el usuario.
+            var precio = parseFloat(document.getElementById('precio').value);
+            var iva = parseFloat(document.getElementById('iva').value);
+
+            //Calcular entre variables.
+
+            precio *= iva;
+
+            //Muestra el resultado
+            document.getElementById('resultado').innerHTML ="El IVA de este importe final es: " + precio.toFixed(2) + " €";
+        }
+    </script>
+</head>
+
+<body>
+    <section>
+        <h1>Clacular IVA :</h1><br /><br />
+        <span>Precio:</span><input type="number" min="0" id="precio">
+        <br />
+        <span>IVA:</span>
+        <select name="" id="iva">
+            <option value="0.21">Normal (21%)</option>
+            <option value="0.10">Reducido (10%)</option>
+            <option value="0.04">Super Reducido (4%)</option>
+        </select>
+        <button type="button" onclick="calcularIVA();">Calcular</button>
+        <br /><br />
+        
+        <p id="resultado">El IVA de este importe final es: </p>
+    </section>
+</body>
+
+</html>

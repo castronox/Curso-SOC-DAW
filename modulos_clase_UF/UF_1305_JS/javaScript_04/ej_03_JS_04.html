@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementación ej 3 javaScript 04</title>
+</head>
+
+<script>
+
+    function calcular() {
+        var anio_1 = parseInt(document.getElementById('anio_1').value);
+        var anio_2 = parseInt(document.getElementById('anio_2').value);
+
+        // Obtenemos la fecha correspondiente a cada año
+        var fecha_1 = new Date(anio_1, 0, 1);
+        var fecha_2 = new Date(anio_2, 0, 1);
+
+        // Calculamos la diferencia en milisegundos y la convertimos a años
+        var enMilisegundos = Math.abs(fecha_2 - fecha_1);
+        var anios = enMilisegundos / (1000 * 60 * 60 * 24 * 365);
+
+        // Mostramos el resultado redondeado a 2 decimales
+        document.getElementById('resultado').innerText = 'La diferencia entre el año ' + anio_1 + ' y el año ' + anio_2 + ' es de ' + anios.toFixed(0) + ' año / años. ';
+    }
+</script>
+
+<body>
+    <label>Año 1:</label>
+    <input type="number" id="anio_1">
+    <br>
+    <label>Año 2:</label>
+    <input type="number" id="anio_2">
+    <br>
+    <button onclick="calcular()">Calcular diferencia de años</button>
+    <p id="resultado"></p>
+
+</body>
+
+</html>
