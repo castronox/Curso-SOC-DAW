@@ -1,4 +1,4 @@
-# Curso-SOC-DAW Cristian Castro Confección y publicación de páginas web: IFCD0110
+# Curso-SOC-DAW Cristian Castro. Confección y publicación de páginas web: IFCD0110
 
 <p> 
 <ul><b>- Resumen de aptitudes de la cualificacion</b>
