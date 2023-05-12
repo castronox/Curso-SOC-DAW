@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_0b_JS_05</title>
+
+    <script>
+        function calcular_nota(){
+            var nota = parseFloat( document.getElementById('nota').value);
+
+            if (nota >= 5){
+                document.getElementById('aprobacion').innerHTML = 'Has aprobado!';
+            }else{
+                document.getElementById('aprobacion').innerHTML = 'Has suspendido!'; 
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="number" id="nota" placeholder="Introduce tu nota!">
+
+    <button onclick="calcular_nota();">Calcular Nota</button>
+
+    <p id="aprobacion"></p>
+    
+</body>
+</html>

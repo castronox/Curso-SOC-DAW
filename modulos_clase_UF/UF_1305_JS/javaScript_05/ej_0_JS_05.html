@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej_0b_JS_05</title>
+
+    <script>
+        function calcular_nota() {
+            var nota_t = parseFloat(document.getElementById('nota_t').value);
+            var nota_p = parseFloat(document.getElementById('nota_p').value);
+            var p_extra = parseFloat(document.getElementById('p_extra').value);
+
+            var media = nota_t * 0.3 + nota_p * 0.7;
+
+            if (p_extra === 1) {
+                media++;
+                document.getElementById('aprobacion').innerHTML = 'El resultado de ' + nota_t + ' de teoria y ' + nota_p + ' de practicas es: ' + media.toFixed(2);
+            } else {
+                document.getElementById('aprobacion').innerHTML = 'El resultado de ' + nota_t + ' de teoria y ' + nota_p + ' de practicas es: ' + media.toFixed(2);
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <input type="number" id="nota_t" placeholder="Nota de teoria">
+    <input type="number" id="nota_p" placeholder="Nota de practica">
+
+    <span>Punto extra? </span>
+    <select name="p_extra" id="p_extra">
+        <option value="1">Si</option>
+        <option value="0">No</option>
+    </select>
+
+    <button onclick="calcular_nota();">Calcular Nota</button>
+
+
+
+    <p id="aprobacion"></p>
+
+</body>
+
+</html>
