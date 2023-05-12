@@ -275,8 +275,7 @@
             <hr />
             <ul>
                 <li>Inserción de imagenes: formatos y atributos.</li>
-                <ul>
-                    
+                <ul>                   
                     <li>
                         <p>Inserción de imágenes en las páginas.</p>
                     </li>
@@ -290,8 +289,7 @@
             </ul>
             <ul>
                 <li>Mapas de imágenes.</li>
-                <ul>
-                    
+                <ul>                    
                     <li>
                         <p>Definición de mapa.</p>
                     </li>
