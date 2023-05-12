@@ -11,11 +11,11 @@
 
         function calcula_mes() {
             //AÑOS.
-            var a_inicio = parseFloat(document.getElementById('a_inicio').value);
-            var a_final = parseFloat(document.getElementById('a_final').value);
+            var a_inicio = parseInt(document.getElementById('a_inicio').value);
+            var a_final = parseInt(document.getElementById('a_final').value);
             //MESES.
-            var m_inicio = parseFloat(document.getElementById('m_inicio').value);
-            var m_final = parseFloat(document.getElementById('m_final').value);
+            var m_inicio = parseInt(document.getElementById('m_inicio').value);
+            var m_final = parseInt(document.getElementById('m_final').value);
 
                     var dif_anio = a_inicio - a_final;
                     var dif_mes = m_final - m_inicio;
