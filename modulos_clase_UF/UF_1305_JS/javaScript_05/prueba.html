@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .opcion {
+            display: none;
+        }
+
+        .mostrar {
+            display: block;
+        }
+        h1{
+            text-align: center;
+        }
+       section{
+        display: flex;
+        justify-content: center;
+        
+           margin: auto; 
+        }
+        form {
+            margin: auto;
+            text-align: center;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            margin: 3% auto 3% auto;
+        }
+    </style>
+    <script>
+        function exe() {
+            var v_inicial = parseFloat(document.getElementById("v_inicial").value);
+            var v_final = parseFloat(document.getElementById("v_final").value);
+            var opcion = parseFloat(document.getElementById("select").value);
+            var t_inicial = parseFloat(document.getElementById("t_inicial").value);
+            var t_final = parseFloat(document.getElementById("t_final").value);
+
+            switch (opcion) {
+                case 1:
+                    var aceleracion = (v_final - v_inicial) / t_final;
+                    break;
+                case 2:
+                var aceleracion = (v_final - v_inicial) / t_final;
+                    break;
+                case 3:
+
+                    var resultado = "Esta es la opcion 3.";
+
+                    break;
+            }
+
+            var ms_to_kmh = aceleracion * 3600 / 1000;
+            var resultado = ms_to_kmh * 3.6;
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+
+
+        }
+        window.addEventListener('load', function () {
+            var select = document.getElementById('select');
+            var opcion1 = document.getElementById('opcion1');
+            var opcion2 = document.getElementById('opcion2');
+
+            select.addEventListener('change', function () {
+                if (this.value === '1') {
+                    opcion1.classList.add('mostrar');
+                    opcion2.classList.remove('mostrar');
+                } else if(this.value === '2') {
+                    opcion2.classList.add('mostrar');
+                    opcion1.classList.remove('mostrar');
+                }else{
+                    opcion1.classList.remove('mostrar');
+                    opcion2.classList.remove('mostrar');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<section>
+    <select name="select" id="select">
+        <option value="">Selecciona una opción</option>
+        <option value="1">Calcular aceleración</option>
+        <option value="2">opcion 2</option>
+    </select>
+</section>
+
+    <section class="opcion" id="opcion1">
+        <h1>Calcular aceleración</h1>
+        <form action="">            
+            <label for="">Velocidad Inicial</label>
+            <input id="v_inicial" type="number">
+            <label for="">Tiempo inicial</label>
+            <input id="t_inicial" type="number">
+            <label for="">Velocidad final</label>
+            <input id="v_final" type="number">
+            <label for="">tiempo final</label>
+            <input id="t_final" type="number">
+            <button onclick="exe();">calcular</button> 
+        </form>
+        <p>La formula es la siguiente: a = dv/dt ( Vf-Vi ) / ( Tf-Ti ) </p>
+
+    </section>
+    
+    
+    <section class="opcion" id="opcion2">
+        opcion 2
+    </section>
+    <p id="resultado"></p>
+</body>
+
+</html>

@@ -59,6 +59,8 @@
         input {
             text-align: center;
         }
+
+        
     </style>
 
     <script>
@@ -85,7 +87,7 @@
 </head>
 
 <body>
-    <h1>Claculadora de aceleracion</h1>
+    <h1>Calculadora de aceleracion</h1>
     <form action="">
 
         <fieldset><legend>Velocidades</legend>
@@ -106,7 +108,13 @@
             <p id="resultado"></p>
             <p id="r_final"></p>
         </fieldset>
-        <button onclick="calcula_aceleracion();">Calcula aceleracion</button><br />
+        <select name="" id="opcion">
+            <option value="1">Selecciona el calculo</option>
+            <option value="2">Aceleracion</option>
+            <option value="3">Deceleracion</option>
+            
+        </select>
+        <button onclick="calcula_aceleracion();">Calcular</button><br />
     </form>
 
 

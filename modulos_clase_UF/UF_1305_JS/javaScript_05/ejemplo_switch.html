@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Switch (Condicional)</title>
+    <script>
+
+        function exe(){
+            var opcion = parseFloat(document.getElementById("s_opcion").value); 
+
+        switch(opcion){
+            case 1:
+                var resultado = "Esta es la opcion 1.";
+                break;
+            case 2:
+            var resultado = "Esta es la opcion 2.";
+            break;
+            case 3:
+            
+            var resultado = "Esta es la opcion 3.";
+            
+            break;
+        }
+
+        document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+
+        
+    }
+    </script>
+</head>
+<body>
+    <select name="" id="s_opcion">
+        <option value="1">Opcion 1</option>
+        <option value="2">Opcion 2</option>
+        <option value="3">Opcion 3</option>
+    </select>
+    <button onclick="exe();">Ejecuta</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

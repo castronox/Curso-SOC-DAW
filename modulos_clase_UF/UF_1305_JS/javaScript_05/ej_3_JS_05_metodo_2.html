@@ -8,19 +8,16 @@
     <title>Ej 3 JavaScript 05</title>
     <style>
         form {
-
             margin: auto;
             border: 1px solid blue;
             padding: 2%;
             width: 450px;
         }
-
         label,
         select,
         button {
             margin-top: 5%;
         }
-
         p {
             border-radius: 10px;
             border: dotted 1px grey;
@@ -29,33 +26,18 @@
         }
     </style>
     <script>
-
-
         function a_sueldo() {
             var salario = parseFloat(document.getElementById("salario").value);
             var nivel = parseFloat(document.getElementById("nivel").value);
-
             if (isNaN(salario) || salario == 0) {
                 return alert("Introduce un sueldo, porfavor.");
-
-            } else if (nivel === 0.93) {
-                nuevo_salario = salario * 0.93;
-                return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
-
-            } else if (nivel === 1.30) {
-
-                nuevo_salario = salario * 1.30;
-                return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
             } else {
-
-                nuevo_salario = salario * 1.05;
-                return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
+                var resultado = salario * nivel;
+                return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + resultado.toFixed(2) + " €";
             }
-
         }
     </script>
 </head>
-
 <body>
     <form action="">
         <label for="salario">Introduce el salario anterior: <input type="number" name="salario" id="salario"> euros.
@@ -70,7 +52,6 @@
         </label><br />
         <button onclick="a_sueldo(); return false;">Calcular</button>
         <p id="resultado"></p>
-
     </form>
 
 </body>
