@@ -15,15 +15,23 @@
         .mostrar {
             display: block;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
-       section{
-        display: flex;
-        justify-content: center;
-        
-           margin: auto; 
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
         }
+
+        section {
+            display: flex;
+            justify-content: center;
+
+            margin: auto;
+        }
+
         form {
             margin: auto;
             text-align: center;
@@ -31,7 +39,8 @@
             display: flex;
             flex-direction: column;
         }
-        button{
+
+        button {
             margin: 3% auto 3% auto;
         }
     </style>
@@ -48,7 +57,7 @@
                     var aceleracion = (v_final - v_inicial) / t_final;
                     break;
                 case 2:
-                var aceleracion = (v_final - v_inicial) / t_final;
+                    var aceleracion = (v_final - v_inicial) / t_final;
                     break;
                 case 3:
 
@@ -72,10 +81,10 @@
                 if (this.value === '1') {
                     opcion1.classList.add('mostrar');
                     opcion2.classList.remove('mostrar');
-                } else if(this.value === '2') {
+                } else if (this.value === '2') {
                     opcion2.classList.add('mostrar');
                     opcion1.classList.remove('mostrar');
-                }else{
+                } else {
                     opcion1.classList.remove('mostrar');
                     opcion2.classList.remove('mostrar');
                 }
@@ -85,17 +94,17 @@
 </head>
 
 <body>
-<section>
-    <select name="select" id="select">
-        <option value="">Selecciona una opción</option>
-        <option value="1">Calcular aceleración</option>
-        <option value="2">opcion 2</option>
-    </select>
-</section>
+    <section>
+        <select name="select" id="select">
+            <option value="">Selecciona una opción</option>
+            <option value="1">Calcular aceleración</option>
+            <option value="2">opcion 2</option>
+        </select>
+    </section>
 
     <section class="opcion" id="opcion1">
         <h1>Calcular aceleración</h1>
-        <form action="">            
+        <form action="">
             <label for="">Velocidad Inicial</label>
             <input id="v_inicial" type="number">
             <label for="">Tiempo inicial</label>
@@ -104,13 +113,13 @@
             <input id="v_final" type="number">
             <label for="">tiempo final</label>
             <input id="t_final" type="number">
-            <button onclick="exe();">calcular</button> 
+            <button onclick="exe();">calcular</button>
         </form>
         <p>La formula es la siguiente: a = dv/dt ( Vf-Vi ) / ( Tf-Ti ) </p>
 
     </section>
-    
-    
+
+
     <section class="opcion" id="opcion2">
         opcion 2
     </section>
