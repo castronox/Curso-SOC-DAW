@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 3 JavaScript 05</title>
+    <style>
+        form{
+
+            margin: auto;
+            border: 1px solid blue;
+            padding: 2%;
+            width: 450px;
+        }
+        label,select,button{
+            margin-top: 5%;           
+        }
+
+        p{
+            border-radius: 10px;
+            border: dotted 1px grey;
+            width: 400px;
+            height: 50px;
+        }
+
+    </style>
+    <script>
+
+
+function a_sueldo(){
+    var salario = parseFloat(document.getElementById("salario").value);
+    var nivel = parseFloat(document.getElementById("nivel").value);
+
+    if (nivel === 0.93){
+        nuevo_salario = salario*0.93;
+        return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
+    
+    }else if (nivel === 1.30){
+
+        nuevo_salario = salario * 1.30;        
+        return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
+    }else{
+
+        nuevo_salario = salario * 1.05;
+        return document.getElementById("resultado").innerHTML = "Tu nuevo salario es de: " + nuevo_salario.toFixed(2) + " €";
+    } 
+    
+}
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="salario">Introduce el salario anterior:  <input type="number" name="salario" id="salario"> euros. </label>
+        <br />
+        <label for="nivel"></label>Nivel:
+        <label for="nivel"><select name="nivel" id="nivel">
+            <option value="0.93">Otro nivel</option>
+            <option value="1.3">Nivel 1</option>
+            <option value="1.05">Nivel 2</option>
+        </select>
+    </label><br />
+    <button onclick="a_sueldo(); return false;">Calcular</button>
+    <p id="resultado"></p>
+    
+    </form>
+    
+</body>
+</html>

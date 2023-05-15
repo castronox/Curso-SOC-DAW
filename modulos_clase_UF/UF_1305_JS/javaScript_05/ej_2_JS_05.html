@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 5 JavaScript 05</title>
+
+
+<script>
+
+
+    function calcula(){
+
+        var h = parseFloat(document.getElementById("altura").value);
+        var b = parseFloat(document.getElementById("base").value);
+
+    if ( b===0 || h===0){
+        alert("Introduce datos correctos");
+    }else{
+
+        var area = b * h ;
+        var perimetro = 2 * ( b + h) ;
+
+        document.getElementById("resultado").innerHTML =
+
+        "El area es: " + area + " y el perímetro: " + perimetro;
+    }
+
+}
+
+</script>
+
+
+</head>
+<body>
+    <label for="altura">Introduce la altura</label>
+    <input type="number" value="0" id="altura">
+
+    <label for="base">Introduce la base</label>
+    <input type="number" value="0" id="base">
+
+    <p id="resultado"></p>
+
+    <button onclick="calcula();">calcula</button>
+</body>
+</html>

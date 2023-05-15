@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceleracion</title>
+    <style>
+
+
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+        form {
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.151);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.164);
+            max-width: 500px;
+            margin: auto;
+            padding: 10px;
+        }
+        fieldset{
+            border: none;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.164);
+            margin:3% auto;
+        }
+        legend{
+            margin: 2%;
+        }
+
+        label,
+        input{
+
+            margin: 1.5vw;
+            margin-top: 5px;
+            
+
+        }
+        button{
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.164);
+            border: none;
+            margin: 2% auto 2% auto;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+        input {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+
+
+        function calcula_aceleracion() {
+            var v_inicial = parseFloat(document.getElementById("v_inicial").value);
+            var v_final = parseFloat(document.getElementById("v_final").value);
+
+            var t_inicial = parseFloat(document.getElementById("t_inicial").value);
+            var t_final = parseFloat(document.getElementById("t_final").value);
+
+            var aceleracion = (v_final - v_inicial) / t_final;
+
+            var ms_to_kmh = aceleracion * 3600 / 1000;
+            var ms_to_kmh_f = ms_to_kmh * 3.6;
+
+
+            return document.getElementById("r_final").innerHTML = "Restultado: " + aceleracion.toFixed(2) + " m/s de aceleración. que serán: " + ms_to_kmh_f.toFixed(2) + " Km /h.";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Claculadora de aceleracion</h1>
+    <form action="">
+
+        <fieldset><legend>Velocidades</legend>
+            <label for="v_inicial">Introduce la velocidad inicial (Vi) :</label>
+            <input type="number" name="v_inicial" id="v_inicial" placeholder="intrudce velocidad inicial" value="0"
+                min="0"><br />
+            <label for="v_inicial">Introduce la velocidad final (Vf) :</label>
+            <input type="number" name="v_final" id="v_final" placeholder="intrudce la velocidad final" value="0" min="0"><br />
+            
+        </fieldset>
+        <fieldset><legend>Tiempos</legend>
+            <label for="v_inicial">Introduce la tienmpo inicial (Ti) :</label>
+            <input type="number" name="t_inicial" id="t_inicial" placeholder="intrudce el tiempo inicial" value="0"
+                min="0"><br />
+            <label for="v_inicial">Introduce la tiempo final (Tf) :</label>
+            <input type="number" name="t_final" id="t_final" placeholder="intrudce el tiempo final" value="0" min="0"><br />
+            
+            <p id="resultado"></p>
+            <p id="r_final"></p>
+        </fieldset>
+        <button onclick="calcula_aceleracion();">Calcula aceleracion</button><br />
+    </form>
+
+
+</body>
+
+</html>
