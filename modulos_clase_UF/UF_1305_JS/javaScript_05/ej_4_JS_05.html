@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3_JavaScript_</title>
+    <script>
+
+        function estableceConversion() {
+            var r = parseFloat(document.getElementById('n').value);
+            var eleccion = document.querySelector('select').value;
+            var resultado_conv;
+            const PI = 3.141592653;
+
+            if (eleccion === 'perimetro') {
+
+                resultado_conv = 2 * PI * r;
+                document.getElementById('resultado_final').innerHTML = 'El resultado de perímetro es: ' + resultado_conv.toFixed(2);
+
+
+            } else if (eleccion === 'area') {
+
+                resultado_conv = PI * r * r;
+                document.getElementById('resultado_final').innerHTML = 'El resultado de área es: ' + resultado_conv.toFixed(2);
+            } else if (eleccion === 'diametro') {
+
+                resultado_conv = 2 * r;
+                document.getElementById('resultado_final').innerHTML = 'El resultado de diámetro es: ' + resultado_conv.toFixed(2);
+
+            } else {
+                alert("No has seleccionado ningun valor...");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <select id="conversion">
+        <option value="">Selecciona Conversión</option>
+        <option value="perimetro">Perímetro</option>
+        <option value="area">Área</option>
+        <option value="diametro">Diámetro</option>
+    </select>
+    <input type="button" value="conversion" onclick="estableceConversion();" id="conversion">
+    <input type="number" id="n" placeholder="Valor">
+    <p id="resultado_final"></p>
+</body>
+
+</html>

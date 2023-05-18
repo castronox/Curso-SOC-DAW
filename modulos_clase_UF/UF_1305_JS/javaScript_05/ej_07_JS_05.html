@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*RESET*/
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /*CUERPO*/
+        header {
+            display: flex;
+            margin: auto;
+            width: 98vw;
+            height: 6rem;
+            background-color: blanchedalmond;
+        }
+
+        main {
+            display: flex;
+            display: inline-block;
+        }
+
+        h1,h3,p{
+            color: rgba(0, 0, 0, 0.575);
+            text-align: center;
+            margin: 2% auto;
+        }
+
+
+
+        /*FORMULARIO*/
+
+        form {
+            margin: 3% auto 0 3%;
+            border: 1px solid rgba(0, 0, 0, 0.575);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.575);
+            display: inline-block;
+            width: auto;
+            padding: 2%;
+            margin-top: 3%;
+
+        }
+        #form {
+
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+        }
+
+        fieldset {
+            border: none;
+        }
+        
+        label {
+            margin: 2%;
+            display: inline-block;
+            width: 20.5vw;
+        }
+        input,
+        select {
+
+            display: inline-block;
+            width: 30.5vw;
+            margin-left: 4%;
+            margin-right: 6px;
+
+        }
+        button {
+            padding: 20px;
+        }
+
+        /*ID'S DE LOS SECTION*/
+        #s_resultado {
+            display: flex;
+            flex-wrap: wrap;
+            display: inline-block;
+            margin: 3% auto auto auto;
+            border: 1px solid black;
+            width: 50vw;
+
+            height: 400px;
+
+        }
+
+        #s_resultado p {
+            border: 1px solid black;
+            margin: 2%;
+        }
+
+        #flex_pagina {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+    </style>
+
+    <script>
+
+        function exe() {
+            event.preventDefault();
+            var seleccion = parseFloat(document.getElementById('porcentaje').value) / 100;
+            var n_preguntas = parseInt(document.getElementById('preguntas').value);
+            var aciertos = parseInt(document.getElementById('aciertos').value);
+            var errores = parseInt(document.getElementById('errores').value);
+
+            var p_contestadas = aciertos + errores;
+            var no_contestadas = n_preguntas - p_contestadas;
+            var nota_x_preguntas = 10 / n_preguntas;
+
+            var n_x_p_acierto = aciertos * nota_x_preguntas;
+            var n_x_p_fallo = errores * nota_x_preguntas;
+
+            var descuento_fallo = n_x_p_fallo * (-seleccion);
+
+            var puntuacion = n_x_p_acierto + descuento_fallo;
+
+            document.getElementById('aciertos_r').innerHTML = "Aciertos: " + aciertos;
+            document.getElementById('errores_r').innerHTML = "Errores: " + errores;
+            document.getElementById('no_contestadas_r').innerHTML = "No contestadas: " + no_contestadas;
+            document.getElementById('nota').innerHTML = "Nota : " + puntuacion;
+
+            if (puntuacion >= 5) {
+                document.getElementById('nota_f').innerHTML = "<h3> HAS APROBADO!<h3 /> ";
+            } else {
+                document.getElementById('nota_f').innerHTML = "<h3> HAS SUSPENDIDO....<h3 /> ";
+            }
+
+        }
+
+
+    </script>
+    <title>Calcular Nota</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de test.</h1>
+    </header>
+    <main>
+        <section id="flex_pagina">
+            <section id="form">
+                <form action="">
+                    <fieldset>
+                        <legend>
+                            <h2>Entrada de datos</h2>
+                        </legend>
+
+                        <legend>Parámetros</legend>
+                        <label for="l_preguntas" id="l_preguntas">Preguntas : </label>
+                        <input type="number" name="preguntas" id="preguntas">
+                        <br />
+
+                        <label for="porcentaje">Des. Por error:</label>
+                        <select for="porcentaje" id="porcentaje">
+                            <option value="">Selecciona un porcentaje.</option>
+                            <option value="0">0%</option>
+                            <option value="25">25%</option>
+                            <option value="33">33%</option>
+                            <option value="50">50%</option>
+                            <option value="66">66%</option>
+                            <option value="75">75%</option>
+                            <option value="100">100%</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Resultados</legend>
+                        <label for="l_aciertos" id="l_aciertos">Aciertos:</label>
+                        <input type="number" name="aciertos" id="aciertos">
+                        <br />
+                        <label for="errores">Erores: </label>
+                        <input type="number" name="errores" id="errores">
+
+                    </fieldset>
+                    <button onclick="exe();">resultado</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section id="s_resultado">
+
+                <p id="aciertos_r">Aciertos:&nbsp;</p>
+                <p id="errores_r">Errores:&nbsp;</p>
+                <p id="no_contestadas_r">No contestadas:&nbsp;</p>
+                <p id="nota">Nota:&nbsp;</p>
+                <h3 id="nota_f">Resultado:&nbsp;</h3>
+            </section>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

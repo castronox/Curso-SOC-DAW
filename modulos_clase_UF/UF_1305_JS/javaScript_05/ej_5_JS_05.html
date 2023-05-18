@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1_JavaScript_</title>
+</head>
+<body>
+    <script>
+        function calcular(){
+        
+        
+        var r = parseFloat(document.getElementById('n').value);
+        var p = perimetro.checked;
+        var a = area.checked;
+        var d = diametro.checked;
+        
+        const PI = 3.141592653;
+
+        if (p){
+        var resultado = 2*PI*r;
+        document.getElementById('resultado_final').innerHTML = 'El resultado de perímetro es: ' + resultado;
+        }
+
+        if(a){    
+        resultado = PI*r*r;
+        document.getElementById('resultado_final').innerHTML = 'El resultado de área es: ' + resultado;
+        }
+
+        if(d){
+        
+        resultado = 2*r;   
+        document.getElementById('resultado_final').innerHTML = 'El resultado de diámetro es: ' + resultado;     
+        }
+
+        
+    }
+    </script>
+
+    <input title="n" type="number" id="n" ><br/>
+
+    <label title="perimetro" for="perimetro">Calcular perimetro</label><input type="checkbox" id="perimetro"><br />
+    <label  title="area" for="area">Calcular área</label><input type="checkbox" id="area"><br />
+    <label title="diametro" for="diametro">Calcular diámetro</label><input type="checkbox" id="diametro"><br />
+    <br />
+    <button onclick="calcular();">Calcula</button>
+    <p id="resultado_final"></p>
+</body>
+</html>

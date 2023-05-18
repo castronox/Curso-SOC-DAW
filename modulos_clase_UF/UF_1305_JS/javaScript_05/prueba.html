@@ -1,82 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        .opcion {
-            display: none;
+        .ocultar {
+            opacity: 0;
+            visibility: hidden;
+            transition: ease-out opacity 1s;
+            height: 0;
         }
-
         .mostrar {
+            visibility: visible;
+            margin-top: 5%;
             display: block;
+            opacity: 1;
+            transition: opacity 0, 2s;
         }
-
-        h1 {
-            text-align: center;
+        header {
+            color: rgb(205, 226, 238);
+            padding: 1.5%;
+            background-color: rgb(112, 166, 212);
+            margin-bottom: 3%;
         }
-
+        h1,
         p {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
+            margin: 4%
         }
-
         section {
             display: flex;
             justify-content: center;
-
+            transition: ease-in-out;
             margin: auto;
         }
-
         form {
-            margin: auto;
+            margin: 3% auto 3% auto;
             text-align: center;
             width: 600px;
             display: flex;
             flex-direction: column;
         }
-
+        label {
+            margin-top: 2%;
+        }
+        select,
+        option {
+            color: rgb(255, 255, 255);
+            background-color: rgb(112, 166, 212);
+            border-radius: 25px;
+            border: none;
+            text-align: center;
+            min-width: 500px;
+            height: 60px;
+            transition: 1s;
+        }
         button {
             margin: 3% auto 3% auto;
         }
     </style>
     <script>
-        function exe() {
-            var v_inicial = parseFloat(document.getElementById("v_inicial").value);
-            var v_final = parseFloat(document.getElementById("v_final").value);
-            var opcion = parseFloat(document.getElementById("select").value);
-            var t_inicial = parseFloat(document.getElementById("t_inicial").value);
-            var t_final = parseFloat(document.getElementById("t_final").value);
-
-            switch (opcion) {
-                case 1:
-                    var aceleracion = (v_final - v_inicial) / t_final;
-                    break;
-                case 2:
-                    var aceleracion = (v_final - v_inicial) / t_final;
-                    break;
-                case 3:
-
-                    var resultado = "Esta es la opcion 3.";
-
-                    break;
-            }
-
-            var ms_to_kmh = aceleracion * 3600 / 1000;
-            var resultado = ms_to_kmh * 3.6;
-            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
-
-
-        }
         window.addEventListener('load', function () {
             var select = document.getElementById('select');
             var opcion1 = document.getElementById('opcion1');
             var opcion2 = document.getElementById('opcion2');
-
             select.addEventListener('change', function () {
                 if (this.value === '1') {
                     opcion1.classList.add('mostrar');
@@ -90,40 +80,97 @@
                 }
             });
         });
+        function calculo() {
+            event.preventDefault();
+            //VARIABLES CASE 1 O CALCULO ACELERACION.
+            var v_inicial = parseFloat(document.getElementById("v_inicial").value);
+            var v_final = parseFloat(document.getElementById("v_final").value);
+            var opcion = parseFloat(document.getElementById("select").value);
+            var t_inicial = parseFloat(document.getElementById("t_inicial").value);
+            var t_final = parseFloat(document.getElementById("t_final").value);
+            //VARIABLES PROBABILIDAD.
+            var proveedor_a = parseFloat(document.getElementById('proveedor_a').value) / 100;
+            var proveedor_b = parseFloat(document.getElementById('proveedor_b').value) / 100;
+            var proveedor_c = parseFloat(document.getElementById('proveedor_c').value) / 100;
+            var prob_err_a = parseFloat(document.getElementById('prob_err_a').value) / 100;
+            var prob_err_b = parseFloat(document.getElementById('prob_err_b').value) / 100;
+            var prob_err_c = parseFloat(document.getElementById('prob_err_c').value) / 100;
+            switch (opcion) {
+                case 1:
+                    var aceleracion = (v_final - v_inicial) / t_final;
+                    var ms_to_kmh = aceleracion * 3600 / 1000;
+                    var resultado = ms_to_kmh * 3.6;
+                    document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+                    break;
+                case 2:
+                    resultado = proveedor_a * prob_err_a + proveedor_b * prob_err_b + proveedor_c * prob_err_c;
+                    document.getElementById("respuesta").innerHTML =
+                        "La probabilidad de fallo en tu producto final es de: : " + (resultado * 100.).toFixed(2) + " %";
+                    break;
+                case 3:
+                    var resultado = "Esta es la opcion 3.";
+                    break;
+            }
+        }
     </script>
 </head>
-
 <body>
-    <section>
-        <select name="select" id="select">
-            <option value="">Selecciona una opción</option>
-            <option value="1">Calcular aceleración</option>
-            <option value="2">opcion 2</option>
-        </select>
-    </section>
-
-    <section class="opcion" id="opcion1">
-        <h1>Calcular aceleración</h1>
-        <form action="">
-            <label for="">Velocidad Inicial</label>
-            <input id="v_inicial" type="number">
-            <label for="">Tiempo inicial</label>
-            <input id="t_inicial" type="number">
-            <label for="">Velocidad final</label>
-            <input id="v_final" type="number">
-            <label for="">tiempo final</label>
-            <input id="t_final" type="number">
-            <button onclick="exe();">calcular</button>
-        </form>
-        <p>La formula es la siguiente: a = dv/dt ( Vf-Vi ) / ( Tf-Ti ) </p>
-
-    </section>
-
-
-    <section class="opcion" id="opcion2">
-        opcion 2
-    </section>
-    <p id="resultado"></p>
+    <header>
+        <h1>Libreria de calculos</h1>
+        <hr />
+    </header>
+    <main>
+        <section>
+            <select name="select" id="select">
+                <option id="opc1" value="">Selecciona una opción</option>
+                <option id="opc2" value="1">Calcular aceleración</option>
+                <option id="opc3" value="2">Probabilidad</option>
+            </select>
+        </section>
+        <section class="ocultar" id="opcion1">
+            <h1 class="" id="">Calcular aceleración</h1>
+            <form action="">
+                <label for="">Velocidad Inicial ( V<sub>i</sub> )</label>
+                <input id="v_inicial" type="number">
+                <label for="">Tiempo inicial ( T <sub>i</sub> )</label>
+                <input id="t_inicial" type="number">
+                <label for="">Velocidad final ( V<sub>f</sub> ) </label>
+                <input id="v_final" type="number">
+                <label for="">tiempo final ( T <sub>f</sub> )</label>
+                <input id="t_final" type="number">
+                <button onclick="calculo();">calcular</button>
+            </form>
+            <p>La formula es la siguiente: a = dv/dt ( Vf-Vi ) / ( Tf-Ti )</p>
+            <p id="resultado"></p>
+        </section>
+        <section class="ocultar" id="opcion2">
+            <h1 class="" id="">Calcular probabilidad.</h1>
+            <form action="">
+                <label for="">Cantidad Proveedor A ( P<sub>a</sub> en '%'.)</label>
+                <input id="proveedor_a" type="number">
+                <label for="">Cantidad Proveedor B ( P<sub>a</sub> en '%'.)</label>
+                <input id="proveedor_b" type="number">
+                <label for="">Cantidad Proveedor C ( P<sub>a</sub> en '%'.)</label>
+                <input id="proveedor_c" type="number">
+                <br /> <br /> <br />
+                <label for="">Probabilidad de defecto en producto, proveedor A( P<sub>d</sub>A ) en '%'.</label>
+                <input id="prob_err_a" type="number">
+                <label for="">Probabilidad de defecto en producto, proveedor B( P<sub>d</sub>B ) en '%'.</label>
+                <input id="prob_err_b" type="number">
+                <label for="">Probabilidad de defecto en producto, proveedor C( P<sub>d</sub>C ) en '%'.</label>
+                <input id="prob_err_c" type="number">
+                <button id="calcularBoton" onclick="calculo();">calcular</button>
+            </form>
+            <p>La formula es la siguiente: P(D) = P(A) * P(D|A) + P(B) * P(D|B) + P(C) * P(D|C)<br /><br />
+                Supongamos que tienes 3 proveedores de los cuales cada uno de aporta un porcentaje de componentes
+                electronicos para tu producto final, <br />
+                y cada uno con un porcentaje/probabilidad de error en los componentes.<br /><br />
+                ¿Que probabilidad tienes de fallo en tu producto final?
+            </p>
+            <p id="respuesta"></p>
+            <br /><br /><br /><br />
+            <hr />
+        </section>
+    </main>
 </body>
-
 </html>
