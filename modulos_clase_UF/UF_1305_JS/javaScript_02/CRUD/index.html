@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRUD</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>CRUD</h1>
+
+    <div id="list-container">
+        <h2>List</h2>
+        <ul id="item-list">
+            <!-- Aquí se mostrarán los elementos -->
+        </ul>
+    </div>
+
+    <div id="form-container">
+        <h2>Form</h2>
+        <form id="item-form">
+            <input type="text" id="item-name" placeholder="Nombre" required>
+            <input type="text" id="item-description" placeholder="Descripción" required>
+            <button type="submit">Agregar</button>
+            <button type="button" id="update-button" style="display: none;">Actualizar</button>
+            <button type="button" id="cancel-button" style="display: none;">Cancelar</button>
+        </form>
+    </div>
+    <div id="list-container">
+        <h2>List</h2>
+        <input type="text" id="search-input" placeholder="Buscar">
+        <ul id="item-list">
+            <!-- Aquí se mostrarán los elementos -->
+        </ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

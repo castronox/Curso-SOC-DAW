@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,99 +8,218 @@
     <style>
         /*RESET*/
         * {
+
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
         /*CUERPO*/
         header {
             display: flex;
             margin: auto;
-            width: 98vw;
+            text-align: center;
+            width: 100%;
             height: 6rem;
-            background-color: blanchedalmond;
+            background-color: #2A715B;
         }
 
         main {
+            background: #2980b9;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2c3e5060, #297fb957);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0e6b3870, #29b95967);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             display: flex;
-            display: inline-block;
+            align-items: center;
         }
 
-        h1,h3,p{
-            color: rgba(0, 0, 0, 0.575);
+        h1,
+        h2,
+        h3 {
+            color: rgba(255, 255, 255, 0.89);
             text-align: center;
             margin: 2% auto;
         }
 
+        legend,
+        label {
+            color: #ffffffd2;
+        }
 
+        h3 {
+            margin-top: 3%;
+        }
+
+
+
+        @media only screen and (max-width: 1158px) {
+            header {
+                width: 100%;
+            }
+
+            form {
+                min-width: 390px;
+            }
+
+            div,
+            button {
+                border: none;
+                margin: auto;
+                padding: 10px 100px 10px 100px;
+            }
+
+            #flex_pagina {
+                display: flex;
+                margin: auto;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #s_resultado {
+                display: flex;
+                flex-wrap: wrap;
+                display: inline-block;
+                margin: auto;
+                width: 50vw;
+                height: 400px;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                width: 100%;
+            }
+
+            form {
+
+                max-width: 400px;
+            }
+
+            div,
+            button {
+                border: none;
+                margin: auto;
+                padding: 10px 70px 10px 70px;
+            }
+
+            #flex_pagina {
+
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            #s_resultado {
+                display: flex;
+                flex-wrap: wrap;
+                display: inline-block;
+                margin: auto;
+                width: 50vw;
+                height: 400px;
+            }
+
+        }
 
         /*FORMULARIO*/
 
         form {
-            margin: 3% auto 0 3%;
-            border: 1px solid rgba(0, 0, 0, 0.575);
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.575);
+            background-color: #2a715b69;
+            display: flex;
+            margin: auto;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
             display: inline-block;
-            width: auto;
             padding: 2%;
             margin-top: 3%;
-
         }
-        #form {
 
+        hr {
+            margin: 1%;
+        }
+
+        #form {
+            margin: 1%;
+            width: 90%;
             display: flex;
             flex-wrap: wrap;
-            width: 40%;
+
         }
 
         fieldset {
+
             border: none;
         }
-        
+
         label {
+
+            text-align: center;
             margin: 2%;
             display: inline-block;
             width: 20.5vw;
         }
+
         input,
         select {
-
+            text-align: center;
+            height: 30px;
+            border: none;
+            margin: auto;
             display: inline-block;
             width: 30.5vw;
-            margin-left: 4%;
+            margin-left: 10%;
             margin-right: 6px;
-
+            margin-bottom: 2%;
         }
+
+        input {
+            text-align: center;
+        }
+
         button {
-            padding: 20px;
+            color: aliceblue;
+            background-color: #2a52713f;
+        }
+
+        div,
+        button {
+            border: none;
+            margin: auto;
+            padding: 10px 100px 10px 100px;
         }
 
         /*ID'S DE LOS SECTION*/
         #s_resultado {
+            background-color: #2a715b69;
             display: flex;
             flex-wrap: wrap;
             display: inline-block;
-            margin: 3% auto auto auto;
-            border: 1px solid black;
+            margin: 3%;
             width: 50vw;
-
             height: 400px;
-
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
         }
 
         #s_resultado p {
-            border: 1px solid black;
-            margin: 2%;
+            color: #ffffff;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.13);
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #2a527127;
+            margin: 6%;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
         #flex_pagina {
-            display: inline-flex;
-            flex-wrap: wrap;
+            display: flex;
             justify-content: center;
         }
-
-
     </style>
 
     <script>
@@ -120,16 +239,22 @@
             var n_x_p_fallo = errores * nota_x_preguntas;
 
             var descuento_fallo = n_x_p_fallo * (-seleccion);
-
             var puntuacion = n_x_p_acierto + descuento_fallo;
 
             document.getElementById('aciertos_r').innerHTML = "Aciertos: " + aciertos;
             document.getElementById('errores_r').innerHTML = "Errores: " + errores;
             document.getElementById('no_contestadas_r').innerHTML = "No contestadas: " + no_contestadas;
-            document.getElementById('nota').innerHTML = "Nota : " + puntuacion;
+            document.getElementById('nota').innerHTML = "Nota : " + puntuacion.toFixed(2);
 
             if (puntuacion >= 5) {
-                document.getElementById('nota_f').innerHTML = "<h3> HAS APROBADO!<h3 /> ";
+                if (puntuacion >= 9) {
+                    document.getElementById('nota_f').innerHTML = "<h3> HAS APROBADO CON EXCELENTE!<h3 /> ";
+
+                } else if (puntuacion >= 7) {
+                    document.getElementById('nota_f').innerHTML = "<h3> NOTABLE!<h3 /> ";
+                } else {
+                    document.getElementById('nota_f').innerHTML = "<h3> HAS APROBADO CON SUFI!<h3 /> ";
+                }
             } else {
                 document.getElementById('nota_f').innerHTML = "<h3> HAS SUSPENDIDO....<h3 /> ";
             }
@@ -153,8 +278,8 @@
                         <legend>
                             <h2>Entrada de datos</h2>
                         </legend>
-
-                        <legend>Parámetros</legend>
+                        <hr />
+                        <legend><u>Parámetros</u></legend>
                         <label for="l_preguntas" id="l_preguntas">Preguntas : </label>
                         <input type="number" name="preguntas" id="preguntas">
                         <br />
@@ -171,9 +296,9 @@
                             <option value="100">100%</option>
                         </select>
                     </fieldset>
-
+                    <hr />
                     <fieldset>
-                        <legend>Resultados</legend>
+                        <legend><u>Resultados</u></legend>
                         <label for="l_aciertos" id="l_aciertos">Aciertos:</label>
                         <input type="number" name="aciertos" id="aciertos">
                         <br />
@@ -181,19 +306,22 @@
                         <input type="number" name="errores" id="errores">
 
                     </fieldset>
-                    <button onclick="exe();">resultado</button>
+                    <div>
+                        <button onclick="exe();">Resultado</button>
+                    </div>
                     </fieldset>
                 </form>
             </section>
 
             <section id="s_resultado">
-
+                <h2>Resultados Finales</h2>
                 <p id="aciertos_r">Aciertos:&nbsp;</p>
                 <p id="errores_r">Errores:&nbsp;</p>
                 <p id="no_contestadas_r">No contestadas:&nbsp;</p>
                 <p id="nota">Nota:&nbsp;</p>
                 <h3 id="nota_f">Resultado:&nbsp;</h3>
             </section>
+
         </section>
 
     </main>

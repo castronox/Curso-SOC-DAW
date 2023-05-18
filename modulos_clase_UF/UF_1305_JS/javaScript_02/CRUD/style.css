@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#list-container,
+#form-container {
+    margin-bottom: 20px;
+}
+
+#item-list {
+    list-style: none;
+    padding: 0;
+}
+
+#item-list li {
+    margin-bottom: 10px;
+}
+
+#item-form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#item-form button {
+    margin-top: 10px;
+}
