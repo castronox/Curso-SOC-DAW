@@ -13,15 +13,163 @@
             box-sizing: border-box;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
+        .contenedor {
+            text-align: center;
+            border-radius: 25px;
+            margin: auto;
+            padding: 3%;
+            height: 400px;
+            max-width: 700px;
+            background: rgba(173, 173, 173, 0.356);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 10px 20px 100px rgba(255, 255, 255, 0.308);
+        }
+
+
+        label,
+        p {
+            padding: 1%;
+            margin: auto;
+            text-align: center;
+            width: 200px;
+            font-size: large;
+            color: white;
+            text-shadow: 8px 5px 5px rgba(87, 84, 84, 0.801);
+        }
+
+        label:hover {}
+
+        input {
+            text-align: center;
+            color: white;
+            text-shadow: 8px 5px 5px rgba(87, 84, 84, 0.801);
+            border-radius: 25px;
+            border: none;
+            padding: 6px;
+            margin: 3%;
+            background: rgba(13, 13, 13, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
+        }
+
+        button {
+            border: none;
+            border-radius: 25px;
+            margin: 3%;
+            padding: 3%;
+            color: #fff;
+            text-shadow: 8px 5px 5px rgba(87, 84, 84, 0.801);
+            background: rgba(13, 13, 13, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
+        }
+
+        .glitch-wrapper {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #222222c4;
+        }
+
+        .glitch {
+            position: relative;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+            letter-spacing: 5px;
+            z-index: 1;
+        }
+
+        .glitch:before,
+        .glitch:after {
+            display: block;
+            content: attr(data-glitch);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+
+        .glitch:before {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #0ff;
+            z-index: -1;
+        }
+
+        .glitch:after {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+            color: #ff00ff;
+            z-index: -2;
+        }
+
+        @keyframes glitch-color {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-3px, 3px);
+            }
+
+            40% {
+                transform: translate(-3px, -3px);
+            }
+
+            60% {
+                transform: translate(3px, 3px);
+            }
+
+            80% {
+                transform: translate(3px, -3px);
+            }
+
+            to {
+                transform: translate(0);
+            }
+        }
+
+        body {
+
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        main {
+            margin: 4%;
+        }
+
+        div {
+            display: flex;
+        }
+    </style>
+
+
+
     </style>
     <script>
         var n_global;
         var contador = 0;
 
+
+
+        function g_num() {
+
+            n_global = Math.round(Math.random() * 10);
+            document.getElementById('chivato').innerHTML = "Numero aleatorio generado! <br /> <br /> (Entre 1 y 10) " /*+ n_global*/;
+        }
+
         function reset() {
 
             contador = 0;
-            document.getElementById('contador').innerHTML = "Numero de intentos: " + contador;
+            document.getElementById('contador').innerHTML = "Numero de intentos: ";
         }
 
         function accion() {
@@ -40,19 +188,13 @@
             } else if (n_introducido == n_global) {
                 document.getElementById('imprime').innerHTML = "Has acertado!";
             } else {
-                alert("Introduce un numero, porfavor.");
+                alert("Introduce un numero valido, porfavor.");
             }
-
-
-
             document.getElementById('contador').innerHTML = "Numero de intentos: " + contador;
         }
-        function g_num() {
 
-            n_global = Math.round(Math.random() * 10);
-            document.getElementById('chivato').innerHTML = "Numero aleatorio: " + n_global;
-        }
-        g_Num();
+
+        window.onload=g_num;
         accion();
 
 
@@ -60,17 +202,29 @@
 </head>
 
 <body>
-    <h1>Adivina el numero</h1>
-    <label for="imprime_num" id="l_imprime_num">Dime un numero:</label>
-    <input id="n_introducido" type="number">
-    <button onclick="accion();">Acción</button>
-    <button onclick="g_num();">G.Numero</button>
-    <button onclick="reset();">Reset</button>
-    <output id="chivato"></output>
+    <header>
+        <div class="glitch-wrapper">
+            <div class="glitch" data-glitch="Adivina el numero">Adivina el numero</div>
+        </div>
+    </header>
+    <main>
+        <section class="contenedor">
+            <label for="imprime_num" id="l_imprime_num">Dime un numero:</label>
+            <input id="n_introducido" type="number">
+            
+            <br /><br />
 
-    <p id="imprime"></p><br />
-    <p id="contador">Numero de intentos: </p>
+            <button onclick="accion();">Comprobar</button>
+            <button onclick="g_num(); reset();">Nueva partida</button>
+            <div>
+                <p id="chivato"></p><br />
 
+                <p id="imprime"></p><br />
+                <p id="contador">Numero de intentos: </p>
+            </div>
+        </section>
+        
+    </main>
 </body>
 
 </html>
