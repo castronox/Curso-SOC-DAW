@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // Variable global para almacenar el número generado
+var numeroGenerado;
+
+// Función que genera el número y lo muestra en pantalla
+function generarNumero() {
+  numeroGenerado = Math.random();
+  console.log("Número generado: " + numeroGenerado);
+}
+
+// Función que recoge el número generado y lo imprime en otro lugar
+function imprimirNumeroRecogido() {
+  console.log("Número recogido: " + numeroGenerado);
+  // Aquí puedes hacer lo que desees con el número recogido
+}
+
+// Llamar a la función que genera el número
+generarNumero();
+
+// Llamar a la función que recoge el número generado y lo imprime en otro lugar
+imprimirNumeroRecogido();
+
+</script>
+<body>
+    
+</body>
+</html>

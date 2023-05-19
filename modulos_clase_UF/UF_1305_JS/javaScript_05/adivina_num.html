@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script>
+        var n_global;
+        var contador = 0;
+
+        function reset() {
+
+            contador = 0;
+            document.getElementById('contador').innerHTML = "Numero de intentos: " + contador;
+        }
+
+        function accion() {
+
+            var n_introducido = parseInt(document.getElementById('n_introducido').value);
+
+
+            if (n_introducido > n_global) {
+                document.getElementById('imprime').innerHTML = "Introduce un numero mas pequeño.";
+                contador++;
+
+            } else if (n_introducido < n_global) {
+                document.getElementById('imprime').innerHTML = "Introduce un numero mas grande";
+                contador++;
+
+            } else if (n_introducido == n_global) {
+                document.getElementById('imprime').innerHTML = "Has acertado!";
+            } else {
+                alert("Introduce un numero, porfavor.");
+            }
+
+
+
+            document.getElementById('contador').innerHTML = "Numero de intentos: " + contador;
+        }
+        function g_num() {
+
+            n_global = Math.round(Math.random() * 10);
+            document.getElementById('chivato').innerHTML = "Numero aleatorio: " + n_global;
+        }
+        g_Num();
+        accion();
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Adivina el numero</h1>
+    <label for="imprime_num" id="l_imprime_num">Dime un numero:</label>
+    <input id="n_introducido" type="number">
+    <button onclick="accion();">Acción</button>
+    <button onclick="g_num();">G.Numero</button>
+    <button onclick="reset();">Reset</button>
+    <output id="chivato"></output>
+
+    <p id="imprime"></p><br />
+    <p id="contador">Numero de intentos: </p>
+
+</body>
+
+</html>
