@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 A JavaScript 05</title>
+    <style>
+        body{
+            
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        h1,p{
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 2%;
+            
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 500px;
+
+        }
+        section{
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 2%;
+            
+            display: flex;
+            justify-content: center;
+            
+            width: 500px;
+            
+        }
+        select, button{
+            
+            margin: auto;
+            width: 150px;
+            margin: 3%;
+            gap: 5px;
+        }
+    </style>
+    <script>
+
+        function exe() {
+            var opcion = parseFloat(document.getElementById("s_opcion").value);
+
+            switch (opcion) {
+                case 1:
+                    var resultado = "Tienes que declarar un IRPF equivalente al 19%.";
+                    break;
+
+                case 2:
+                    var resultado = "Tienes que declarar un IRPF equivalente al 24%.";
+                    break;
+
+                case 3:
+                    var resultado = "Tienes que declarar un IRPF equivalente al 30%.";
+                    break;
+
+                case 4:
+                    var resultado = "Tienes que declarar un IRPF equivalente al 37%.";
+                    break;
+
+                case 5:
+                    var resultado = "Tienes que declarar un IRPF equivalente al 45%.";
+                    break;
+                
+                default:
+                    resultado = "Selecciona un rango salarial, Porfavor.";
+
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calcular IRPF según rango salarial.</h1>
+    <section>
+    <select name="" id="s_opcion">
+        <option value="">Indica rango Salarial</option>
+        <option value="1">0 € - 12450 €</option>
+        <option value="2">12450 € - 20200 €</option>
+        <option value="3">20200 € - 35200 €</option>
+        <option value="4">35200 € - 60000 €</option>
+        <option value="5">60000 € - más</option>
+    </select>
+    <button onclick="exe();">Ejecuta</button>
+
+    
+</section>
+<p id="resultado"></p>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1b JavaScript 05</title>
+    <style>
+        body {
+
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        h1,
+        p {
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 2%;
+
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 500px;
+
+        }
+
+        section {
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 2%;
+
+            display: flex;
+            justify-content: center;
+
+            width: 500px;
+
+        }
+
+        input,
+        button {
+
+            margin: auto;
+            width: 150px;
+            margin: 3%;
+            gap: 5px;
+        }
+    </style>
+    <script>
+
+        function exe() {
+            var opcion = parseInt(document.getElementById("in_nota").value);
+            resultado = '';
+            switch (opcion) {
+                case 1:                    
+                    
+
+                case 2:
+                    var resultado = "Deficiente";
+                    break;
+
+                case 3:
+                    
+                case 4:
+                    var resultado = "Suspenso";
+                    break;
+
+                case 5:
+                    
+                
+
+                case 6:
+                    var resultado = "Aprobado";
+                    break;
+
+                case 7:
+
+
+                case 8:
+                    var resultado = "Notable";
+                    break;
+
+                case 9:
+
+
+                case 10:
+                    var resultado = "Excelente";
+                    break;
+
+                default:
+                    resultado = "Error en la nota";
+
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calcular IRPF según rango salarial.</h1>
+    <section>
+        <input type="number" name="nota" id="in_nota" placeholder="Introduce tu nota." max="10" min="0">
+        <button onclick="exe();">Ejecuta</button>
+
+
+    </section>
+    <p id="resultado"></p>
+</body>
+
+</html>
