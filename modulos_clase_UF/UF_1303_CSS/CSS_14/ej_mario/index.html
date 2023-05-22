@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Super Nintendo Grid Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        header {
+            grid-area: h;
+        }
+
+        nav {
+            grid-area: n;
+        }
+
+        #snesbig {
+            grid-area: foto;
+        }
+
+        main {
+            grid-area: m;
+        }
+
+        #galeria {
+            grid-area: g;
+        }
+
+        #opiniones {
+            grid-area: o;
+        }
+
+        #especificaciones {
+            grid-area: e;
+        }
+
+        footer {
+            grid-area: f;
+        }
+
+
+
+        body {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 30% 30% auto;
+            grid-template-areas:
+                'h h h'
+                'n n n'
+                'foto m m'
+                'foto g g'
+                'o o e'
+                'f f f';
+            width: 85%;
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        header {
+            background-image: url(img/header.jpg);
+            background-size: contain, 20% 20%;
+
+
+            display: flex;
+        }
+
+        header>section {
+            font-family: 'mario_font';
+            font-size: 2.4rem;
+            color: white;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.562);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex: 2;
+        }
+
+        nav ul {
+            color: white;
+            background-color: black;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        h3,
+        main>h1,
+        nav {
+            font-family: 'pixel_font';
+        }
+
+
+        thead td {
+            padding: 4px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        table tr:nth-of-type(even) {
+            background-color: rgba(128, 128, 128, 0.377);
+        }
+
+        footer img {
+            width: 1300px;
+            height: 210px;
+        }
+
+        #especificaciones {
+            background-color: rgba(128, 128, 128, 0.13);
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        #opiniones {
+            background-color: rgba(128, 128, 128, 0.13);
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        #logo {
+            display: flex;
+            width: 166px;
+            height: 157px;
+            flex: 1;
+        }
+
+        #galeria figure {
+            display: inline;
+        }
+
+        #galeria figure img {
+            width: 166px;
+            height: 118px;
+        }
+
+        #snesbig {
+            width: 268px;
+            height: 566px;
+        }
+
+        #mario {
+            width: 100px;
+            animation-duration: 6s;
+            animation-name: slidein;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-right: 100%;
+                width: 100px;
+            }
+
+            to {
+                margin-left: 900%;
+                width: 100px;
+                transform: rotateY(180deg);
+            }
+        }
+
+        @font-face {
+            font-family: 'pixel_font';
+            src: url(fonts/Minecraft.ttf);
+        }
+
+        @font-face {
+            font-family: 'mario_font';
+            src: url(fonts/Super_Mario_64.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <figure><img src="img/logosmall.png" alt="" id="logo"></figure>
+        <section>
+            <figure><img id="mario" src="img/mario_running.gif" alt=""></figure>
+            <h1>SUPER NINTENDO GRID LAYOUT</h1>
+        </section>
+    </header>
+    <nav>
+        <ul>
+            <li>Inicio</li>
+            <li>Origen</li>
+            <li>Juegos</li>
+            <li>Regiones</li>
+        </ul>
+    </nav>
+    <figure><img src="img/grande.jpg" alt="" id="snesbig"></figure>
+    <main>
+        <h1>Información</h1><br /><br />
+        <p>
+            Durante mediados de la década de 1980, Nintendo había consolidado el mercado de videojuegos dentro y fuera
+            de Japón a través de su consola NES (Nintendo Entertainment System/Nintendo Famicom) con importantes
+            políticas y estrategias de comercialización.12​ Gracias a ello, en 1986, había ayudado a revitalizar la
+            industria en Estados Unidos, luego de que esta estuviera en un periodo de crisis financiero comenzado en el
+            año 1983,13​ colocando en una posición dominante en el mercado a comparación de otras compañías (en la
+            mayoría nacionales como Atari) que habían quebrado o perdido una importante confianza y presencia económica
+
+            a causa de los embates provocados por la mencionada crisis; la compañía habría logrado penetrar en otros
+            mercados, principalmente Europa y Asia, gracias a una estratégica asociación con diferentes compañías para
+            la distribución de sus consolas.
+
+            A finales del 1987 la situación en el mercado japonés presentaba cambios, el 30 de octubre de ese mismo
+            año14​ la compañía Hudson Soft en asociación con el fabricante de industria electrónica NEC lanzarían al
+            mercado la consola PC Engine (que sería conocida en otros mercados como el TurboGrafx-16), presentando un
+            diseño compacto, un hardware y gráficos superiores a comparación de la NES, siendo ya un competidor
+            directo.<br /><br />
+
+            El interés de NEC en entrar en el mercado de los videojuegos coincidió con el intento fallido de Hudson para
+            vender diseños de chips gráficos para Nintendo. Por otro lado, Sega era otra compañía que venía compitiendo
+            desde hace años por consolidar una consola de videojuegos en el mercado japonés, después de haber realizado
+            fracasos intentos en el lanzamiento y comercialización de otras consolas en el pasado: la SG-1000 en
+            1983,15​14​ Sega Mark III en 198515​14​ y Sega Master System en 1986,15​14​ la compañía decide diseñar y
+            comercializar una nueva consola basada en la arquitectura de 16 bits16​14​ que pudiera rivalizar
+            superiormente a Nintendo, basándose en el hardware de sus propios sistemas de arcade de aquellos años, el
+            desarrollo de la nueva consola daría frutos y el 29 de octubre de 1988 seria lanzado la Sega Mega Drive/Sega
+            Genesis,16​14​ siendo un sistema que en verdad ofrecía un procesador, gráficos completamente en 16 bits y
+            una calidad de audio superior.
+            <br /><br />
+            Aunque esas dos consolas no podían competir verdaderamente con la Famicom en cuando salieron a la venta al
+            mercado, los ejecutivos de Nintendo consideraron replantearse su posición una vez que sus competidores
+            podían ofrecer nuevos sistemas verdaderamente superiores a su consola.
+        </p>
+    </main>
+    <section id="galeria">
+        <figure><img src="img/game1.jpg" alt=""></figure>
+        <figure><img src="img/game2.jpg" alt=""></figure>
+        <figure><img src="img/game3.jpg" alt=""></figure>
+        <figure><img src="img/game4.jpg" alt=""></figure>
+        <figure><img src="img/game5.jpg" alt=""></figure>
+    </section>
+    <section id="opiniones">
+        <h3>Opiniones</h3><br />
+        <ul>
+            <li><b>Is good</b> <br />
+                Durante mediados de la década de 1980, Nintendo había consolidado el mercado de videojuegos dentro y
+                fuera de Japón a través de su consola NES (Nintendo Entertainment System/Nintendo Famicom) con
+                importantes políticas y estrategias de comercialización.
+            </li>
+        </ul>
+        <ul>
+            <li><b>Is good</b><br />
+                Durante mediados de la década de 1980, Nintendo había consolidado el mercado de videojuegos dentro y
+                fuera de Japón a través de su consola NES.</li>
+        </ul>
+        <ul>
+            <li><b>Is good</b><br />
+                Importantes políticas y estrategias de comercialización.</li>
+        </ul>
+    </section>
+    <section id="especificaciones">
+        <h3>Especificaciones</h3><br />
+
+        <table>
+            <thead id="thead">
+                <td>Specs</td>
+            </thead>
+            <tr>
+                <td>Velocidad de reloj: 1.79, 2.68 MHz, o 3.58 MHz (NTSC);46​47​ 1,77 MHz, 2,66 MHz o 3,55 MHz (PAL)
+                </td>
+            </tr>
+            <tr>
+                <td>Memoria RAM principal: 128 KB.</td>
+            </tr>
+            <tr>
+                <td>DMA y HDMA</td>
+            </tr>
+            <tr>
+                <td>Coprocesador de sonido: Sony SPC700 de 8 bits.</td>
+            </tr>
+            <tr>
+                <td>Procesador digital de sonido: S-DSP de 16 bits.</td>
+            </tr>
+            <tr>
+                <td>Circuitos S-PPU1 y S-PPU2, unidades de procesamiento de imagen de 16 bits.</td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <figure><img src="img/footer.jpg" alt=""></figure>
+    </footer>
+</body>
+
+</html>
