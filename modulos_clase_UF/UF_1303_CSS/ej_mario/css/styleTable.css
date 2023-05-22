@@ -1,0 +1,67 @@
+
+@media (min-width: 600px) and (max-width: 1000px){
+    body {
+        background-image: url(../img/background.png);
+        grid-template-columns:auto auto;
+        grid-template-areas:
+            'h h '
+            'n n '
+            'foto e'
+            'foto o'
+            'g g'
+            'm m'
+            'f f';
+        width: 95%;        
+        margin: 10px 10px;
+        padding: 10px;
+    }
+    #mario {
+        width: 90px;
+        animation-duration: 6s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes slidein {
+        from {
+            margin-right: 100%;
+            width: 58px;
+        }
+    
+        to {
+            margin-left: 400%;
+            width: 58px;
+            transform: rotateY(180deg);
+        }
+    }
+    main{
+        
+    }
+    header h1{
+        background-size: contain;
+        font-size: 34px;
+        display: flex;
+        
+        flex:2
+    }
+
+    #logo{
+        background-color: rgba(255, 255, 255, 0.425);
+        border-radius: 50%;
+        display: flex;
+        flex: 1;
+        width: 88px;
+        height: 88px;
+    }
+
+    
+        footer img {
+            width: 100%;
+            height: 210px;
+        }
+    }
+
+
+
+

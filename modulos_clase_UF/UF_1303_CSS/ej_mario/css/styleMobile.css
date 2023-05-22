@@ -1,0 +1,71 @@
+@media (max-width: 600px){
+
+    body {
+        grid-template-columns:auto;
+        grid-template-areas:
+            'h  '
+            'n  '
+            'm'
+            'g'
+            'foto'
+            'e'
+            'o'
+            'f';
+        width: 100%;        
+        margin: 0px;
+        padding: 10px;
+    }
+
+#mario {
+    width: 48px;
+    height: 48px;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 88px;
+    }
+
+    to {
+        margin-left: 250%;
+        width: 88px;
+        transform: rotateY(180deg);
+    }
+}
+
+
+    footer img {
+        width: 100%;
+        height: 210px;
+    }
+
+    header{
+        height: 88px;
+    }
+
+    header h1{
+        background-size: contain;
+        font-size: 14px;
+        display: flex;
+        
+        flex:2
+    }
+
+    #logo{
+        background-color: rgba(255, 255, 255, 0.425);
+        border-radius: 50%;
+        display: flex;
+        flex: 1;
+        padding: 2%;
+        margin: 12%;
+        width: 68px;
+        height: 68px;
+    }
+
+}
+

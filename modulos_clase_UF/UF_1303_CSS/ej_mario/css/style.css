@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+#snesbig {
+    grid-area: foto;
+}
+
+main {
+    grid-area: m;
+}
+
+#galeria {
+    grid-area: g;
+}
+
+#opiniones {
+    grid-area: o;
+}
+
+#especificaciones {
+    grid-area: e;
+}
+
+footer {
+    grid-area: f;
+}
+
+
+
+body {
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 35% 30% auto;
+    grid-template-areas:
+        'h h h'
+        'n n n'
+        'foto m m'
+        'foto g g'
+        'o o e'
+        'f f f';
+    width: 85%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+header>section {
+    font-family: 'mario_font';
+    font-size: 2.4rem;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.562);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 2;
+}
+
+nav ul {
+    color: white;
+    background-color: black;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+h3,
+main>h1,
+nav {
+    font-family: 'pixel_font';
+}
+
+
+thead td {
+    padding: 4px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+table tr:nth-of-type(even) {
+    background-color: rgba(128, 128, 128, 0.377);
+}
+
+footer img {
+    width: 100%;
+    height: 210px;
+}
+
+#especificaciones {
+    background-color: rgba(128, 128, 128, 0.13);
+    padding: 15px;
+    border: 1px solid black;
+}
+
+#opiniones {
+    background-color: rgba(128, 128, 128, 0.13);
+    padding: 15px;
+    border: 1px solid black;
+}
+
+#logo {
+    
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 50%;
+    padding: 2%;
+    margin: 12%;
+    display: flex;
+    width: 166px;
+    height: 157px;
+    flex: 1;
+}
+
+#galeria figure {
+    display: inline;
+}
+
+#galeria figure img {
+    width: 156px;
+    height: 118px;
+}
+
+#snesbig {
+    width: 268px;
+    height: 566px;
+}
+
+#mario {
+    width: 100px;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 100px;
+    }
+
+    to {
+        margin-left: 500%;
+        width: 100px;
+        transform: rotateY(180deg);
+    }
+}
+
+@font-face {
+    font-family: 'pixel_font';
+    src: url(../fonts/Minecraft.ttf);
+}
+
+@font-face {
+    font-family: 'mario_font';
+    src: url(../fonts/Super_Mario_64.ttf);
+}
