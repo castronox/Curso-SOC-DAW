@@ -39,7 +39,11 @@
             text-shadow: 8px 5px 5px rgba(87, 84, 84, 0.801);
         }
 
-        label:hover {}
+        input:hover {
+            box-shadow: 10px 10px 10px rgba(182, 177, 177, 0.308);
+            background: rgba(109, 71, 71, 0.5);
+            transition: 0.5s;
+        }
 
         input {
             text-align: center;
@@ -66,6 +70,13 @@
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 10px 10px 10px rgba(182, 177, 177, 0.308);
+            background: rgba(109, 71, 71, 0.5);
+            transition: 0.5s;
         }
 
         .glitch-wrapper {
@@ -176,6 +187,7 @@
 
             var n_introducido = parseInt(document.getElementById('n_introducido').value);
 
+            contador >= 7 ? alert("Que malo eres") : '';
 
             if (n_introducido > n_global) {
                 document.getElementById('imprime').innerHTML = "Introduce un numero mas pequeño.";
@@ -194,7 +206,7 @@
         }
 
 
-        window.onload=g_num;
+        window.onload = g_num;
         accion();
 
 
@@ -209,21 +221,23 @@
     </header>
     <main>
         <section class="contenedor">
-            <label for="imprime_num" id="l_imprime_num">Dime un numero:</label>
-            <input id="n_introducido" type="number">
-            
-            <br /><br />
-
-            <button onclick="accion();">Comprobar</button>
-            <button onclick="g_num(); reset();">Nueva partida</button>
             <div>
                 <p id="chivato"></p><br />
 
                 <p id="imprime"></p><br />
                 <p id="contador">Numero de intentos: </p>
             </div>
+            <br /><br />
+            <label for="imprime_num" id="l_imprime_num">Escribe un numero:</label>
+            <input id="n_introducido" min="0" type="number">
+
+
+
+            <button onclick="accion();">Comprobar</button>
+            <button onclick="g_num(); reset();">Nueva partida</button>
+
         </section>
-        
+
     </main>
 </body>
 
