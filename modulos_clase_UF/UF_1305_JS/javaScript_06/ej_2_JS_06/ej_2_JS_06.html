@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 JavaScript 06</title>
+
+    <script>
+
+
+        function calcula_orden() {
+
+            for (let i = 4; i > 1; i--) {
+                for (let j = 1; j < i; j++) {
+                    var n_a_introducir = parseInt(document.getElementById("n_" + j).value);
+                    var n_ya_introducido = parseInt(document.getElementById("n_" + (j + 1)).value);
+
+                    if (n_a_introducir > n_ya_introducido) {
+                        document.getElementById("n_" + j).value = n_ya_introducido;
+                        document.getElementById("n_" + (j + 1)).value = n_a_introducir;
+                    }
+                }
+            }
+
+            document.getElementById("resultado").textContent =
+                document.getElementById("n_1").value + ", " +
+                document.getElementById("n_2").value + ", " +
+                document.getElementById("n_3").value + ", " +
+                document.getElementById("n_4").value;
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <input type="number" id="n_1" min="0" placeholder="introduce un numero.">
+    <input type="number" id="n_2" min="0" placeholder="introduce un numero.">
+    <input type="number" id="n_3" min="0" placeholder="introduce un numero.">
+    <input type="number" id="n_4" min="0" placeholder="introduce un numero.">
+    <button onclick="calcula_orden();">Calcular</button>
+    <p id="resultado"></p>
+
+</body>
+
+</html>
