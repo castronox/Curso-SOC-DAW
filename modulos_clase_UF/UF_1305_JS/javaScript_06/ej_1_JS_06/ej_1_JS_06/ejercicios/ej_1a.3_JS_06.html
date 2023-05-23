@@ -5,22 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1c.3 Bucles</title>
+    <title>Ejercicio A.3 Bucles</title>
     <script>
 
+        var numero =100;
 
+        function exe() {
 
-        function exe(){
+            while (numero > 0) {
+                document.write("<p> Esta es la repetición: " + numero + "</p><br /> ");
+                numero-=5;
+            }
 
-        for (let i = 100; i > 10; i-=5) {
-            document.write("<p> Esta es la repetición: " + i + "</p><br /> ");
         }
-    }
-
-
-
-
-
     </script>
 
 </head>
@@ -30,7 +27,7 @@
         <h1>Bucles</h1>
     </header>
     <main>
-<button onclick="exe();">Inicia el bucle</button>
+        <button onclick="exe();">Comienza el bucle</button>
 
 
 
