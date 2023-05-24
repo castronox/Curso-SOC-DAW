@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 JavaScript 06</title>
+
+    <script>
+
+        
+        function calcula_orden() {
+            
+            var n_1 = parseInt(document.getElementById('n_1').value);
+            var n_2 = parseInt(document.getElementById('n_2').value);
+
+            var p= document.querySelector('p') ;
+
+            
+
+
+            if (n_1 < n_2) {
+
+                for (let i = n_1; n_2 > i - 1; i++) {
+                    
+                    p.innerHTML+=("<p> Esta es la repetición: " + i + "</p><br /> ");
+                }
+
+            } else if (n_2 < n_1) {
+
+                for (let j = n_2; n_1 > j - 1; j++) {
+                    document.write("<p> Esta es la repetición: " + j + "</p><br /> ");
+                }
+            } else {
+                alert("error");
+            }
+
+        reload.location();
+            
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <input type="number" id="n_1" min="0" placeholder="introduce un numero.">
+    <input type="number" id="n_2" min="0" placeholder="introduce un numero.">
+    <button onclick="calcula_orden();">Calcular</button>
+
+    <p id="res"></p>
+
+
+</body>
+
+</html>
