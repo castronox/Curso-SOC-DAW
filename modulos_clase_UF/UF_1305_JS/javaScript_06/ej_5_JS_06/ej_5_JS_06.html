@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 JavaScript 06</title>
+
+    <script>
+function exe(){
+        var n = parseInt(document.getElementById('n').value);
+        var p= document.querySelector('p') ;
+
+        var n_veces = 10;
+
+        for(let i = 1; i-1<n_veces;  i++ ){
+
+            var s = n *i ;
+            
+            p.innerHTML+=("<p> Esta es la repetición: " + s + "</p><br /> ");
+
+        }
+        
+        
+
+}
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="n" placeholder="introduce numero">
+    <button onclick="exe();">calcular</button>
+    <p></p>
+    
+</body>
+</html>

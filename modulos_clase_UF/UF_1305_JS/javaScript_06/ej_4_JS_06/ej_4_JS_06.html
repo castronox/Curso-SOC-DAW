@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 JavaScript 06</title>
+
+    <script>
+
+function exe(){        
+        var base = parseFloat(document.getElementById('base').value);
+        var exponente = parseFloat(document.getElementById('exp').value);
+        var resultado=1;
+
+        for (let i = 0; i<exponente ; i++){
+           resultado *= base;
+            
+        }
+
+        document.getElementById('res').innerHTML = resultado;
+    }
+    </script>
+</head>
+<body>
+    <input type="number" id="base" placeholder="Base">
+    <input type="number" id="exp" placeholder="exponente">
+
+    <button onclick="exe();">Exe</button>
+    <p id="res"></p>
+    
+</body>
+</html>
