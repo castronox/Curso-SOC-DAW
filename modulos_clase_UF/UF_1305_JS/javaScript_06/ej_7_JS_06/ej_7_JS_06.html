@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 JavaScript 06</title>
+    <script>
+
+        function exe() {
+            var n_1 = parseFloat(document.getElementById('n_1').value);
+            var num = 'Divisores: ';
+            var p = document.querySelector('p');
+            for (let i = 1; i <= n_1; i++) {
+
+                if (n_1 % i == 0) {
+
+                    p.innerHTML += ("<p>Divisor : " + i + "</p><br /> ");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" name="" id="n_1" placeholder="introduce numero.">
+    <button onclick="exe();">Calcula</button>
+    <p></p>
+</body>
+
+</html>
