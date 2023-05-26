@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de fotos</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        main figure {
+            width: 600px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        main figure img {
+            width: 100%;
+            height: auto;
+            transition: filter 0.5s;
+        }
+
+        main figure:nth-of-type(1) img:hover {
+            filter: blur(5px);
+        }
+
+        main figure:nth-of-type(2) img:hover {
+            filter: brightness(150%);
+        }
+
+        main figure:nth-of-type(3) img:hover {
+            filter: grayscale(100%);
+        }
+
+        main figure:nth-of-type(4) img:hover {
+            filter: sepia(100%);
+        }
+
+        main figure:nth-of-type(5) img:hover {
+            filter: invert(100%);
+        }
+
+        main figure:nth-of-type(6) img:hover {
+            filter: saturate(50%);
+        }
+
+        main figure:nth-of-type(7) img:hover {
+            filter: opacity(30%);
+        }
+
+        main figure:nth-of-type(8) img:hover {
+            filter: saturate(267%) contrast(75%);
+        }
+
+        main figure:nth-of-type(9) img:hover {
+            filter: contrast(75%) opacity(30%);
+        }
+
+
+        @media (max-width: 768px) {
+            main figure {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main figure {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Galería de fotos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="paisajes.html">Paisajes</a></li>
+            <li><a href="retratos.html">Retratos</a></li>
+            <li><a href="obras.html">Obras de arte</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <figure>
+            <img src="img/arte_img/arte_2.png" alt="Imagen 1" title="Imagen 1">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_3.png" alt="Imagen 2" title="Imagen 2">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_4.png" alt="Imagen 3" title="Imagen 3">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_5.png" alt="Imagen 4" title="Imagen 4">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_6.png" alt="Imagen 5" title="Imagen 5">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_7.png" alt="Imagen 6" title="Imagen 6">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_8.png" alt="Imagen 7" title="Imagen 7">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_9.png" alt="Imagen 8" title="Imagen 8">
+        </figure>
+        <figure>
+            <img src="img/arte_img/arte_10.png" alt="Imagen 9" title="Imagen 9">
+        </figure>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Galería de fotos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
