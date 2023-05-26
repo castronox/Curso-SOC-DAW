@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 JavaScript 06b</title>
+
+    <script>
+
+        function exe() {
+
+            var numero = parseFloat(document.getElementById('n_1').value);
+            var esPrimo = true;
+
+            if (numero <= 1){
+                esPrimo = false;
+            } else {
+                for ( let i = 2; i <= numero / 2; i++){
+                    if (numero % i === 0 ){
+                        esPrimo = false;
+                        break;
+                    }
+                }
+            }
+
+            if(esPrimo){
+                alert("El numero es primo");
+            }else{
+                alert("El numero NO es primo");
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input type="number" id="n_1" placeholder="">
+
+
+    <button onclick="exe();">Exe</button>
+    <p id="res"></p>
+
+</body>
+
+</html>

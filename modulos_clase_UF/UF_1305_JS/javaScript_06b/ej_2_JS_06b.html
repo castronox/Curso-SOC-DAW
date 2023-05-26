@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 0 JavaScript 06b.</title>
+
+    <style>
+        tr,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+
+    <script>
+        
+        for (let i = 1; i <= 10; i++) {
+
+            document.write('<table><tr><td colspan="5"> tabla del ' + i + '</td></tr>');
+
+            for (let j = 0; j <= 10; j++) {
+                var r = i * j;
+                    
+                        document.write('<tr>');
+                        document.write('<td>' + i + '</td>');
+                        document.write('<td> X </td>');
+                        document.write('<td>' + j + '</td>');
+                        document.write('<td> = </td>');
+                        document.write('<td>' + r + '</td>');
+                        document.write('</tr>');
+            }
+            document.write( '</table>');
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

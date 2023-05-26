@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabla con bucles for anidados</title>
+    <style>
+        tr,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+        <script>
+
+            function exe() {
+                var contenedor = document.getElementById('tabla');
+    
+                var filas = parseInt(document.getElementById('filas').value);
+                var columnas = parseInt(document.getElementById('columnas').value);
+    
+                var tabla = '<table>';
+                
+    
+                for (let i = 0; i < filas; i++) {
+                    tabla += '<table><tr>';
+    
+                    for (let j = 0; j < columnas; j++) {
+                        tabla += '<td>Fila ' +(i + 1 )+' Columna ' + (j + 1) + '</td>';
+                    }
+    
+                    
+                }
+                tabla += '</table>';
+                contenedor.innerHTML = tabla;
+            }
+        </script>
+</head>
+
+
+<body>
+    <section>
+        <h1>Generador de tabla</h1>
+        <input type="number" name="" id="filas" placeholder="Nº Filas.">
+        <input type="number" name="" id="columnas" placeholder="Nº Columnas.">
+        <br />
+        <button onclick="exe();">Crear tabla</button>
+        <hr />
+    </section>
+    <section id="tabla"></section>
+
+
+</body>
+
+</html>
