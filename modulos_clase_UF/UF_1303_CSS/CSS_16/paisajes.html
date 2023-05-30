@@ -60,43 +60,61 @@
         main figure img {
             width: 100%;
             height: auto;
-            transition: filter 0.5s;
+            transition: 0.2s;
         }
 
         main figure:nth-of-type(1) img:hover {
             filter: blur(5px);
+            transform:translate( 20px ,20px);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(2) img:hover {
             filter: brightness(150%);
+            transform: translateX(30px);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(3) img:hover {
             filter: grayscale(100%);
+            transform: translateX(-30px);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(4) img:hover {
             filter: sepia(100%);
+            transform: translateY(30px);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(5) img:hover {
             filter: invert(100%);
+            transform: translateY(-30px);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(6) img:hover {
             filter: saturate(50%);
+            transform: rotate(5deg);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(7) img:hover {
             filter: opacity(30%);
+            transform: rotate(-5deg);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(8) img:hover {
             filter: saturate(267%) contrast(75%);
+            transform: skew(5deg, 5deg);
+            transition: 0.5s;
         }
 
         main figure:nth-of-type(9) img:hover {
             filter: contrast(75%) opacity(30%);
+            transform: skew(-5deg, -5deg);
+            transition: 0.5s;
         }
 
 
