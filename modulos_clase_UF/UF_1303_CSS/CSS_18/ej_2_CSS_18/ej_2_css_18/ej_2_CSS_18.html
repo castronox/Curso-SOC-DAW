@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo</title>
+
+    <style>
+        .cubo {
+            margin: 16% auto;
+            position: relative;
+            transform-style: preserve-3d;
+            height: 200px;
+            width: 200px;
+            transform: rotateX(45deg) rotateY(45deg);
+        }
+
+        .cara {
+            position: absolute;
+            border: solid 1px black;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .front {
+            background-color: rgba(255, 0, 0, 0.5);
+            transform: translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(0, 255, 0, 0.5);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .left {
+            background-color: rgba(0, 0, 255, 0.5);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .right {
+            background-color: rgba(255, 255, 0, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            background-color: rgba(255, 0, 255, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background-color: rgba(0, 255, 255, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cubo">
+        <div class="cara front"></div>
+        <div class="cara back"></div>
+        <div class="cara left"></div>
+        <div class="cara right"></div>
+        <div class="cara top"></div>
+        <div class="cara bottom"></div>
+    </div>
+</body>
+
+</html>

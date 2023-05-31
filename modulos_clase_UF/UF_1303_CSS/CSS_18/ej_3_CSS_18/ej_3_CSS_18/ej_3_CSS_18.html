@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo con imagenes</title>
+
+    <style>
+        .cubo {
+            margin: 16% auto;
+            position: relative;
+            transform-style: preserve-3d;
+            height: 200px;
+            width: 200px;
+            animation: spin 10s infinite linear;
+        }
+
+        .cara {
+            position: absolute;
+            border: solid 1px black;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background-color: rgba(255, 0, 0, 0.5);
+            transform: translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(0, 255, 0, 0.5);
+            transform: translateZ(-100px);
+        }
+
+        .left {
+            background-color: rgba(0, 0, 255, 0.5);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .right {
+            background-color: rgba(255, 255, 0, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            background-color: rgba(255, 0, 255, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background-color: rgba(0, 255, 255, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes spin {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cubo">
+        <div class="cara front"><img src="img/imagen_1.png"></div>
+        <div class="cara back"><img src="img/imagen_2.png"></div>
+        <div class="cara left"><img src="img/imagen_3.png"></div>
+        <div class="cara right"><img src="img/imagen_4.png"></div>
+        <div class="cara top"><img src="img/imagen_5.png"></div>
+        <div class="cara bottom"><img src="img/imagen_6.png"></div>
+    </div>
+</body>
+
+</html>
