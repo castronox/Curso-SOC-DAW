@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 JavaScript 07</title>
+
+    <script>
+
+        function hipotenusa(l1,l2){
+            h = Math.pow(l1,2) + Math.pow(l2,2);
+            return r = Math.sqrt(h);
+        }
+
+        function calcular(n1,n2){
+            resultado.innerHTML = hipotenusa(n1,n2);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="n1" id="n1" placeholder="n1">
+    <input type="number" name="n1" id="n2" placeholder="n2">
+
+    <button onclick="calcular(parseFloat(n1.value),parseFloat(n2.value));">Calcular Hipotenusa</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
