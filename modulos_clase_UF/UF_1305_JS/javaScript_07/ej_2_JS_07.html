@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulos</title>
+
+    <script>
+        function area_T(b,h){
+            return area = b*h /2;
+        }
+
+        function calcular_T(n1,n2){
+            resultado.innerHTML = area_T(n1,n2);
+        }
+
+        function area_R(b,h){
+            return area = b * h ;
+        }
+        function calcular_R(n1,n2){
+            resultado.innerHTML = area_R(n1,n2);
+
+        }
+
+        function area_R(b,h){
+            return area = b * h ;
+        }
+        function calcular_R(n1,n2){
+            resultado.innerHTML = area_R(n1,n2);
+
+        }
+
+        
+        function area_C(r){
+          return r =2 * Math.PI * Math.pow(r,2);
+        }
+        function calcular_C(r){
+            resultado.innerHTML = area_C(r).toFixed(2);
+
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <input type="number" name="n1" id="n1" placeholder="n1">
+    <input type="number" name="n2" id="n2" placeholder="n2">
+    <input type="number" name="r" id="r" placeholder="radio">
+
+    <button onclick="calcular_R(parseInt(n1.value),parseInt(n2.value));">Calcular</button>
+    <button onclick="calcular_C(parseInt(r.value));">Calcular Circulo</button>
+    <p id="resultado"></p>
+</body>
+</html>

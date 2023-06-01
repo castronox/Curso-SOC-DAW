@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explicación de métodos Math y funciones numéricas</title>
+    <style>
+        /* Estilos CSS para las cartas */
+        .card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Explicación de métodos Math y funciones numéricas</h1>
+    </div>
+
+    <div class="card">
+        <h2>Métodos Math</h2>
+        <p>
+            <code>Math.abs()</code> - devuelve el valor absoluto de un número.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoAbsoluto"></span>
+        </p>
+        <p>
+            <code>Math.round()</code> - redondea un número al entero más cercano.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoRedondeado"></span>
+        </p>
+        <p>
+            <code>Math.floor()</code> - redondea hacia abajo al entero más cercano.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoRedondeadoAbajo"></span>
+        </p>
+        <p>
+            <code>Math.ceil()</code> - redondea hacia arriba al entero más cercano.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoRedondeadoArriba"></span>
+        </p>
+        <p>
+            <code>Math.random()</code> - genera un número aleatorio entre 0 y 1.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoAleatorio"></span>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Funciones numéricas</h2>
+        <p>
+            <code>parseFloat()</code> - convierte una cadena en un número de punto flotante.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoConvertido"></span>
+        </p>
+        <p>
+            <code>isNaN()</code> - comprueba si un valor no es un número (NaN).
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoNoEsNumero"></span>
+        </p>
+        <p>
+            <code>isFinite()</code> - comprueba si un valor es un número finito.
+        </p>
+        <p>
+            <strong>Resultado:</strong>
+            <span id="resultadoEsNumeroFinito"></span>
+        </p>
+    </div>
+
+    <script>
+        
+            // Ejemplo de uso de los métodos Math
+    var numero = -4.3;
+    var valorAbsoluto = Math.abs(numero);
+    var numeroRedondeado = Math.round(numero);
+    var numeroRedondeadoAbajo = Math.floor(numero);
+    var numeroRedondeadoArriba = Math.ceil(numero);
+    var aleatorio = Math.random();
+    
+    // Imprimir los resultados de los métodos Math
+    document.getElementById("resultadoAbsoluto").textContent = valorAbsoluto;
+    document.getElementById("resultadoRedondeado").textContent = numeroRedondeado;
+    document.getElementById("resultadoRedondeadoAbajo").textContent = numeroRedondeadoAbajo;
+    document.getElementById("resultadoRedondeadoArriba").textContent = numeroRedondeadoArriba;
+    document.getElementById("resultadoAleatorio").textContent = aleatorio;
+    
+    // Ejemplo de uso de las funciones numéricas
+    var cadenaNumerica = '3.14';
+    var numeroConvertido = parseFloat(cadenaNumerica);
+    var noEsUnNumero = isNaN(numeroConvertido);
+    var esUnNumeroFinito = isFinite(numeroConvertido);
+    
+    // Imprimir los resultados de las funciones numéricas
+    document.getElementById("resultadoConvertido").textContent = numeroConvertido;
+    document.getElementById("resultadoNoEsNumero").textContent = noEsUnNumero;
+    document.getElementById("resultadoEsNumeroFinito").textContent = esUnNumeroFinito;
+  </script>
+</body>
+</html>

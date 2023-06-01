@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 JavaScript 07</title>
+
+    <script>
+        function minimo(n1,n2){
+            if(n1>n2){
+                return (n2);
+            }else if (n1<n2){
+                return (n1);
+            }else{
+                return('Los dos valores son iguales');
+            }
+        }
+
+        function calcular(n1,n2){
+            resultado.innerHTML = minimo(n1,n2)
+        }
+    </script>
+
+</head>
+<body>
+    <input type="number" name="" id="n1" placeholder="Numero 1">
+    <input type="number" name="" id="n2" placeholder="Numero 2">
+    <button onclick="calcular(parseInt(n1.value),parseInt(n2.value));">Calcular</button>
+    <p id="resultado"></p>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 0 javascript 07</title>
+    <style>
+        div{
+            height: 100px; width: 100px;
+            border: solid 2px grey;
+            margin:  10px;
+        }
+    </style>
+
+    <script>
+        function colorea(elemento,color){
+            elemento.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <span>Color:</span>
+    <input type="color" name="color" id="incolor" value="#ff0000">
+    <div onclick="colorea(this,incolor.value);"></div>
+    <div onclick="colorea(this, incolor.value);"></div>
+    <div onclick="colorea(this,incolor.value);"></div>
+    <button onclick="colorea(document.body,incolor.value);">Colorear body</button>
+</body>
+</html>
