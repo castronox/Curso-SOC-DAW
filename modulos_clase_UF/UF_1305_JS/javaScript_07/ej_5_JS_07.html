@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4 JavaScript 07</title>
+    <title>Ejercicio 5 JavaScript 07</title>
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -123,13 +123,24 @@
 
     <script>
 
-        function hipotenusa(l1, l2) {
-            h = Math.pow(l1, 2) + Math.pow(l2, 2);
-            return r = Math.sqrt(h);
+        function n_primo(n1) {
+
+            if (n1 <= 1) {
+                return "No es primo"
+            }
+
+            for (let i = 2; i < n1; i++) {
+                if (n1 % i === 0) {
+                    return "No es primo"
+                }
+            }
+
+            return "Es primo"
+
         }
 
-        function calcular(l1, l2) {
-            resultado.innerHTML = hipotenusa(l1, l2).toFixed(2);
+        function calcular(n1) {
+            resultado.innerHTML = n_primo(n1);
         }
     </script>
 </head>
@@ -138,14 +149,12 @@
 
     <form action="">
         <fieldset>
-            <legend>Calculo de Hipotenusa</legend>
+            <legend>Numeros Primos</legend>
             <div>
-                <input type="number" name="n1" id="l1" placeholder="n1">
-                <input type="number" name="n1" id="l2" placeholder="n2">
+                <input type="number" name="n1" id="n1" placeholder="Un numero.." min="0">
             </div>
             <div>
-                <button onclick="calcular(parseFloat(l1.value),parseFloat(l2.value)); event.preventDefault();">Calcular
-                    Hipotenusa</button>
+                <button onclick="calcular(parseFloat(n1.value)); event.preventDefault();">Calcular Numero Primo</button>
             </div>
         </fieldset>
         <fieldset>
