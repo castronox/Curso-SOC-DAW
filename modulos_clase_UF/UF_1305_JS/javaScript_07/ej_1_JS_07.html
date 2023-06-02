@@ -6,6 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1 JavaScript 07</title>
 
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            width: (100%);
+        }
+
+        legend {
+            --cian: #e0b0ef;
+            color: var(--cian);
+        }
+
+        form {
+
+            background: linear-gradient(to top, #30cfd0 0%, #451f77 100%);
+            background-repeat: no-repeat;
+            margin: 3% auto;
+            box-shadow: 13px 13px 23px #330867;
+            min-width: 550px;
+
+        }
+
+
+        fieldset {
+            max-width: 530px;
+            margin: 2%;
+            padding: 2.3vw;
+            --cian: #e0b0ef;
+            border: 2px solid var(--cian);
+            box-shadow: inset 0 0 10px rgba(242, 27, 253, 0.4), 0 0 9px 3px rgba(253, 27, 242, 0.1);
+        }
+
+
+
+
+        p {
+            margin: auto;
+            padding: auto;
+            width: 175px;
+            text-align: center;
+            align-items: center;
+            color: #d7b8f3cc;
+            text-shadow: 3px 3px 3px rgb(81, 18, 98);
+            font-size: 46px;
+        }
+
+        div {
+
+            margin: auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        input {
+
+            text-align: center;
+            margin: 1%;
+            color: #fdfdfd;
+            border: 2px solid #8707ff;
+            border-radius: 10px;
+            padding: 10px 25px;
+            background: transparent;
+            max-width: 190px;
+        }
+
+        .input:active {
+            box-shadow: 2px 2px 15px #6403b9 inset;
+            border: none;
+        }
+
+        button {
+            --cian: #e0b0ef;
+            margin-top: 1%;
+            font-size: 15px;
+            padding: 0.7em 2.7em;
+            letter-spacing: 0.06em;
+            position: relative;
+            font-family: inherit;
+            border-radius: 0.6em;
+            overflow: hidden;
+            transition: all 0.3s;
+            line-height: 1.4em;
+            border: 2px solid var(--cian);
+            background: linear-gradient(to right, rgba(27, 159, 253, 0.1) 1%, transparent 40%, transparent 60%, rgba(253, 27, 253, 0.1) 100%);
+            color: var(--cian);
+            box-shadow: inset 0 0 10px rgba(242, 27, 253, 0.4), 0 0 9px 3px rgba(253, 27, 242, 0.1);
+            text-shadow: 3px 3px 3px rgb(81, 18, 98);
+        }
+
+
+        button:hover {
+            color: rgb(225, 153, 243);
+            text-shadow: 1px 1px 1px #73097b;
+            box-shadow: inset 0 0 10px rgba(253, 27, 227, 0.6), 0 0 9px 3px rgba(227, 27, 253, 0.2);
+        }
+
+        button:before {
+            content: "";
+            position: absolute;
+            left: -4em;
+            width: 4em;
+            height: 100%;
+            top: 0;
+            transition: transform .4s ease-in-out;
+            background: linear-gradient(to right, transparent 1%, rgba(249, 27, 253, 0.1) 40%, rgba(253, 27, 234, 0.1) 60%, transparent 100%);
+        }
+
+        button:hover:before {
+            transform: translateX(15em);
+        }
+    </style>
+
     <script>
         function minimo(n1,n2){
             if(n1>n2){
@@ -23,11 +138,22 @@
     </script>
 
 </head>
-<body>
+<body><form action="">
+    <fieldset>
+        <legend>Calcular num menor</legend>
+        <div>
     <input type="number" name="" id="n1" placeholder="Numero 1">
     <input type="number" name="" id="n2" placeholder="Numero 2">
-    <button onclick="calcular(parseInt(n1.value),parseInt(n2.value));">Calcular</button>
-    <p id="resultado"></p>
-
+</div>
+    <div>
+    <button onclick="calcular(parseInt(n1.value),parseInt(n2.value));event.preventDefault();">Calcular</button>
+</div>    
+</fieldset>
+<fieldset>
+    <div>
+        <p id="resultado"></p>
+    </div>
+</fieldset>
+</form>
 </body>
 </html>
