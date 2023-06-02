@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 7 JavaScript</title>
+    <title>Ejercicio 6 JavaScript</title>
 
     <script>
-        function doblar(img, escala) {
-            var width = img.width * escala;
-            var height = img.height * escala;
-
-            img.style.width = width + "px";
-            img.style.height = height + "px";
+        function doblar(imagen){
+            imagen.height*=2;
+            imagen.width*=2;
         }
     </script>
 </head>
-
 <body>
-    <img src="img/homer.jpg" title="Homer image" alt="Imagen de Homer Simpson" id="foto" onclick="doblar(this, 0.5);"
-        height="200" width="150">
+    <img src="img/homer.jpg" title="Homer image" alt="Imagen de Homer Simpson" id="foto" onclick="doblar(this);" height="200" width="150" >
 
-        <img src="img/homer.jpg" title="Homer image" alt="Imagen de Homer Simpson" id="foto" onclick="doblar(this, 1.5);"
-        height="200" width="150">
 
+    
 </body>
-
 </html>

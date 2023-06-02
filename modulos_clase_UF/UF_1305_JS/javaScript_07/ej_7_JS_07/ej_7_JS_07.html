@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6 JavaScript</title>
+    <title>Ejercicio 7 JavaScript</title>
 
     <script>
-        function doblar(imagen){
-            imagen.height*=2;
-            imagen.width*=2;
+        function doblar(img, escala) {
+            img.style.width = 150 + "px";
+            img.style.height = 200 + "px";
+            
+            let width = img.width * escala;
+            let height = img.height * escala;
+
+            img.style.width = width + "px";
+            img.style.height = height + "px";
         }
     </script>
 </head>
+
 <body>
-    <img src="img/homer.jpg" title="Homer image" alt="Imagen de Homer Simpson" id="foto" onclick="doblar(this);" height="200" width="150" >
-    
+    <img src="img/homer.jpg" title="Homer image" alt="Imagen de Homer Simpson" id="foto""
+        height="200px" width="150px">
+
+    <select name="escala" id="escala" onchange="doblar(document.getElementById('foto'),parseFloat(document.getElementById('escala').value/100));">
+        <option>Seleccion un tamaño.</option>
+        <option value="10">Tamaño 10%</option>
+        <option value="30">Tamaño 30%</option>
+        <option value="50">Tamaño 50%</option>
+        <option value="70">Tamaño 70%</option>
+        <option value="100">Tamaño 100%</option>
+        <option value="110">Tamaño 110%</option>
+        <option value="130">Tamaño 130%</option>
+        <option value="150">Tamaño 150%</option>
+        <option value="170">Tamaño 170%</option>
+    </select>
+
 </body>
+
 </html>

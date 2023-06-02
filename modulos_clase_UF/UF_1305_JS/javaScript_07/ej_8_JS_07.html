@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 JavaScript 07</title>
+    <style>
+        h1{text-align: center;}
+        section {
+            border: 1px solid black;
+            margin: 4% auto;
+            padding: 1%;
+            width: 500px;
+            height: 300px;
+        }
+
+        div {
+            display: flex;
+            margin: 3%;
+            justify-content: center;
+        }
+    </style>
+    <script>
+
+
+
+    function colorea(){
+            var colorInput = document.getElementById('colorInput');
+            var lienzo = document.getElementById('lienzo');
+
+            const selectedColor = colorInput.value;
+            lienzo.style.backgroundColor = selectedColor;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Pinta el lienzo</h1>
+    <section id="lienzo">
+
+    </section>
+    <div>
+        <input type="color" name="" id="colorInput">
+    </div>
+    <div>
+
+        <button onclick="colorea();">Colorear</button>
+        <p id="resultado"></p>
+
+    </div>
+</body>
+
+</html>
