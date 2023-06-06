@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación con Lenguajes Script en Páginas Web</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: "titulo_1";
+            src: url(fonts/OriginTech\ personal\ use.ttf);
+        }
+
+        .flex {
+            display: flex;
+            gap: 1vw;
+            justify-content: center;
+        }
+
+        header {
+            display: flex;
+            gap: 1vw;
+            justify-content: center;
+        }
+
+        main {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #f98bff6d 0%, #2bd1ff67 52%, #2bff875b 90%);
+        }
+
+        body,
+        main {
+            border-radius: 15px;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            font-family: 'titulo_1';
+
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+        }
+
+        .caja {
+            padding: 3%;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(242deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            box-shadow: -20px 20px 38px #8a7f896d,
+                20px -20px 38px #ffffff47;
+
+
+            transition: 1s;
+        }
+
+        .caja:hover {
+            border-radius: 15px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(42deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            box-shadow: -20px 20px 38px #8a7f89,
+                20px -20px 38px #ffffff;
+
+            transition: 1s;
+        }
+
+        @media (max-width: 768px) {
+
+            body,
+            main,
+            header {
+                display: grid;
+                grid-template-columns: repeat(1fr);
+                grid-gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            body,
+            main {
+                grid-template-columns: repeat(1fr);
+            }
+        }
+        a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        footer{
+            margin: 2% 0;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    
+        <header>
+            <section class="caja">
+                <h1>Programació amb Llenguatjes Script en Págines Web</h1>
+
+            </section>
+            <section class="caja">
+                <p>Codi: UF1305</p>
+                <p>Durada: 90 hores</p>
+            </section>
+            <section class="caja">
+                <p>Aquesta unitat formativa es correspon amb l'RP1 i l'RP2.</p>
+                <h2>Capacitats i criteris d'avaluació :</h2>
+            </section>
+        </header>
+        <main>
+        <nav>
+            <ul class="flex">
+
+                <li class="caja"><a href="index.html">Inici</a></li>
+                <li class="caja"><a href="galeria.html">Galeria</a></li>
+                <li class="caja"><a href="contacte.html">Contacte</a></li>
+            </ul>
+            <hr />
+        </nav>
+        <h1>Resum de les aptituts apreses en aquest modul </h1><br /> 
+        <section>
+
+            <h3 class="caja">Identificar les estructures de programació i els tipus de dades que s'utilitzen per crear
+                scripts
+                d'acord
+                amb unes especificacions rebudes.</h3><br />
+            <ul class="caja">
+                <section>
+                    <li>Descriure les estructures de tipus seqüencial, condicional i d'iteració que s'utilitzen per
+                        agrupar i
+                        organitzar les accions d'un programa.</li>
+                </section>
+                <section>
+                    <li>Reconèixer la sintaxi del llenguatge script que descriuen les estructures de programació en
+                        crear
+                        scripts d'acord amb les especificacions tècniques del llenguatge.</li>
+                </section>
+                <section>
+                    <li>Explicar els tipus de dades que s'utilitzen per representar i emmagatzemar els valors de
+                        les variables
+                        en crear scripts d'acord amb les especificacions tècniques del llenguatge.</li>
+                </section>
+                <section>
+                    <li>Identificar els operadors que s'utilitzen per fer els càlculs i les operacions dins d'un
+                        script.</li>
+                </section>
+                <section>
+                    <li>Citar les instruccions proporcionades pel llenguatge script per dur a terme operacions
+                        d'entrada i de
+                        sortida de dades d'acord amb les especificacions tècniques del llenguatge.</li>
+                </section>
+                <section>
+                    <li>Distingir els mètodes per executar un script amb diversos navegadors web.</li>
+                </section>
+                <section>
+                    <li>Interpretar scripts que resolguin un problema especificat prèviament:</li><br />
+                    <ul>
+                        <section>
+                            <li>Identificar el tipus i l'ús de les dades declarades dins de l'script.</li>
+                        </section>
+                        <section>
+                            <li>Descriure les estructures de programació utilitzades per organitzar les accions del
+                                programa.</li>
+                        </section>
+                        <section>
+                            <li>Reconèixer les instruccions proporcionades pel llenguatge script que s'utilitzen en les
+                                operacions de
+                                manipulació, d'entrada i de sortida de dades.</li>
+                        </section>
+                        <section>
+                            <li>Inserir l'script a la pàgina web utilitzant les etiquetes apropiades.</li>
+                        </section>
+                        <section>
+
+                            <li>Provar la funcionalitat de l'script utilitzant un navegador.</li>
+                        </section>
+                        <section>
+                            <li>Detectar i corregir els errors de sintaxi i d'execució.</li>
+                        </section>
+                        <section>
+                            <li>Documentar els canvis que s'han fet a l'script.</li>
+                        </section>
+                    </ul>
+                </section>
+        </section>
+        <section>
+            <h3 class="caja">Distingir les propietats i els mètodes dels objectes proporcionats pel llenguatge script en
+                funció
+                de
+                les especificacions tècniques del llenguatge.</h3><br />
+
+            <ul class="caja">
+                <section>
+                    <li>Explicar els objectes del navegador, així com les propietats i els mètodes que
+                        s'utilitzen per
+                        afegir funcionalitat a les pàgines web, tenint en compte les especificacions tècniques del
+                        llenguatge.
+                    </li>
+                </section>
+                <section>
+
+                    <li>Identificar els objectes predeterminats pel llenguatge script per fer servir noves
+                        estructures i
+                        utilitats que afegiran noves funcionalitats a les pàgines, d'acord amb les especificacions
+                        tècniques del
+                        llenguatge.</li>
+                </section>
+                <section>
+                    <li>Descriure i identificar els objectes del document que permeten afegir interactivitat
+                        entre
+                        l'usuari i l'script, així com les propietats i els mètodes.</li>
+                </section>
+                <section>
+                    <li>Descriure els esdeveniments que proporciona el llenguatge script per interactuar amb
+                        l'usuari –de
+                        ratolí, teclat, enfocament, formulari i càrrega, entre d'altres– i relacionar-los amb els
+                        objectes del
+                        llenguatge.</li>
+                </section>
+            </ul>
+            <section>
+                <ul class="caja">
+                    <li>Interpretar scripts que afegeixen efectes estètics a la presentació de les pàgines:
+                    </li><br />
+
+                    <section>
+                        <li>Identificar els objectes sobre els quals s'apliquen els efectes estètics.</li>
+                    </section>
+
+                    <section>
+                        <li>Identificar les propietats i els mètodes utilitzats per afegir els efectes.</li>
+                    </section>
+                    <section>
+                        <li>Reconèixer els esdeveniments utilitzats per dur a terme les accions.</li>
+                    </section>
+                    <section>
+                        <li>Descriure la funció o les funcions d'efectes i identificar-ne els paràmetres.</li>
+                    </section>
+                    <section>
+                        <li>Fer canvis a l'script seguint unes especificacions rebudes.</li>
+                    </section>
+                    <section>
+                        <li>Detectar i corregir els errors de sintaxi i d'execució.</li>
+                    </section>
+                    <section>
+                        <li>Documentar els canvis que s'han fet.</li>
+                    </section>
+                </ul>
+            </section>
+            <section>
+                <ul class="caja">
+                    <li>Interpretar scripts en què es validen les entrades de dades dels camps d'un formulari:
+                    </li><br />
+
+                    <section>
+                        <li>Identificar els objectes del formulari que es validen dins de l'script.</li>
+                    </section>
+                    <section>
+                        <li>Identificar les propietats i els mètodes utilitzats per validar cada entrada.</li>
+                    </section>
+                    <section>
+                        <li>Reconèixer les funcions proporcionades pel llenguatge script que s'utilitzen per
+                            validar
+                            dades.</li>
+                    </section>
+                    <section>
+                        <li>Descriure els esdeveniments que s'utilitzen per dur a terme accions.</li>
+                    </section>
+                    <section>
+
+                        <li>Descriure la funció o les funcions de validació i identificar-ne els paràmetres.
+                        </li>
+                    </section>
+
+                    <section>
+                        <li>Fer canvis a l'script seguint unes especificacions rebudes.</li>
+                    </section>
+                    <section>
+                        <li>Detectar i corregir els errors de sintaxi i d'execució.</li>
+                    </section>
+                    <section>
+                        <li>Documentar l'script que s'ha creat.</li>
+                    </section>
+                </ul>
+            </section>
+            <section>
+                <ul class="caja">
+                    <li>Interpretar la documentació tècnica associada al llenguatge script, fins i tot si
+                        està
+                        editada en
+                        la llengua estrangera d'ús més freqüent al sector, utilitzant-la d'ajuda per integrar
+                        scripts.</li>
+                </ul>
+            </section>
+
+        </section>
+
+        </section>
+        <section>
+            <h3 class="caja">Identificar scripts ja desenvolupats que s'adaptin a les funcionalitats especificades i
+                integrar-los
+                a
+                les pàgines web d'acord amb unes especificacions rebudes.</h3>
+
+
+            <ul class="caja">
+                <section>
+                    <li>Localitzar i descarregar el component ja desenvolupat, ja sigui des d'Internet o des de les
+                        col·leccions indicades, seguint les especificacions rebudes.</li>
+                </section>
+                <section>
+                    <li>Identificar els objectes i les seves propietats, els seus mètodes i la seva funcionalitat dins
+                        de
+                        l'script ja desenvolupat per tal d'ajustar-los a la pàgina on s'integraran.</li>
+                </section>
+                <section>
+                    <li>Identificar els esdeveniments inclosos a l'script per distingir les interaccions amb l'usuari.
+                    </li><br />
+                    <ul>
+                        <section>
+                            <li>Descarregar el component ja desenvolupat.</li>
+                        </section>
+                        <section>
+                            <li>Utilitzar una eina d'edició de scripts.</li>
+                        </section>
+                        <section>
+                            <li>Modificar les propietats i els atributs dels objectes que componen l'script per
+                                ajustar-lo a les
+                                especificacions rebudes.</li>
+                        </section>
+                        <section>
+                            <li>Comprovar la disponibilitat d'ús de l'script tenint en compte els drets d'autor i la
+                                legislació
+                                vigent.</li>
+                        </section>
+                        <section>
+                            <li>Integrar l'script a la pàgina web indicada prèviament.</li>
+                        </section>
+                        <section>
+                            <li>Provar la funcionalitat de la pàgina resultant en un navegador.</li>
+                        </section>
+                        <section>
+                            <li>Corregir els errors detectats.</li>
+                        </section>
+                        <section>
+                            <li>Documentar els processos que s'han dut a terme.</li>
+                        </section>
+                    </ul>
+                </section>
+        </section>
+    </main>
+    <footer class="caja"><p>Evaluació contínua uf1305.</p></footer>
+</body>
+
+</html>

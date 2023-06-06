@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input:invalid {
+            border-color: #ff0000;
+        }
+
+        input:valid {
+            border-color: #00ff00;
+        }
+        .caja {
+            padding: 2%;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(242deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            box-shadow: -20px 20px 38px #8a7f896d,
+                20px -20px 38px #ffffff47;
+            transition: 1s;
+        }
+
+        .caja:hover {
+            border-radius: 15px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(42deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            box-shadow: -20px 20px 38px #8a7f89,
+                20px -20px 38px #ffffff;
+
+            transition: 1s;
+        }
+        ul li {
+            margin: 3%;
+            display: inline;
+            list-style: none;
+            
+        }
+        a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .flex {
+            display: flex;
+            gap: 1vw;
+            justify-content: center;
+        }
+        label,input{
+            margin: 1%;
+        }
+        main {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #f98bff6d 0%, #2bd1ff67 52%, #2bff875b 90%);
+        }
+
+        body,
+        main {
+            border-radius: 15px;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        footer{
+            margin: 2% 0;
+        }
+        p{
+            text-align: center;
+        }
+        h1 {
+            font-family: 'titulo_1';
+
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @font-face {
+            font-family: "titulo_1";
+            src: url(fonts/OriginTech\ personal\ use.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <header >
+    <h1 class="caja" >Formulari de Contacte</h1>
+</header>
+<main>
+    <nav>
+        <ul class="flex">
+
+            <li class="caja"><a href="index.html">Inici</a></li>
+            <li class="caja"><a href="galeria.html">Galeria</a></li>
+            <li class="caja"><a href="contacte.html">Contacte</a></li>
+        </ul>
+        <hr />
+    </nav>
+    <form class="caja">
+        <label for="direccion">Direcció:</label>
+        <input type="text" id="direccion" name="direccion" pattern="[a-zA-Z0-9\s]+" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+
+        <label for="codigo-postal">Códi Postal:</label>
+        <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}" required>
+
+        <label for="telefono">Teléfon:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+
+        <label for="correo">Correu Electrónic:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+    </main>
+    <footer class="caja"><p>Evaluació contínua uf1305.</p></footer>
+</body>
+
+</html>
