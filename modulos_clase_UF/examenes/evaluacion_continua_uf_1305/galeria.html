@@ -108,7 +108,7 @@
             transition: 0.8s;
         }
 
-        section{
+        section {
             margin: 0.3%;
         }
 
@@ -161,6 +161,7 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
         @font-face {
             font-family: "titulo_1";
             src: url(fonts/OriginTech\ personal\ use.ttf);
@@ -188,13 +189,9 @@
             transition: transform 0.3s ease;
         }
 
-        .contenedor_img:hover img {
-            transform: scale(1.3);
-        }
 
-        .contenedor_img:hover img {
-            transform: scale(1.3);
-        }
+
+
 
         @media (max-width: 767px) {
             .galleria {
@@ -256,12 +253,26 @@
         }
 
 
+        /* function colorear() {
+             var color = document.getElementById("color-input").value;
+             var cajas = document.querySelectorAll('.caja');
+             cajas.forEach(function (caja) {
+                 caja.style.backgroundColor = color;
+             });
+         }*/
         function colorear() {
+
             var color = document.getElementById("color-input").value;
+
             var cajas = document.querySelectorAll('.caja');
-            cajas.forEach(function (caja) {
-                caja.style.backgroundColor = color;
-            });
+
+
+            for (var i = 0; i < cajas.length; i++) {
+
+                cajas[i].style.backgroundColor = color;
+
+            }
+
         }
     </script>
 </head>
@@ -286,7 +297,7 @@
         </section>
         <hr />
 
-        <div class="galleria" onclick="colorear(this);">
+        <section class="galleria" onclick="colorear(this);">
             <section class="contenedor_img caja">
                 <img src="imagenes/1.png" alt="Imagen_paisaje 1" onmouseenter="this.style.transform = 'scale(1.3)';"
                     onmouseleave="escalar(this);">
@@ -327,7 +338,7 @@
                 <img src="imagenes/10.png" alt="Imagen_paisaje 10" onmouseenter="this.style.transform = 'scale(1.3)';"
                     onmouseleave="escalar(this);">
             </section>
-        </div>
+        </section>
     </main>
     <footer class="caja">
         <p>Evaluació contínua uf1305._paisaje</p>

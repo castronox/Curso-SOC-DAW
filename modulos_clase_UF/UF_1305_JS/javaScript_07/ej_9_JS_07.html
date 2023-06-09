@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 07 JavaScript</title>
+
+    <script>
+        function calcula_impedancia(r, l, c, f) {
+
+            var xc = 1 / 2 * Math.PI * f * c;
+
+            var xl = 2 * Math.PI * f * l;
+
+            //var xc_xl = Math.pow(r,2) + (Math.pow(xl,2) - Math.pow(xc,2)) ;
+
+            var z = Math.sqrt(Math.pow(r,2) + (Math.pow(xl,2) - Math.pow(xc,2)));
+
+            return document.getElementById('resultado').innerHTML = xc.toFixed(2) +' , '+ xl.toFixed(2)  + ' , ' + z.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="number" placeholder="Resistencia (R)." id="r">
+    <input type="number" placeholder="Inductancia (L)" id="l">
+    <input type="number" placeholder="C.Condensador (C)" id="c">
+    <input type="number" placeholder="F.Entrada" id="f">
+    <button type="button" onclick="calcula_impedancia(parseFloat(document.getElementById('r').value),parseFloat(document.getElementById('l').value),parseFloat(document.getElementById('c').value),parseFloat(document.getElementById('f').value));">Calcular</button>
+
+    <p id="resultado"></p>
+</body>
+
+</html>
