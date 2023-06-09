@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorear aleatoriamente</title>
+    <style>
+        body{
+            margin: 10%;
+        display: flex;
+        justify-content: center;
+        }
+        div {
+            width: 3rem;
+            height: 3rem;
+            transition: 0.7s;
+            border: 1px solid black;
+
+        }
+
+        #contenedor {
+            width: 350px;
+            
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+    <script>
+        function colorear(div) {
+            var r = Math.round(Math.random() * 250);
+            var g = Math.round(Math.random() * 250);
+            var b = Math.round(Math.random() * 250);
+            var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+            div.style.backgroundColor = color;
+            return color;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <section id="contenedor">
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+        <div onmouseenter="colorear(this);"></div>
+
+    </section>
+
+</body>
+
+</html>
