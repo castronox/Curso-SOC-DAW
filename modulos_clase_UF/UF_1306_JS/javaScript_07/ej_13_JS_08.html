@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        section{
+            margin: 1% auto;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        input , button{
+            display: flex;
+            margin: auto;
+        }
+        div {
+            width: 10px;
+            height: 10px;
+            border: 0.1px solid black;
+        }
+    </style>
+    <script>
+        function pintar(div) {
+            var pintar = document.getElementById('color');
+
+            var color = pintar.value;
+
+            div.style.backgroundColor = color;
+        }
+
+        function borrar(div) {
+            var borrar = '#FFFFFF';
+
+            div.style.backgroundColor = borrar;
+        }
+        function creaLienzo() {
+
+            var section = document.createElement('section');
+
+            for (let i = 0; i < 3087; i++) {
+                var div = document.createElement('div');
+                
+
+                div.setAttribute('onmouseenter', 'pintar(this);');
+                div.setAttribute('onclick', 'borrar(this);');
+                section.appendChild(div);
+            }
+            document.body.appendChild(section);
+        }
+
+
+
+    </script>
+</head>
+
+<body onload="creaLienzo();">
+    <input type="color" name="color" id="color"><br/>
+    
+        <button onclick="location.reload();">Nuevo dibujo</button>
+
+
+    
+</body>
+
+</html>
