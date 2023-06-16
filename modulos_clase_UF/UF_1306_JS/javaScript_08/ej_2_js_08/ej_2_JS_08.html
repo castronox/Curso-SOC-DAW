@@ -9,48 +9,106 @@
     <style>
         section {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            align-items: center;
         }
 
         section:nth-of-type(1) img {
-            max-width: 400px;
+            
+            width: 300px;
         }
 
         section:nth-of-type(2) img {
             max-width: 100px;
+            border-radius: 25px;
         }
+        section:nth-of-type(3) {
+            display: block;
+        }
+        #puntos_jugador{
+            color: rgb(43, 162, 226);
+        }
+        #puntos_cpu{
+            color: rgb(226, 83, 43);
+        }
+
+
     </style>
     <script>
+        var contador_h = 0;
+        var contador_cpu = 0;
+
         function escoger(element) {
-            document.getElementById("mi_tirada").src = " ";
+            document.getElementById("mi_tirada").src = "";
             var seleccion = element.src;
-            //alert(seleccion);
             document.getElementById("mi_tirada").src = seleccion;
 
             tirada_cpu();
+            
         }
 
-        function tirada_cpu(element) {
+        function agrega_puntos() {
+            var miTirada = document.getElementById("mi_tirada").getAttribute("src");
+            var tiradaCpu = document.getElementById("maquina").getAttribute("src");
             
-            var maquina = Math.floor(Math.random()*3);
+            var resultado = 0; 
 
-            switch (maquina){
+            switch (miTirada) {
+                case "http://127.0.0.1:5500/modulos_clase_UF/UF_1306_JS/javaScript_08/ej_2_js_08/img/piedra.jpg":
+                    if (tiradaCpu.includes("tijera")) {
+                        resultado = 1; 
+                    } else if (tiradaCpu.includes("papel")) {
+                        resultado = -1; 
+                    }
+                    break;
+                case "http://127.0.0.1:5500/modulos_clase_UF/UF_1306_JS/javaScript_08/ej_2_js_08/img/papel.jpg":
+                    if (tiradaCpu.includes("piedra")) {
+                        resultado = 1; 
+                    } else if (tiradaCpu.includes("tijera")) {
+                        resultado = -1; 
+                    }
+                    break;
+                case "http://127.0.0.1:5500/modulos_clase_UF/UF_1306_JS/javaScript_08/ej_2_js_08/img/tijera.jpg":
+                    if (tiradaCpu.includes("papel")) {
+                        resultado = 1; 
+                    } else if (tiradaCpu.includes("piedra")) {
+                        resultado = -1; 
+                    }
+                    break;
+            }
 
-                case 0 :
-                document.getElementById("maquina").src = "img/piedra.jpg" ;
-                break;
-                case 1 :
-                document.getElementById("maquina").src = "img/papel.jpg" ;
-                break;
-                case 2 :
-                document.getElementById("maquina").src = "img/tijera.jpg" ;
-                break;
+            
+            if (resultado === 1) {
+                contador_h++;
+            } else if (resultado === -1) {
+                contador_cpu++;
+            }
 
+            
+            document.getElementById("puntos_jugador").textContent = contador_h;
+            document.getElementById("puntos_cpu").textContent = contador_cpu;
+        }
+
+        function tirada_cpu() {
+            var maquina = Math.floor(Math.random() * 3);
+
+            switch (maquina) {
+                case 0:
+                    document.getElementById("maquina").src = "img/piedra.jpg";
+                    break;
+                case 1:
+                    document.getElementById("maquina").src = "img/papel.jpg";
+                    break;
+                case 2:
+                    document.getElementById("maquina").src = "img/tijera.jpg";
+                    break;
                 default:
-                    "Hubo un error."
-            }   
-            
+                    "Hubo un error.";
+            }
 
-            
+            agrega_puntos(); 
         }
     </script>
 </head>
@@ -65,10 +123,14 @@
         <figure><img src="img/piedra.jpg" alt="" onclick="escoger(this); "></figure>
         <figure><img src="img/papel.jpg" alt="" onclick="escoger(this); "></figure>
         <figure><img src="img/tijera.jpg" alt="" onclick="escoger(this); "></figure>
+        
+        <section>
+            <h2>Puntos:</h2>
+            <h3>Jugador: <span id="puntos_jugador">0</span></h3>
+            <h3>CPU: <span id="puntos_cpu">0</span></h3>
+        </section>
     </section>
-    <section>
 
-    </section>
 </body>
 
 </html>

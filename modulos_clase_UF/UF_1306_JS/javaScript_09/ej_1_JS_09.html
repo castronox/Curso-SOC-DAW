@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 JavaScript 09</title>
+    <script>
+        
+
+        function explicacion(){
+
+        }
+
+
+
+
+        function aplica_f() {
+            var texto = document.getElementById("texto").value;
+            var texto_2 = document.getElementById("texto_2").value;
+            var funcion = parseInt(document.getElementById("s_funcion").value);
+
+
+            switch (funcion) {
+
+                case 0:
+                    texto_2 = "";
+                    var salida_final = texto.charAt(2);
+                    document.getElementById("salida").innerHTML = salida_final;
+
+                    break;
+
+                case 1:
+
+                    var salida_final = texto_2.concat(" ", texto);
+                    document.getElementById("salida").innerHTML = salida_final;
+
+                    break;
+
+                case 2:
+                texto_2 = " "
+                var salida_final =                 
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+
+                    break;
+                case 9:
+
+                    break;
+                case 10:
+
+                case 11:
+
+                    break;
+
+                default:
+                    break;
+
+            }
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <section>
+        <label for="">Introduce un texto: </label>
+        <input id="texto" type="text">
+        <label for="" not required>Introduce otro texto si lo necesitas: </label>
+        <input id="texto_2" type="text">
+
+        <label for="">Selecciona la funcion:</label>
+        <select name="selecciona_funcion" id="s_funcion">
+            <option value="">Selecciona una función.</option>
+            <option value="0" onchange="explicacion();">charAT()</option>
+            <option value="1" onchange="explicacion();">concat()</option>
+            <option value="2" onchange="explicacion();">replace()</option>
+            <option value="3" onchange="explicacion();">indexOf()</option>
+            <option value="4" onchange="explicacion();">lastIndexOf()</option>
+            <option value="5" onchange="explicacion();">search()</option>
+            <option value="6" onchange="explicacion();">slice()</option>
+            <option value="7" onchange="explicacion();">split()</option>
+            <option value="8" onchange="explicacion();">substring()</option>
+            <option value="9" onchange="explicacion();">toLowerCase()</option>
+            <option value="10" onchange="explicacion();">toUpperCase()</option>
+            <option value="11" onchange="explicacion();">trim()</option>
+        </select>
+        <button onclick="aplica_f();">Mostrar</button>
+    </section>
+    <section>
+
+        <p id="salida">
+
+
+        </p>
+    </section>
+
+
+</body>
+
+</html>
