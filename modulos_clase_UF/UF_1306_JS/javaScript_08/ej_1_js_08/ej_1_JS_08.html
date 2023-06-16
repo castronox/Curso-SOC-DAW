@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 de JavaScript 08</title>
+    <style>
+        img {
+            height: 600px;
+        }
+    </style>
+    <script>
+
+        contador = 1;
+        function evoluciona(element) {
+
+
+            if (contador < 3) {
+
+                contador++;
+            } else {
+                contador = 1;
+            }
+
+            element.src = "img/goku" + contador + ".png";
+            element.title = "Goku numero " + contador;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Ejercicio de transformación goku</h1>
+
+    <img id="img" src="img/goku1.png" alt="goku1" title="imagen_goku" onclick="evoluciona(this);">
+</body>
+
+</html>

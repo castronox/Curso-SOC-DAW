@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 2 JavaScript 08</title>
+
+    <style>
+        section {
+            display: flex;
+        }
+
+        section:nth-of-type(1) img {
+            max-width: 400px;
+        }
+
+        section:nth-of-type(2) img {
+            max-width: 100px;
+        }
+    </style>
+    <script>
+        function escoger(element) {
+            document.getElementById("mi_tirada").src = " ";
+            var seleccion = element.src;
+            //alert(seleccion);
+            document.getElementById("mi_tirada").src = seleccion;
+
+            tirada_cpu();
+        }
+
+        function tirada_cpu(element) {
+            
+            var maquina = Math.floor(Math.random()*3);
+
+            switch (maquina){
+
+                case 0 :
+                document.getElementById("maquina").src = "img/piedra.jpg" ;
+                break;
+                case 1 :
+                document.getElementById("maquina").src = "img/papel.jpg" ;
+                break;
+                case 2 :
+                document.getElementById("maquina").src = "img/tijera.jpg" ;
+                break;
+
+                default:
+                    "Hubo un error."
+            }   
+            
+
+            
+        }
+    </script>
+</head>
+
+<body>
+    <section>
+        <figure><img src="img/nada.png" alt="" id="mi_tirada"></figure>
+        <figure><img src="img/nada.png" alt="" id="maquina"></figure>
+    </section>
+
+    <section>
+        <figure><img src="img/piedra.jpg" alt="" onclick="escoger(this); "></figure>
+        <figure><img src="img/papel.jpg" alt="" onclick="escoger(this); "></figure>
+        <figure><img src="img/tijera.jpg" alt="" onclick="escoger(this); "></figure>
+    </section>
+    <section>
+
+    </section>
+</body>
+
+</html>
