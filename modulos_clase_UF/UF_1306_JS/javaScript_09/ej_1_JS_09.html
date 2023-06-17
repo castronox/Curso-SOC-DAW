@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1 JavaScript 09</title>
     <script>
-        
 
-        function explicacion(){
 
-        }
+
 
 
 
@@ -38,44 +36,129 @@
                     break;
 
                 case 2:
-                texto_2 = " "
-                var salida_final =                 
+
+                    var salida_final = texto.replace(texto, texto_2);
+
+                    document.getElementById("salida").innerHTML = salida_final;
 
                     break;
                 case 3:
+                    var concatena_v = texto + " " + texto_2;
+                    var salida_final = concatena_v.indexOf(texto_2);
+                    document.getElementById("salida").innerHTML = "El valor apuntado desde la segunda cadena de texto es:  (" + salida_final + ") " + concatena_v;
 
                     break;
                 case 4:
+                    texto_2 = " ";
 
+                    if (texto.length > 0) {
+                        var texto_proceso = texto.lastIndexOf("a");
+                        document.getElementById("salida").innerHTML = "El índice de la última aparición del valor es: " + texto_proceso;
+                    } else {
+                        document.getElementById("salida").innerHTML = "El campo de entrada está vacío.";
+                    }
                     break;
                 case 5:
+                    texto_2 = " ";
+                    var salida_final = texto.search("a");
+
+                    document.getElementById("salida").innerHTML = "el valor 'a' esta indexado en la posicion: " + salida_final;
 
                     break;
                 case 6:
 
+                    texto_2 = " ";
+                    var salida_final = texto.slice(3, 6);
+                    document.getElementById("salida").innerHTML = "El slice de esta funcion recorta la cadena de caracteres desde la posicion 3 hasta la 6 de dicha cadena y este sería el resultado: " + salida_final;
+
                     break;
                 case 7:
-
+                    texto_2 = " ";
+                    var salida_final = texto.split(" ");
+                    document.getElementById("salida").innerHTML = "Esta función busca los espacios y les asigna una separación por coma dando el siguiente resultado: " + salida_final;
                     break;
                 case 8:
-
+                    texto_2 = " ";
+                    var salida_final = texto.substring(2, 5);
+                    document.getElementById("salida").innerHTML = "Esta funcion extrae los caracteres  del 2 al 5 y te los muestra: " + salida_final;
                     break;
                 case 9:
-
+                    texto_2 = " ";
+                    var salida_final = texto.toLowerCase();
+                    document.getElementById("salida").innerHTML = "El resultado de esta funcion permite poner la cadena de caracteres de mayusculas a minusculas quedando asi el resultadso: " + salida_final;
                     break;
                 case 10:
+                    texo_2 = " ";
+                    var salida_final = texto.toUpperCase();
+                    document.getElementById("salida").innerHTML = "Esta funcion transforma la cadena de caracteres de minusculas a mayusculas quedando asi la cadena introducida: " + salida_final;
 
                 case 11:
-
+                    texto_2 = " ";
+                    var salida_final = texto.trim();
+                    document.getElementById("salida").innerHTML = "La función quita el espacio en blanco de ambos lados de una cadenade la siguiente forma: " + salida_final;
                     break;
 
                 default:
+                    alert("Selecciona alguna funcion");
                     break;
 
             }
 
-
         }
+
+        function explicar() {
+            var funcion = parseInt(document.getElementById("s_funcion").value);
+
+switch (funcion) {
+
+    case 0:
+        document.getElementById("explicacion").innerHTML = "prueba. 0";
+        break;
+    case 1:
+        document.getElementById("explicacion").innerHTML = "prueba. 1";
+        break;
+    case 2:
+        document.getElementById("explicacion").innerHTML = "prueba. 2";
+        break;
+    case 3:
+        document.getElementById("explicacion").innerHTML = "prueba. 3";
+        break;
+    case 4:
+        document.getElementById("explicacion").innerHTML = "prueba. 4";
+        break;
+    case 5:
+        document.getElementById("explicacion").innerHTML = "prueba. 5";
+        break;
+    case 6:
+        document.getElementById("explicacion").innerHTML = "prueba. 6";
+        break;
+    case 7:
+        document.getElementById("explicacion").innerHTML = "prueba. 7";
+        break;
+    case 8:
+        document.getElementById("explicacion").innerHTML = "prueba. 8";
+        break;
+    case 9:
+        document.getElementById("explicacion").innerHTML = "prueba. 9";
+        break;
+    case 10:
+        document.getElementById("explicacion").innerHTML = "prueba. 10";
+        break;
+    case 11:
+        document.getElementById("explicacion").innerHTML = "prueba. 11";
+        break;
+
+    default:
+
+        alert("Selecciona un funcion a explicar.");
+        break;
+
+
+
+
+
+}
+}
 
     </script>
 </head>
@@ -88,29 +171,26 @@
         <input id="texto_2" type="text">
 
         <label for="">Selecciona la funcion:</label>
-        <select name="selecciona_funcion" id="s_funcion">
+        <select name="selecciona_funcion" id="s_funcion" onchange="explicar();">
             <option value="">Selecciona una función.</option>
-            <option value="0" onchange="explicacion();">charAT()</option>
-            <option value="1" onchange="explicacion();">concat()</option>
-            <option value="2" onchange="explicacion();">replace()</option>
-            <option value="3" onchange="explicacion();">indexOf()</option>
-            <option value="4" onchange="explicacion();">lastIndexOf()</option>
-            <option value="5" onchange="explicacion();">search()</option>
-            <option value="6" onchange="explicacion();">slice()</option>
-            <option value="7" onchange="explicacion();">split()</option>
-            <option value="8" onchange="explicacion();">substring()</option>
-            <option value="9" onchange="explicacion();">toLowerCase()</option>
-            <option value="10" onchange="explicacion();">toUpperCase()</option>
-            <option value="11" onchange="explicacion();">trim()</option>
+            <option value="0" onchange="explicar();">charAT()</option>
+            <option value="1" onchange="explicar();">concat()</option>
+            <option value="2" onchange="explicar();">replace()</option>
+            <option value="3" onchange="explicar();">indexOf()</option>
+            <option value="4" onchange="explicar();">lastIndexOf()</option>
+            <option value="5" onchange="explicar();">search()</option>
+            <option value="6" onchange="explicar();">slice()</option>
+            <option value="7" onchange="explicar();">split()</option>
+            <option value="8" onchange="explicar();">substring()</option>
+            <option value="9" onchange="explicar();">toLowerCase()</option>
+            <option value="10" onchange="explicar();">toUpperCase()</option>
+            <option value="11" onchange="explicar();">trim()</option>
         </select>
         <button onclick="aplica_f();">Mostrar</button>
     </section>
     <section>
-
-        <p id="salida">
-
-
-        </p>
+        <p id="explicacion" onchange="explicacion();"></p>
+        <p id="salida"></p>
     </section>
 
 
