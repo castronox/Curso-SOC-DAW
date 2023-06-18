@@ -5,14 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1 JavaScript 09</title>
+    <style>
+        body,
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2% auto;
+        }
+
+        section {
+            background-color: aquamarine;
+            padding: 3%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 25px;
+            margin: 1% auto;
+
+
+            min-width: 400px;
+            max-width: 451px;
+        }
+
+        label,
+        input,
+        select {
+            margin: 0.4%;
+            border-radius: 15px;
+        }
+
+        button {
+            margin-top: 3.5%;
+            border-radius: 15px;
+            border: none;
+        }
+    </style>
     <script>
-
-
-
-
-
-
-
         function aplica_f() {
             var texto = document.getElementById("texto").value;
             var texto_2 = document.getElementById("texto_2").value;
@@ -24,13 +54,13 @@
                 case 0:
                     texto_2 = "";
                     var salida_final = texto.charAt(2);
-                    document.getElementById("salida").innerHTML = salida_final;
+                    document.getElementById("salida").innerHTML = "El carácter seleccionado por el método es: " + salida_final;
 
                     break;
 
                 case 1:
 
-                    var salida_final = texto_2.concat(" ", texto);
+                    var salida_final = texto.concat(" esto se ha concatenado ", texto_2);
                     document.getElementById("salida").innerHTML = salida_final;
 
                     break;
@@ -45,7 +75,7 @@
                 case 3:
                     var concatena_v = texto + " " + texto_2;
                     var salida_final = concatena_v.indexOf(texto_2);
-                    document.getElementById("salida").innerHTML = "El valor apuntado desde la segunda cadena de texto es:  (" + salida_final + ") " + concatena_v;
+                    document.getElementById("salida").innerHTML = "El valor de la segunda cadena comienza en la posicion:  (" + salida_final + ") " + concatena_v;
 
                     break;
                 case 4:
@@ -59,43 +89,53 @@
                     }
                     break;
                 case 5:
-                    texto_2 = " ";
-                    var salida_final = texto.search("a");
 
-                    document.getElementById("salida").innerHTML = "el valor 'a' esta indexado en la posicion: " + salida_final;
+
+                    var expresionRegular = /a/g;
+                    var contador = 0;
+                    var indice = texto.search(expresionRegular);
+
+                    while (indice !== -1) {
+                        contador++;
+                        texto = texto.slice(indice + 1);
+                        indice = texto.search(expresionRegular);
+                    }
+
+                    document.getElementById("salida").innerHTML = "El valor 'a' está repetido " + contador + " veces.";
 
                     break;
+
                 case 6:
 
                     texto_2 = " ";
                     var salida_final = texto.slice(3, 6);
-                    document.getElementById("salida").innerHTML = "El slice de esta funcion recorta la cadena de caracteres desde la posicion 3 hasta la 6 de dicha cadena y este sería el resultado: " + salida_final;
+                    document.getElementById("salida").innerHTML = "El slice de este método recorta la cadena de carácteres desde la posicón 3 hasta la 6 de dicha cadena y este sería el resultado: " + salida_final;
 
                     break;
                 case 7:
                     texto_2 = " ";
                     var salida_final = texto.split(" ");
-                    document.getElementById("salida").innerHTML = "Esta función busca los espacios y les asigna una separación por coma dando el siguiente resultado: " + salida_final;
+                    document.getElementById("salida").innerHTML = "En este ejemplo, busca los espacios y les asigna una separación por coma dando el siguiente resultado: " + salida_final;
                     break;
                 case 8:
                     texto_2 = " ";
                     var salida_final = texto.substring(2, 5);
-                    document.getElementById("salida").innerHTML = "Esta funcion extrae los caracteres  del 2 al 5 y te los muestra: " + salida_final;
+                    document.getElementById("salida").innerHTML = "Este método extrae los carácteres  del 2 al 5 y te los muestra: " + salida_final;
                     break;
                 case 9:
                     texto_2 = " ";
                     var salida_final = texto.toLowerCase();
-                    document.getElementById("salida").innerHTML = "El resultado de esta funcion permite poner la cadena de caracteres de mayusculas a minusculas quedando asi el resultadso: " + salida_final;
+                    document.getElementById("salida").innerHTML = "El resultado de este método permite poner la cadena de caracteres de mayúsculas a minúsculas quedando así el resultadso: " + salida_final;
                     break;
                 case 10:
                     texo_2 = " ";
                     var salida_final = texto.toUpperCase();
-                    document.getElementById("salida").innerHTML = "Esta funcion transforma la cadena de caracteres de minusculas a mayusculas quedando asi la cadena introducida: " + salida_final;
+                    document.getElementById("salida").innerHTML = "Este método transforma la cadena de caracteres de minusculas a mayusculas quedando asi la cadena introducida: " + salida_final;
 
                 case 11:
                     texto_2 = " ";
                     var salida_final = texto.trim();
-                    document.getElementById("salida").innerHTML = "La función quita el espacio en blanco de ambos lados de una cadenade la siguiente forma: " + salida_final;
+                    document.getElementById("salida").innerHTML = "El método quita el espacio en blanco de ambos lados de una cadena de la siguiente forma: " + salida_final;
                     break;
 
                 default:
@@ -109,70 +149,102 @@
         function explicar() {
             var funcion = parseInt(document.getElementById("s_funcion").value);
 
-switch (funcion) {
+            switch (funcion) {
 
-    case 0:
-        document.getElementById("explicacion").innerHTML = "prueba. 0";
-        break;
-    case 1:
-        document.getElementById("explicacion").innerHTML = "prueba. 1";
-        break;
-    case 2:
-        document.getElementById("explicacion").innerHTML = "prueba. 2";
-        break;
-    case 3:
-        document.getElementById("explicacion").innerHTML = "prueba. 3";
-        break;
-    case 4:
-        document.getElementById("explicacion").innerHTML = "prueba. 4";
-        break;
-    case 5:
-        document.getElementById("explicacion").innerHTML = "prueba. 5";
-        break;
-    case 6:
-        document.getElementById("explicacion").innerHTML = "prueba. 6";
-        break;
-    case 7:
-        document.getElementById("explicacion").innerHTML = "prueba. 7";
-        break;
-    case 8:
-        document.getElementById("explicacion").innerHTML = "prueba. 8";
-        break;
-    case 9:
-        document.getElementById("explicacion").innerHTML = "prueba. 9";
-        break;
-    case 10:
-        document.getElementById("explicacion").innerHTML = "prueba. 10";
-        break;
-    case 11:
-        document.getElementById("explicacion").innerHTML = "prueba. 11";
-        break;
+                case 0:
+                    document.getElementById("explicacion").innerHTML = "Explicación: <br /><br />El método <span>charAt(N)</span> obtiene el valor seleccionado de entre sus parentesis con N numero. No se puede dejar vacio la asignación de parámetro, se le ha asignado el valor 2, así identificará / mostrará el carácter que le continúa en cuestión en la cadena de carácteres.";
+                    esconde_texto();
+                    break;
+                case 1:
+                    document.getElementById("explicacion").innerHTML = "El método <span>concat()<span/> introduce mediante 2 valores por parámetro, qué es lo que se quiere concatenar y en el caso de este ejemplo, se concatena un valor preasignado por mi, entre la primera cadena de texto introducida y la segunda.";
+                    muestra_texto();
+                    break;
+                case 2:
+                    document.getElementById("explicacion").innerHTML = "El método <span>replace()<span/> reemplaza el texto introducido del segundo campo por el del primero, quedando impreso únicamente la cadena de carácteres del segundo campo de texto introducido.";
+                    muestra_texto();
+                    break;
+                case 3:
+                    document.getElementById("explicacion").innerHTML = "El método <span>indexOf()<span/> de ejemplo te muestra el valor numérico de donde se encuentra el inicio del segundo valor introducido, es decir si en el primer campo pones 5 carácteres, lo que introduzcas del siguiente valor se pondra en 6ta posición tal como contiua dicha cadena.";
+                    muestra_texto();
+                    break;
+                case 4:
+                    document.getElementById("explicacion").innerHTML = "El método <span>lastIndexOf()<span/> te muestra la posición del último valor seleccionado por parámetro en este caso 'a' que encuentre introducido por el usuario. ";
+                    esconde_texto();
+                    break;
+                case 5:
+                    document.getElementById("explicacion").innerHTML = "El método <span>search()<span/>busca el caracter o cadena de carácteres seleccionado en este caso, la letra 'a', y te muestra el valor numerico donde esta indexado.Este método mediante una expresión regular y un bucle, encuentra todos los caracteres que sean como el del parámetro. Después de cada iteración, utilizando el método slice()  eliminamos la parte del texto que ya se ha verificado.";
+                    esconde_texto();
+                    break;
+                case 6:
+                    document.getElementById("explicacion").innerHTML = "El método <span>slice()<span/> recorta la cadena de carácteres con los valores introducidos por parámetro que en este caso es '3' y '6' prueba escribir una cadena y veras que de una cadena de valores (1,2,3,4,5,6,7,8) devolveria los caracteres (4,5,6). ";
+                    esconde_texto();
+                    break;
+                case 7:
+                    document.getElementById("explicacion").innerHTML = "El método <span>split()<span/> busca el carácter o cadena de carácteres pasados por parámetro. En el caso de este ejemplo, busca los espacios y los substituye por una coma." ;
+                    esconde_texto();
+                    break;
+                case 8:
+                    document.getElementById("explicacion").innerHTML = "El método <span>substring()<span/> extrae los valores introducidos por parámetro y los devuelve por salida en el caso de (1,2,3,4,5,6,7,8,9) serían (3,4,5).";
+                    esconde_texto();
+                    break;
+                case 9:
+                    document.getElementById("explicacion").innerHTML = "El método <span>toLowerCase()<span/> pone la cadena de caracteres de mayúsculas, a minúsculas.";
+                    esconde_texto();
+                    break;
+                case 10:
+                    document.getElementById("explicacion").innerHTML = "El método <span>toUpperCase()<span/> pone la cadena de caracteres de minúsculas, a mayúsculas.";
+                    esconde_texto();
+                    break;
+                case 11:
+                    document.getElementById("explicacion").innerHTML = "El método <span>trim()<span/> quita los espacio en blanco de ambos lados de una cadena.";
+                    esconde_texto();
+                    break;
+                case 12:
+                    muestra_texto();
 
-    default:
+                default:
 
-        alert("Selecciona un funcion a explicar.");
-        break;
+                    alert("Selecciona un funcion a explicar.");
+                    break;
 
+            }
+        }
+        function esconde_texto() {
+            document.getElementById("l_texto_2").style.visibility = "hidden";
+            document.getElementById("l_texto_2").style.width = 0;
+            document.getElementById("l_texto_2").style.height = 0;
 
+            document.getElementById("texto_2").style.visibility = "hidden";
+            document.getElementById("texto_2").style.width = 0;
+            document.getElementById("texto_2").style.height = 0;
+        }
+        function muestra_texto() {
+            document.getElementById("l_texto_2").style.visibility = "visible";
+            document.getElementById("texto_2").style.visibility = "visible";
 
+            document.getElementById("l_texto_2").style.width = "auto";
+            document.getElementById("texto_2").style.width = "auto";
 
+            document.getElementById("texto_2").style.height = "auto";
+            document.getElementById("l_texto_2").style.height = "auto";
 
-}
-}
+        }
 
     </script>
 </head>
 
 <body>
+    <h1>Repaso métodos string.</h1>
     <section>
+        <p>A continuación, cuando selecciones algo con el desplegable, se mostrarán las explicaciones de los métodos comentados.</p>
         <label for="">Introduce un texto: </label>
         <input id="texto" type="text">
-        <label for="" not required>Introduce otro texto si lo necesitas: </label>
+        <label for="texo_2" id="l_texto_2">Introduce otro texto si lo necesitas: </label>
         <input id="texto_2" type="text">
 
         <label for="">Selecciona la funcion:</label>
         <select name="selecciona_funcion" id="s_funcion" onchange="explicar();">
-            <option value="">Selecciona una función.</option>
+            <option value="12">Selecciona una función.</option>
             <option value="0" onchange="explicar();">charAT()</option>
             <option value="1" onchange="explicar();">concat()</option>
             <option value="2" onchange="explicar();">replace()</option>
