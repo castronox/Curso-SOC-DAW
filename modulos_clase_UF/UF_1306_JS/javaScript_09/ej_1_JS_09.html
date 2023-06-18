@@ -41,6 +41,11 @@
             border-radius: 15px;
             border: none;
         }
+
+        span{
+            color: blueviolet;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.331);
+        }
     </style>
     <script>
         function aplica_f() {
@@ -156,47 +161,47 @@
                     esconde_texto();
                     break;
                 case 1:
-                    document.getElementById("explicacion").innerHTML = "El método <span>concat()<span/> introduce mediante 2 valores por parámetro, qué es lo que se quiere concatenar y en el caso de este ejemplo, se concatena un valor preasignado por mi, entre la primera cadena de texto introducida y la segunda.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>concat()</span> introduce mediante 2 valores por parámetro, qué es lo que se quiere concatenar y en el caso de este ejemplo, se concatena un valor preasignado por mi, entre la primera cadena de texto introducida y la segunda.";
                     muestra_texto();
                     break;
                 case 2:
-                    document.getElementById("explicacion").innerHTML = "El método <span>replace()<span/> reemplaza el texto introducido del segundo campo por el del primero, quedando impreso únicamente la cadena de carácteres del segundo campo de texto introducido.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>replace()</span> reemplaza el texto introducido del segundo campo por el del primero, quedando impreso únicamente la cadena de carácteres del segundo campo de texto introducido.";
                     muestra_texto();
                     break;
                 case 3:
-                    document.getElementById("explicacion").innerHTML = "El método <span>indexOf()<span/> de ejemplo te muestra el valor numérico de donde se encuentra el inicio del segundo valor introducido, es decir si en el primer campo pones 5 carácteres, lo que introduzcas del siguiente valor se pondra en 6ta posición tal como contiua dicha cadena.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>indexOf()</span> de ejemplo te muestra el valor numérico de donde se encuentra el inicio del segundo valor introducido, es decir si en el primer campo pones 5 carácteres, lo que introduzcas del siguiente valor se pondra en 6ta posición tal como contiua dicha cadena.";
                     muestra_texto();
                     break;
                 case 4:
-                    document.getElementById("explicacion").innerHTML = "El método <span>lastIndexOf()<span/> te muestra la posición del último valor seleccionado por parámetro en este caso 'a' que encuentre introducido por el usuario. ";
+                    document.getElementById("explicacion").innerHTML = "El método <span>lastIndexOf()</span> te muestra la posición del último valor seleccionado por parámetro en este caso 'a' que encuentre introducido por el usuario. ";
                     esconde_texto();
                     break;
                 case 5:
-                    document.getElementById("explicacion").innerHTML = "El método <span>search()<span/>busca el caracter o cadena de carácteres seleccionado en este caso, la letra 'a', y te muestra el valor numerico donde esta indexado.Este método mediante una expresión regular y un bucle, encuentra todos los caracteres que sean como el del parámetro. Después de cada iteración, utilizando el método slice()  eliminamos la parte del texto que ya se ha verificado.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>search()</span>busca el caracter o cadena de carácteres seleccionado en este caso, la letra 'a', y te muestra el valor numerico donde esta indexado.Este método mediante una expresión regular y un bucle, encuentra todos los caracteres que sean como el del parámetro. Después de cada iteración, utilizando el método slice()  eliminamos la parte del texto que ya se ha verificado.";
                     esconde_texto();
                     break;
                 case 6:
-                    document.getElementById("explicacion").innerHTML = "El método <span>slice()<span/> recorta la cadena de carácteres con los valores introducidos por parámetro que en este caso es '3' y '6' prueba escribir una cadena y veras que de una cadena de valores (1,2,3,4,5,6,7,8) devolveria los caracteres (4,5,6). ";
+                    document.getElementById("explicacion").innerHTML = "El método <span>slice()</span> recorta la cadena de carácteres con los valores introducidos por parámetro que en este caso es '3' y '6' prueba escribir una cadena y veras que de una cadena de valores (1,2,3,4,5,6,7,8) devolveria los caracteres (4,5,6). ";
                     esconde_texto();
                     break;
                 case 7:
-                    document.getElementById("explicacion").innerHTML = "El método <span>split()<span/> busca el carácter o cadena de carácteres pasados por parámetro. En el caso de este ejemplo, busca los espacios y los substituye por una coma." ;
+                    document.getElementById("explicacion").innerHTML = "El método <span>split()</span> busca el carácter o cadena de carácteres pasados por parámetro. En el caso de este ejemplo, busca los espacios y los substituye por una coma." ;
                     esconde_texto();
                     break;
                 case 8:
-                    document.getElementById("explicacion").innerHTML = "El método <span>substring()<span/> extrae los valores introducidos por parámetro y los devuelve por salida en el caso de (1,2,3,4,5,6,7,8,9) serían (3,4,5).";
+                    document.getElementById("explicacion").innerHTML = "El método <span>substring()</span> extrae los valores introducidos por parámetro y los devuelve por salida en el caso de (1,2,3,4,5,6,7,8,9) serían (3,4,5).";
                     esconde_texto();
                     break;
                 case 9:
-                    document.getElementById("explicacion").innerHTML = "El método <span>toLowerCase()<span/> pone la cadena de caracteres de mayúsculas, a minúsculas.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>toLowerCase()</span> pone la cadena de caracteres de mayúsculas, a minúsculas.";
                     esconde_texto();
                     break;
                 case 10:
-                    document.getElementById("explicacion").innerHTML = "El método <span>toUpperCase()<span/> pone la cadena de caracteres de minúsculas, a mayúsculas.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>toUpperCase()</span> pone la cadena de caracteres de minúsculas, a mayúsculas.";
                     esconde_texto();
                     break;
                 case 11:
-                    document.getElementById("explicacion").innerHTML = "El método <span>trim()<span/> quita los espacio en blanco de ambos lados de una cadena.";
+                    document.getElementById("explicacion").innerHTML = "El método <span>trim()</span> quita los espacio en blanco de ambos lados de una cadena.";
                     esconde_texto();
                     break;
                 case 12:

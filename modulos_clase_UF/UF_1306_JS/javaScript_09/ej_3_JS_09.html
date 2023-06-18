@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 JavaScript 09</title>
+
+    <script>
+
+        function codificar(){
+
+        var encode = document.getElementById("encode").value;
+
+        var c_codificada = String.charCodeAt(encode.length);
+
+        
+
+        document.getElementById("salida").innerHTML = c_codificada + decode;
+
+        
+        }
+
+    </script>
+</head>
+<body>
+    <label for="">Introduce el texto a encriptar.</label>
+    <input type="text" name="" id="encode">
+    <button  onclick="codificar();">Codificar</button>
+
+    <p id="salida"></p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 JavaScript 09</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            max-width: 500px;
+        }
+    </style>
+    <script>
+        function ordenar() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido_1 = document.getElementById("apellido_1").value;
+            var apellido_2 = document.getElementById("apellido_2").value;
+
+            var r1 = apellido_1.toUpperCase();
+            var r2 = apellido_2.toUpperCase();
+            var letra_n = nombre.substring(0,1);
+            var l_may = letra_n.toUpperCase();
+            var r3 = nombre.slice(1,nombre.length);
+            var r3_min = r3.toLowerCase();
+            
+            var salida = r1 + " " + r2 + ", " + l_may + r3_min;
+
+            document.getElementById("salida").innerHTML = salida;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Formulario de nombre</h1>
+    <label for="">Introduzca su nombre:</label>
+    <input type="text" id="nombre">
+
+    <label for="">Introduzca su primer apellido.</label>
+    <input type="text" id="apellido_1">
+
+    <label for="">Introduzca su segundo apellido .</label>
+    <input type="text" id="apellido_2">
+
+    <button onclick="ordenar();">Mostrar</button>
+
+    <p id="salida"></p>
+</body>
+
+</html>
