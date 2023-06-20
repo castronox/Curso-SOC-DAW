@@ -1,0 +1,144 @@
+
+/* FORMATO Y FUENTES*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'georgeFont';
+    src: url(../fonts/Louis\ George\ Cafe.ttf);
+}
+
+
+/* FIN DE FORMATO Y FUENTES*/
+
+
+
+/* HEADER*/
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+
+header h1 {
+    font-family: 'georgeFont';
+    text-align: center;
+    font-size: 4vw;
+    padding: 0.8%;
+    color: rgba(51, 149, 53, 0.8);
+    text-shadow: 3px 3px 3px rgb(219, 219, 219);
+}
+
+nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+nav ul li {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    padding: 10px;
+    
+}
+
+nav ul li::before {
+    margin-left: auto;
+}
+
+nav ul li::after,
+nav ul li::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:rgba(51, 149, 53, 0.8);
+    display: block;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after,
+nav ul li:hover::before {
+    width: 100%;
+}
+
+
+
+nav a {
+    font-size: x-large;
+    font-family: 'georgeFont';
+    text-shadow: 3px 3px 3px rgba(222, 213, 213, 0.588);
+    color: rgba(51, 149, 53, 0.8);
+    text-decoration: none;
+}
+
+/* FIN HEADER*/
+
+/* FOOOTER*/
+
+footer{
+    padding-top: 5%;
+    height: 250px;
+    align-items: center;
+}
+footer p{
+    
+    font-family: 'georgeFont';
+    text-align: center;
+    padding: 3%;
+    margin: 3%;
+
+
+}
+
+main button {
+    margin: 3%;
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #445e3e;
+    font-weight: bold;
+    padding: calc(1.5em + var(--s)) calc(6.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: 1.6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+
+main button:hover,
+main button:focus-visible {
+    --_p: 0px;
+    outline-color: rgba(51, 149, 53, 0.8);
+    outline-offset: .05em;
+}
+
+main button:active {
+    background: #8b954540;
+    color: #000000;
+}

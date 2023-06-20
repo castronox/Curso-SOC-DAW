@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Evaluación Practica UF1306</title>
+    <style>
+        section:nth-of-type(1) {
+            margin: 4.5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        div h2 {
+            font-size: 100px;
+            padding-bottom: 150px;
+        }
+
+        .card {
+            font-family: 'georgeFont';
+            font-size: medium;
+            color: #ffffff;
+            width: 280px;
+            height: 384px;
+            position: relative;
+            outline: 6px solid #f5f5f5;
+            border-radius: 8px;
+            line-height: 150%;
+            padding: 16px;
+            background: #0fff3f;
+            background-blend-mode: multiply;
+            background: linear-gradient(to top, #94ad0ab3, #9cff33);
+            transition: background-color 1s ease-in-out;
+            overflow: hidden;
+            box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.525);
+            transition: 0.8s;
+            margin: 2%;
+        }
+
+        .card-front {
+
+            bottom: 16px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        }
+
+        .card-back {
+            transform: translateX(120%);
+            transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        }
+
+
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+
+        .title::after {
+            content: "";
+            display: block;
+            width: 50%;
+            border-radius: 50%;
+            height: 2px;
+            margin: 2px auto;
+            background-color: #ffffff;
+        }
+
+
+
+        .card:hover {
+            background-color: #2b583cb3;
+            box-shadow: 23px 23px 13px rgba(0, 0, 0, 0.525);
+            transition: 1.8s;
+        }
+
+        .card:hover .card-front {
+            transform: translateX(-100%);
+        }
+
+        .card:hover .card-back {
+            transform: translateX(0);
+        }
+
+        .centrado {
+            text-align: center;
+        }
+
+        span {
+            color: rgb(152, 210, 75);
+            font-size: 2rem;
+
+        }
+
+        main a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.6rem;
+        }
+
+        main a:visited {
+            color: rgb(161, 165, 161);
+            text-decoration: line-through;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Información de contenido a cerca de JavaScript.</h1>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Indice</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="referencias.html">Referencias</a></li>
+            <li><a href="pagina_5.html">Prueba JS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>1</h2>
+                    <p class="title">Conceptos Básicos</p>
+                    <p class="subtitle">JavaScript</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado"><span>-Variables.</span><br />
+                        <span>-Operadores.</span><br />
+                        <span>-Tipos de datos.</span><br />
+                        <span>-Estructuras de control.</span><br />
+                        <span>-Funciones.</span><br />
+                        <span>-Arrays.</span><br />
+                        <span>-Interpretación y lectura de datos.</span><br />
+                        <span>-DOM</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>2</h2>
+                    <p class="title">Tipos de variables</p>
+                    <p class="subtitle">Datos</p>
+                </div>
+                <div class="card-back">
+                    <p> -Variables numéricas.<br />
+
+                        -Variables de cadenas de texto<br />
+
+                        -Variable Booleana:(true) o falso (false)<br />
+
+                        -Variable Objetos: Colecciones de propiedades y métodos relacionados.<br />
+
+                        -Variable Array: almacenan múltiples valores en una sola variable, se accede mediante
+                        índices.<br />
+
+                        -Variable Null: Ausencia de cualquier objeto o valor.<br />
+
+                        -Variable Undefined: Indica que no tiene un valor definido.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>3</h2>
+                    <p class="title">Bucle While</p>
+                    <p class="subtitle">Estructuras de control.</p>
+                </div>
+                <div class="card-back">
+                    <p>El bucle while comienza evaluando la condición. Si la condición es verdadera, se ejecuta el
+                        bloque de código dentro del bucle. Después de ejecutar el bloque de código, la condición se
+                        vuelve a evaluar. Si la condición sigue siendo verdadera, se repite el ciclo y se vuelve a
+                        ejecutar el bloque de código. Este proceso continúa hasta que la condición se evalúa como falsa,
+                        momento en el que se sale del bucle y la ejecución del programa continúa con la siguiente línea
+                        de código después del bucle.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>4</h2>
+                    <p class="title">Bucle Do While</p>
+                    <p class="subtitle">Estructuras de control</p>
+                </div>
+                <div class="card-back">
+                    <p>El bucle do-while primero ejecuta el bloque de código y luego evalúa la condición. Esto significa
+                        que el bloque de código se ejecutará al menos una vez, sin importar si la condición
+                        inicialmente. Después de ejecuta el bloque de código, y evalúa la condición. Si la condición es
+                        verdadera, el bucle se repite . El ciclo continúa hasta que la condición se evalúa como falsa,
+                        se sale del bucle y la ejecución del programa continúa con la siguiente línea de código después
+                        del bucle.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>5</h2>
+                    <p class="title">Bucle FOR</p>
+                    <p class="subtitle">Estructuras de control</p>
+                </div>
+                <div class="card-back">
+
+
+                    <p> 1- Inicialización:<br /> Inicializa una variable de control del bucle. Se ejecuta solo una vez
+                        al inicio del bucle.<br />
+
+                        2- Condición:<br /> Se evalúa antes de cada iteración del bucle. Si se evalúa como verdadera, el
+                        bloque de código se ejecuta. Si se evalúa como falsa, sale del bucle.<br />
+
+                        3- Actualización:<br /> Se utiliza para actualizar la variable después de cada iteración.
+                        incrementa o decrementa su valor.<br />
+                    </p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>6</h2>
+                    <p class="title">Bifurcaciónes / Condicionales <br />( IF -ELSE - ELSE IF )</p>
+                    <p class="subtitle">Estructuras de control</p>
+                </div>
+                <div class="card-back">
+                    <p>La condición del if debe ser una expresión que se evalúa como un valor booleano: Si la condición
+                        es verdadera, ejecuta el bloque de código que sigue al if. Si la condición es falsa, se omite
+                        ese bloque y se continúa con la ejecución del código.
+
+                        Opcionalmente, se puede utilizar la estructura else para especificar un bloque de código
+                        alternativo que se ejecutará si la condición es falsa <br /> Además, se puede encadenar
+                        múltiples condiciones utilizando la estructura ELSE IF</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>7</h2>
+                    <p class="title">Estructura SWITCH</p>
+                    <p class="subtitle">Estructuras de control</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        La estructura switch en JavaScript es una forma de control de flujo que permite tomar decisiones
+                        basadas en el valor de una expresión. Se utiliza cuando se necesita evaluar una expresión y
+                        ejecutar diferentes bloques de código dependiendo del valor que tome esa expresión.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>8</h2>
+                    <p class="title">Eventos de Ratón</p>
+                    <p class="subtitle"> DOM JS</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+
+                        <span><a class="visita" href="https://www.w3schools.com/jsref/event_onclick.asp"
+                                target="_blank"> onclick()</a> </span><br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onmouseover.asp" target="_blank">
+                                onmouseover()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onmouseout.asp" target="_blank">
+                                onmouseout()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onkeydown.asp" target="_blank">
+                                onkeydown()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onkeyup.asp" target="_blank"> onkeyup()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onload.asp" target="_blank"> onload()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onunload.asp" target="_blank">
+                                onunload()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onsubmit.asp" target="_blank">
+                                onsubmit()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_oninput.asp" target="_blank"> oninput()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onfocus.asp" target="_blank"> onfocus()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/event_onblur.asp" target="_blank"> onblur()</a>
+                        </span> <br />
+
+                        <a href="https://www.w3schools.com/jsref/event_onchange.asp" target="_blank">onchange()</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>9</h2>
+                    <p class="title">Operadores relacionales.</p>
+                    <p class="subtitle">Tipos de Operadores</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        <span>
+                            < </span> Menor que<br />
+                                <span>
+                                    <= </span> Menor o igual a<br />
+                                        <span> > </span> Mayor que<br />
+                                        <span> >= </span> Mayor o igual a<br />
+                                        <span> == </span> Igual a<br />
+                                        <span> != </span>Diferente de<br />
+                                        <span> === </span> Idéntico a (valor y tipo)<br />
+                                        <span> !== </span> No idéntico a
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>10</h2>
+                    <p class="title">Operadores Aritméticos. </p>
+                    <p class="subtitle">Tipos de Operadores</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        <span> + </span> Devuelve una suma.<br />
+                        <span> - </span> Devuelve una resta<br />
+                        <span> * </span> Devuelve una multiplicación<br />
+                        <span> / </span> Devuelve una<br />
+                        <span> % </span> Devuelve una<br />
+                        <span> ++ </span> Aumenta en 1 el valor de una variable.<br />
+                        <span> -- </span>Disminuye en 1 el valor de una variable.<br />
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>11</h2>
+                    <p class="title">Tipos dinámicos JavaScript </p>
+                    <p class="subtitle">Interpretación de lectura de datos</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        En JavaScript, los tipos de datos son dinámicos, lo que significa que una variable puede
+                        contener diferentes tipos de datos a lo largo de su vida útil. A diferencia de otros lenguajes
+                        de programación, no es necesario declarar explícitamente el tipo de una variable en JavaScript.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>12</h2>
+                    <p class="title">Funciones matemáticas. </p>
+                    <p class="subtitle">Métodos predefinidos.</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                    <p class="centrado">
+                        <span>Algunas de las funciones son:<br /><br /></span>
+
+                        <span><a class="visita" href="https://www.w3schools.com/jsref/jsref_pow.asp" target="_blank">
+                                Math.pow()</a> </span><br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_sqrt.asp" target="_blank">
+                                Math.sqrt()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_random.asp" target="_blank">
+                                Math.random()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_round.asp" target="_blank">
+                                Math.round()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_floor.asp" target="_blank">
+                                Math.floor()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_ceil.asp" target="_blank"> Math.ceil()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_sin.asp" target="_blank">
+                                Math.sin()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_tan.asp" target="_blank">
+                                Math.tan()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_cos.asp" target="_blank"> Math.cos()</a>
+                        </span> <br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>13</h2>
+                    <p class="title">Propiedad y método</p>
+                    <p class="subtitle">Interpretación de lectura de datos</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        <span>Propiedades:</span><br /> Las propiedades son valores asociados a un objeto. Representan
+                        características o atributos del objeto y se acceden utilizando la notación de punto o la
+                        notación de corchetes.<br />
+                        <span><br />Métodos:<br /></span> Los métodos son funciones asociadas a un objeto. Representan
+                        acciones que el objeto puede realizar y se invocan utilizando la notación de punto.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>14</h2>
+                    <p class="title">Funciones String</p>
+                    <p class="subtitle">Interpretación y lectura de STRINGS</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                    <p class="centrado">
+                        <span>Algunas de las funciones son:<br /></span>
+
+                        <span><a class="visita" href="https://www.w3schools.com/jsref/jsref_length_string.asp"
+                                target="_blank"> texto.length</a> </span><br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">
+                                indexOf()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_substring.asp" target="_blank">
+                                substring()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_slice_string.asp" target="_blank">
+                                slice()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_replace.asp" target="_blank"> replace()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_touppercase.asp" target="_blank">
+                                toUpperCase()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_tolowercase.asp" target="_blank">
+                                toLowerCase()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_trim_string.asp" target="_blank">
+                                trim()</a> </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">split()</a>
+                        </span> <br />
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_concat_string.asp"
+                                target="_blank">concat()</a>
+                        </span> <br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>15</h2>
+                    <p class="title">Recursividad en JavaScript</p>
+                    <p class="subtitle">Interpretación de lectura de datos </p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        La recursividad en JavaScript es una técnica en la que una función se llama a sí misma durante
+                        su propia ejecución.<br />
+
+                        La recursividad permite resolver problemas complejos dividiéndolos en subproblemas más pequeños
+                        y más simples. En cada llamada recursiva, la función se resuelve para un caso base más simple y
+                        luego combina los resultados para obtener la solución del problema original.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>16</h2>
+                    <p class="title">Métodos wrapper</p>
+                    <p class="subtitle">Interpretación y lectura de STRINGS</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        <span>Algunas de las funciones son:<br /></span>
+
+                        <span><a href="https://www.w3schools.com/jsref/jsref_anchor.asp" target="_blank">anchor()</a>
+                        </span> <br />
+                        <span><a href="https://www.w3schools.com/jsref/jsref_bold.asp" target="_blank">italics()</a>
+                        </span> <br />
+                        <span><a href="https://www.w3schools.com/jsref/jsref_italics.asp" target="_blank">link()</a>
+                        </span> <br />
+                        <span><a href="https://www.w3schools.com/jsref/jsref_small.asp" target="_blank">small()</a>
+                        </span> <br />
+                        <span><a href="https://www.w3schools.com/jsref/jsref_sub.asp" target="_blank">sub()</a> </span>
+                        <br />
+                        <span><a href="https://www.w3schools.com/jsref/jsref_sup.asp" target="_blank">sup()</a> </span>
+                        <br />
+
+                        </span> <br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h2>17</h2>
+                    <p class="title">Modificadores de estilo</p>
+                    <p class="subtitle">DOM JS</p>
+                </div>
+                <div class="card-back">
+                    <p class="centrado">
+                        para aplicar modificaciones de estilo a un elemento, este debe estar presente en el DOM y
+                        haberse cargado correctamente antes de intentar acceder o modificar sus propiedades de estilo.
+
+                        Estos modificadores .style proporcionan una forma conveniente de acceder y modificar las
+                        propiedades de estilo de los elementos HTML utilizando JavaScript.
+
+                        <br /><span><a href="https://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank">Objetos
+                                de estilo DOM</a> </span> <br />
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </section>
+    </main>
+    <footer></footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

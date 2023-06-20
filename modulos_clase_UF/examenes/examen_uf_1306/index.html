@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Evaluación Practica UF1306</title>
+    <style>
+        h2,
+        h3 {
+            color: rgba(35, 104, 36, 0.8);
+            font-family: 'georgeFont';
+            text-shadow: 3px 3px 3px rgb(219, 219, 219);
+            margin: 3% auto;
+            text-align: center;
+            font-size: 2.5vw;
+        }
+
+
+        section:nth-of-type(1) {
+            padding: 3%;
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+
+        section:nth-of-type(1) div {
+            justify-content: center;
+            margin: 2% auto;
+            vertical-align: middle;
+            min-width: 400px;
+            min-height: 400px;
+        }
+
+        section:nth-of-type(1) div p {
+            text-shadow: 3px 3px 3px rgb(123, 131, 90);
+            display: flex;
+            max-width: 650px;
+            align-items: center;
+            font-size: larger;
+            padding: 4%;
+            font-family: 'georgeFont';
+            vertical-align: middle;
+        }
+
+        section:nth-of-type(1) div figure {
+            display: flex;
+            justify-content: center;
+            filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.614));
+            transition: 0.6s;
+        }
+
+        section:nth-of-type(1) div figure:hover {
+            display: flex;
+            justify-content: center;
+            filter: drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.614));
+            transition: 0.3s;
+        }
+
+        section:nth-of-type(2) ul {
+            margin: 1.5%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1%;
+            font-family: 'georgeFont';
+            justify-content: space-around;
+
+        }
+
+        section:nth-of-type(2) ul li {
+
+            flex-basis: 350px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        section:nth-of-type(2) ul li p {
+            filter: blur(5px);
+            color: rgb(83, 82, 82);
+            text-shadow: 3px 3px 3px rgb(123, 131, 90);
+            background-color: #ebd6b4;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+            background-blend-mode: soft-light, screen;
+            padding: 25px;
+            margin: 1.5%;
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.366);
+            font-size: larger;
+            transition: 0.8s;
+        }
+
+        section:nth-of-type(2) ul li p:hover,
+        span::after {
+            filter: blur(0);
+            text-shadow: none;
+            transition: 0.4s;
+        }
+
+        section:nth-of-type(2) ul li p:hover>span {
+            color: rgb(147, 100, 180);
+            transition: 0.8s;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.366);
+        }
+
+        section:nth-of-type(3) div{
+            display: flex;
+            justify-content: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Conocimientos prácticos en JavaScript.</h1>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Indice</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="referencias.html">Referencias</a></li>
+            <li><a href="pagina_5.html">Prueba JS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Bienvenido a esta prueba de evaluación práctica de la unidad formativa 1306!</h2>
+        <section>
+            <div>
+                <p>En esta unidad formativa, he aprendido a trabajar con Javascript, un lenguaje muy importante a dia de
+                    hoy, para ser exactos, y por las
+                    fechas de entrega de dicha evaluación, en el índice TIOBE podemos comprobar como JavaScript está en
+                    el puesto numero 7 del índice mencionado.<br /><br />
+                    Para el quien no sepa a cerca de este índice,mide la popularidad de los lenguajes de
+                    programación.<br /><br />
+                    Los encargados del índice TIOBE explican que "no se trata del mejor lenguaje de programación o del
+                    lenguaje en el que se ha escrito la mayoría de las líneas de código", pero afirman que la cantidad
+                    de páginas web puede reflejar la cantidad de ingenieros, cursos o puestos de trabajo en todo el
+                    mundo relacionados con el lenguaje.
+                </p>
+            </div>
+            <div>
+                <figure><img src="img/javascript-logo.png" title="javaScript_shield" alt="escudo_js"></figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Curiosidades a cerca de JavaScript</h2>
+            <div>
+                <ul>
+                    <li>
+                        <p><span>Lenguaje de programación interpretado:</span><br /><br /> JavaScript es un lenguaje de
+                            programación
+                            interpretado, lo que significa que no requiere un compilador para ejecutar su código. Los
+                            navegadores web modernos tienen un motor de JavaScript incorporado que interpreta y ejecuta
+                            el código directamente.</p>
+                    </li>
+                    <li>
+                        <p><span>Diseñado en 10 días:</span><br /><br /> JavaScript fue creado por Brendan Eich en 1995
+                            mientras trabajaba en
+                            Netscape Communications. Sorprendentemente, solo le llevó 10 días diseñar el lenguaje.
+                            Inicialmente, se llamaba "Mocha" y luego se renombró a "LiveScript" antes de adoptar el
+                            nombre que todos conocemos hoy en día: JavaScript.</p>
+                    </li>
+                    <li>
+                        <p><span>Amplio uso en el desarrollo web:</span><br /><br /> JavaScript es ampliamente utilizado
+                            en el desarrollo web.
+                            Además de ser el lenguaje de programación principal para la interactividad en los
+                            navegadores web, también se utiliza en el lado del servidor (Node.js), en aplicaciones de
+                            escritorio (Electron.js) y en el desarrollo de aplicaciones móviles híbridas (React Native,
+                            NativeScript).</p>
+                    </li>
+                    <li>
+                        <p><span>Dinámicamente tipado:</span><br /><br /> JavaScript es un lenguaje de programación
+                            dinámicamente tipado, lo que
+                            significa que no es necesario declarar el tipo de una variable antes de usarla. Las
+                            variables en JavaScript pueden contener valores de diferentes tipos y pueden cambiar de tipo
+                            durante la ejecución del programa.</p>
+                    </li>
+                    <li>
+                        <p><span>Gran cantidad de bibliotecas y marcos de trabajo:</span><br /><br /> JavaScript cuenta
+                            con una amplia gama de
+                            bibliotecas y marcos de trabajo que facilitan el desarrollo web. Algunos ejemplos populares
+                            son React, Angular, Vue.js y jQuery. Estas herramientas permiten a los desarrolladores crear
+                            aplicaciones web de manera más eficiente y rápida, ya que proporcionan componentes y
+                            abstracciones útiles.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>¿Quieres saber más? Pulsa el siguiente botón para acceder a la pagina información del contenido!</h3>
+            <div><button onclick="location.href='info.html'">Información y contenido</button></div>
+        </section>
+
+    </main>
+    <footer>
+        <p>Página creada por Cristian Castro</p>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

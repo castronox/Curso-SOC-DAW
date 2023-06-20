@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Evaluación Practica UF1306</title>
+</head>
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        margin: 2%;
+    }
+
+    form {
+        color: rgba(51, 149, 53, 0.8);       
+        gap: 33px;
+        flex-basis: 450px;
+        padding: 1%;
+        font-family: 'georgeFont';
+        font-size: x-large;
+        align-items: center;
+        justify-content: center;
+        
+
+    }
+    form div{
+        
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+
+    fieldset{
+        border: 0.5px solid rgba(0, 0, 0, 0.062);
+        min-width: 370px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.235);
+        padding:4% ;
+        margin: 4%;
+        transition: 0.7s;
+    }
+    fieldset:hover{
+        background-color: rgba(81, 108, 76, 0.233);
+        box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.235);
+        transition: 0.7s;
+    }
+
+    input,select{
+        
+        text-align: center;
+        border: none;
+        padding: 5px;
+        width: 220px;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 823px)  {
+        fieldset
+        {
+            min-width: 270px;
+        }
+        
+        form div {
+flex-wrap: wrap;
+display: flex;
+justify-content: center;
+margin: 2%;
+}  
+    }
+</style>
+
+
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Conocimientos prácticos en JavaScript.</h1>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Indice</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="referencias.html">Referencias</a></li>
+            <li><a href="pagina_5.html">Prueba JS</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <form action="" method="">
+        <div>
+            <fieldset>
+                <label for="nombre">Nombre:</label><br/>
+                <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁ-ÿ\s]+" required><br/><br/>
+
+                <label for="edad">Edad:</label><br/>
+                <input type="number" id="edad" name="edad" min="1" max="120" required><br/><br/>
+
+                <label for="sexo">Sexo:</label><br/>
+                <select id="sexo" name="sexo" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select><br/><br/>
+
+                <label for="correo">Correo Electrónico:</label><br/>
+                <input type="email" id="correo" name="correo" required><br/><br/>
+            </fieldset>
+            <fieldset>
+                <label for="telefono">Teléfono:</label><br/>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required><br/><br/>
+
+                <label for="direccion">Dirección:</label><br/>
+                <input type="text" id="direccion" name="direccion" required><br/><br/>
+
+                <label for="color">Color Favorito:</label><br/>
+                <input type="color" id="color" name="color" required><br/><br/>
+
+                <label for="texto">Texto:</label><br>
+                <textarea id="texto" name="texto" required></textarea><br/><br/>
+            </fieldset>
+        </div>
+            <div><button>Enviar</button></div>
+            
+        </form>
+    </main>
+    <footer><p>Página creada por Cristian Castro</p></footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
