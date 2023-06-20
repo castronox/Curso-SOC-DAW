@@ -6,6 +6,52 @@
     <link rel="stylesheet" href="css/style.css">
     
     <title>Evaluación Practica UF1306</title>
+
+    <style>
+            main {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+            main section {
+            border: 1px solid rgba(0, 0, 0, 0.146);
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.543);
+            min-width: 450px;
+            min-height: 250px;
+            max-width: 451px;
+            max-height: 251px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        main a{
+            border-radius: 25px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition:0.8s;
+
+        }
+        main section{
+            margin-top: 4%;
+            transition:0.8s;
+        }
+        main section:hover{
+            background-color: antiquewhite;
+            box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.543);
+            transition:0.8s;
+        }
+        main section a:hover{
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.265);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,8 +69,11 @@
             <li><a href="pagina_5.html">Prueba JS</a></li>
         </ul>
     </nav>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section><a href="https://www.w3schools.com/">W3 SCHOOLS.</a></section>
+        <section><a href="https://developer.mozilla.org/es/">M /MDN MOZILLA</a></section>
+    </main>
+    <footer><p>Página creada por Cristian Castro</p></footer>
     <script src="script/script.js"></script>
 </body>
 </html>

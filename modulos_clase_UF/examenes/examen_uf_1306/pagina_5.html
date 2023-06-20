@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Evaluación Practica UF1306</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        main section {
+            border: 1px solid rgba(0, 0, 0, 0.146);
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.543);
+            max-width: 450px;
+            max-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+
+        main section:nth-of-type(2) {
+            margin-top: 2%;
+            max-height: 350px;
+        }
+
+        main section:nth-of-type(3) {
+            margin-top: 2%;
+            min-height: 250px;
+            min-width: 450px;
+        }
+
+        input,
+        label,
+        select {
+            padding: 5px;
+            margin: 0.5%;
+            margin-top: 10px;
+        }
+
+        main section h2 {
+            margin: 2%;
+            font-family: 'georgeFont';
+            text-align: center;
+        }
+
+        main section form {
+
+            color: rgba(51, 149, 53, 0.8);
+            gap: 33px;
+            flex-basis: 450px;
+            padding: 1%;
+            font-family: 'georgeFont';
+            font-size: x-large;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        main section div {
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            text-align: center;
+            font-family: 'georgeFont';
+            font-size: x-large;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <a href="index.html">
@@ -22,8 +97,53 @@
             <li><a href="pagina_5.html">Prueba JS</a></li>
         </ul>
     </nav>
-    <main></main>
+    <main>
+
+        <section>
+            <h2>Ejercicio 1</h2>
+            <form action="">
+
+
+                <label for="distancia_f">Distancia de frenada.</label>
+                <input type="number" id="recorrido_f" placeholder="Recorrido de frenada (m)">
+
+                <label for="">Pendiente en %</label>
+                <input type="number" id="pendiente" placeholder="Introduce el % de pendiente">
+
+
+                <div><button onclick="calcula_f(); event.preventDefault();">Calcular</button></div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Ejercicio 2</h2>
+            <form action="">
+                <label for="text">Introduce tu nombre:</label>
+                <input type="text" id="nombre">
+                <label for="text">Introduce tu edad</label>
+                <input type="number" id="edad">
+
+                <label for="">Estado civil</label>
+                <select name="" id="e_civil">
+                    <option value="1">Soltero</option>
+                    <option value="2">Casado</option>
+                    <option value="3">Otros</option>
+                </select>
+
+                <input type="checkbox" checked="true" name="" id="ocupacion">
+                <label for="">En paro</label>
+
+                <div><button onclick="imprime(); event.preventDefault();">Mostrar resultado</button></div>
+            </form>
+        </section>
+        <section>
+            <h2>Resultados.</h2>
+            <p id="salida"></p>
+        </section>
+
+    </main>
     <footer></footer>
     <script src="script/script.js"></script>
 </body>
+
 </html>
