@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Funciones con Arrays</title>
+</head>
+
+<body>
+    <script>
+
+        function positivos(arr) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        function negativos(arr) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        function pares(arr) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        function impares(arr) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 !== 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        function calcular() {
+            var inputArray = document.getElementById("array-input").value;
+            var array = inputArray.split(",").map(Number);
+
+            var numPositivos = positivos(array);
+            var numNegativos = negativos(array);
+            var numPares = pares(array);
+            var numImpares = impares(array);
+
+            document.getElementById("result").innerHTML = "Array: " + array + "<br>" +
+                "Números positivos: " + numPositivos + "<br>" +
+                "Números negativos: " + numNegativos + "<br>" +
+                "Números pares: " + numPares + "<br>" +
+                "Números impares: " + numImpares + "<br>";
+        }
+    </script>
+
+    <h1>Funciones con Arrays</h1>
+    <label for="array-input">Introduce los números separados por comas:</label>
+    <br>
+    <input type="text" id="array-input">
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    <br>
+    <div id="result"></div>
+</body>
+
+</html>

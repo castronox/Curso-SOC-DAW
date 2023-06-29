@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3 JavaScript 09</title>
+    <title>Ejercicio 4 JavaScript 09</title>
     <style>
         body {
             display: flex;
@@ -18,25 +18,31 @@
 
         function codificar() {
             var encode = document.getElementById("encode").value;
+            var desplazamiento = parseInt(document.getElementById("desplazamiento").value);
             var c_codificada = "";
 
             for (let i = 0; i < encode.length; i++) {
                 var charCode = encode.charCodeAt(i);
-                var cifrado = String.fromCharCode(charCode + 1);
+                var cifrado = String.fromCharCode(charCode + desplazamiento);
 
                 c_codificada += cifrado;
             }
 
-            document.getElementById("salida").innerHTML = c_codificada;
+            var c_codificada_invertida = invertir(c_codificada);
+
+            document.getElementById("salida").innerHTML = c_codificada_invertida;
         }
 
         function decodificar() {
             var c_codificada = document.getElementById("encode").value;
+            var desplazamiento = parseInt(document.getElementById("desplazamiento").value);
             var decode = "";
 
-            for (let i = 0; i < c_codificada.length; i++) {
-                var charCode = c_codificada.charCodeAt(i);
-                var descifrado = String.fromCharCode(charCode - 1); 
+            var c_codificada_invertida = invertir(c_codificada);
+
+            for (let i = 0; i < c_codificada_invertida.length; i++) {
+                var charCode = c_codificada_invertida.charCodeAt(i);
+                var descifrado = String.fromCharCode(charCode - desplazamiento);
 
                 decode += descifrado;
             }
@@ -44,7 +50,13 @@
             document.getElementById("salida_decodificada").innerHTML = decode;
         }
 
-
+        function invertir(cadena) {
+            var cadenaInvertida = "";
+            for (let i = cadena.length - 1; i >= 0; i--) {
+                cadenaInvertida += cadena.charAt(i);
+            }
+            return cadenaInvertida;
+        }
 
     </script>
 </head>
@@ -52,9 +64,11 @@
 <body>
     <label for="">Introduce el texto a encriptar.</label>
     <input type="text" name="" id="encode">
+
+    <input type="text" name="" id="desplazamiento">
     <button onclick="codificar();">Codificar</button>
     <button onclick="decodificar();">Deodificar</button>
-    
+
     <h1>Salida codificada:</h1><br />
     <p id="salida"></p>
 

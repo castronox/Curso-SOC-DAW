@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        h1,
+        p {
+            text-align: center;
+            justify-content: center;
+        }
+
+        p {
+            margin: 4% auto;
+            width: 500px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplos de 7</h1>
+
+    <p id="salida">El resultado de 1000 multiplos de 7 es:</p>
+
+
+
+    <script>
+
+        var multiplosDe7 = [];
+
+
+        for (var i = 1; i <= 1000; i++) {
+            multiplosDe7.push(7 * i);
+        }
+
+        document.getElementById('salida').innerHTML = "El resultado de 1000 multiplos de 7 es:<br /><br /><br /> " + multiplosDe7;
+
+    </script>
+</body>
+
+</html>

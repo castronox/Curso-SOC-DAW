@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operaciones con vectores</title>
+
+</head>
+
+<body>
+    <h1>Operaciones con vectores</h1>
+    <form>
+        <label for="vector">Vector:</label>
+        <input type="text" id="vector" name="vector" placeholder="Ingrese los valores separados por comas" required>
+        <br>
+        <label for="escalar">Escalar:</label>
+        <input type="text" id="escalar" name="escalar" placeholder="Ingrese el valor escalar" required>
+        <br>
+        <button type="button" onclick="sumar();">Sumar</button>
+        <button type="button" onclick="maximo();">Máximo</button>
+        <button type="button" onclick="promedio();">Promedio</button>
+        <button type="button" onclick="escalar1();">Escalar</button>
+        <button type="button" onclick="escalar2();">Escalar2</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function sumar() {
+            var vector = obtenerVector();
+            var suma = 0;
+            for (var i = 0; i < vector.length; i++) {
+                suma += vector[i];
+            }
+            mostrarResultado("La suma de los valores es: " + suma);
+        }
+
+        function maximo() {
+            var vector = obtenerVector();
+            var max = vector[0];
+            for (var i = 1; i < vector.length; i++) {
+                if (vector[i] > max) {
+                    max = vector[i];
+                }
+            }
+            mostrarResultado("El valor máximo es: " + max);
+        }
+
+        function promedio() {
+            var vector = obtenerVector();
+            var suma = 0;
+            for (var i = 0; i < vector.length; i++) {
+                suma += vector[i];
+            }
+            var promedio = suma / vector.length;
+            mostrarResultado("El promedio es: " + promedio);
+        }
+
+        function escalar1() {
+            var vector = obtenerVector();
+            var factorEscalar = obtenerEscalar();
+            var resultado = [];
+            for (var i = 0; i < vector.length; i++) {
+                resultado.push(vector[i] * factorEscalar);
+            }
+            mostrarResultado("El vector resultante es: " + resultado.join(", "));
+        }
+
+        function escalar2() {
+            var vector = obtenerVector();
+            var escalar = obtenerEscalar();
+            var resultado = vector.map(function (valor) {
+                return valor * escalar;
+            });
+            mostrarResultado("El vector resultante es: " + resultado.join(", "));
+        }
+
+        function obtenerVector() {
+            var inputVector = document.getElementById('vector').value;
+            return inputVector.split(',').map(function (valor) {
+                return parseFloat(valor);
+            });
+        }
+
+        function obtenerEscalar() {
+            var inputEscalar = document.getElementById('escalar').value;
+            return parseFloat(inputEscalar);
+        }
+
+        function mostrarResultado(resultado) {
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
