@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="CSS/estilos_genericos.css">
+    <link rel="stylesheet" href="CSS/header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+
+    <style>
+        main section {
+            padding-top: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+
+
+        hr{
+            border: none;
+            height: 150px;
+        }
+
+
+
+        .form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            background-image: linear-gradient(45deg, #0cf3c8,
+            #700f74);
+            border-radius: 2.5em;
+            padding: 30px;
+            width: 300px;
+            height: 350px;
+        }
+
+        .form::before {
+            content: '';
+            background-image: linear-gradient(45deg, #700f74,
+            #00ffff);
+            height: 358px;
+            width: 309px;
+            position: absolute;
+            margin-top: -34px;
+            margin-left: px;
+            z-index: -1;
+            border-radius: 2.7em;
+        }
+
+        .button {
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            background: hsl(186, 95%, 71%);
+            color: rgb(117, 14, 146);
+            padding: 0.7em 5.5em;
+            display: flex;
+            align-items: center;
+            border: 2px solid #66da4300;
+            border-radius: 5em;
+            overflow: hidden;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            border: 2px solid #00fbff;
+            background: #8231a57b;
+            color: #ffffff;
+            text-shadow: 3px 3px 3px rgb(88, 85, 85);
+        }
+
+        .button:active {
+            border: 2px solid #66da4300;
+            background: #00d9ff35;
+            color: rgb(255, 255, 255);
+        }
+
+        .input {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #66da4300;
+            border-bottom: 1px solid #ffffff;
+            outline: none;
+            background-color: transparent;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.2s;
+        }
+
+        .input:focus {
+            border: 1px solid #66da4300;
+            border-bottom: 1px solid #700f74;
+            background-color: transparent;
+            color: white;
+        }
+
+        .input::placeholder {
+            color: #ffffff;
+        }
+
+        .textarea {
+            font-family: Arial, Helvetica, sans-serif;
+            width: calc(100% - 10px);
+            padding: 8px;
+            height: 100px;
+            margin-bottom: 20px;
+            border: 1px solid #66da4300;
+            border-bottom: 1px solid #ffffff;
+            outline: none;
+            background-color: transparent;
+            color: #700f74;
+        }
+
+        .textarea::placeholder {
+            color: #ffffff;
+        }
+
+        .textarea:focus {
+            border: 1px solid #66da4300;
+            border-bottom: 1px solid #700f74;
+            background-color: transparent;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="loaded()">
+    <div class="loader_bg">
+        <div class="loader">
+            <h1>Cristian DEV</h1>
+            <img src="https://i.gifer.com/XOsX.gif" alt="#" />
+            <h1>cargando..</h1>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <section>
+                <input type="checkbox" name="hamburguesa" id="hamburguesa_desplegable">
+                <section class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </section>
+
+                <ul class="menu-items">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="#">Sobre Mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+
+                </ul>
+                <div class="contenedor_nombre">
+                    <h2>Diseñador web</h2>
+                    <h1>Cristian Castro</h1><br />
+                </div>
+
+            </section>
+    </header>
+    <main>
+        <hr>
+        <section>
+            <h1 class="titulos">Escribeme si necesitas cualquier tipo de información adicional</h1>
+        </section>
+<hr>
+        <section>
+            <ul>
+                <li><a href="https://github.com/castronox/Curso-SOC-DAW" target="_blank">
+                        <figure><img src="img/iconos/icono_GitHub.svg" title="Icono / Enlace GitHub"
+                                alt="Icono con enlace a GitHub"></figure>
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/devcristiancatro/">
+                        <figure><img src="img/iconos/icono_LinkedIn.svg" title="Icono / Enlace LinkedIn"
+                                alt="Icono con enlace a LinkedIn"></figure>
+                    </a></li>
+                <li><a href="tel:654303317">
+                        <figure><img src="img/iconos/icono_WhatsApp.svg" title="Icono / Enlace WhatsApp"
+                                alt="Icono con El teléfono de Desarrollador"></figure>
+                    </a></li>
+
+            </ul>
+
+            <hr>
+            <form class="form">
+                <input class="input" type="text" placeholder="Nombre | Nombre de Empresa">
+                <input class="input" type="text" placeholder="Correo electrónico">
+                <textarea class="textarea" placeholder="Escribeme tu consulta!"></textarea>
+                <center><button class="button">Enviar Mensaje</button></center>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+    <footer>
+        <p class="titulos">Portafolio de Cristian castro.<br/> Todos los derechos reservados</p>
+    </footer>
+
+
+    <script src="scripts/loader.js">
+    </script>
+</body>
+
+</html>

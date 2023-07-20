@@ -8,442 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilos_genericos.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/letras_animadas_inicio.css">
     <title>Cristian Dev</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        /* ............/navbar/............ */
 
-        header nav input[type="checkbox"],
-        nav .hamburger-lines {
-            display: none;
-        }
 
-        header h1 {
-            font-family: 'Syncopate', sans-serif;
-            text-align: center;
-
-            font-size: 1vw;
-            color: #5e1a63db;
-            text-shadow: 6px 6px 6px rgba(70, 70, 70, 0.5);
-
-        }
-
-        header h2 {
-            font-family: 'Syncopate', sans-serif;
-            text-align: center;
-
-            font-size: 1.5vw;
-            color: rgba(255, 255, 255, 0.792);
-            text-shadow: 6px 6px 6px rgba(70, 70, 70, 0.5);
-
-        }
-
-        .contenedor_nombre {
-            padding: 6px;
-            max-width: 700px;
-            display: flex;
-            flex-direction: column;
-
-            margin-top: 0%;
-            flex: 1;
-        }
-
-
-        header nav {
-            box-shadow: 0px 5px 10px 0px #aaa;
-            position: fixed;
-            width: 100%;
-            background: #888787;
-            animation: fluido 30s ease-in-out infinite;
-            background: radial-gradient(circle farthest-corner at 6.5% 15.3%, rgba(68, 231, 246, 1) 12%, rgba(216, 72, 248, 1) 90%);
-            display: flex;
-            background-size: 300%;
-            -webkit-background-clip: content-box;
-            background-clip: content-box;
-
-
-            justify-content: center;
-            align-items: center;
-            height: 130px;
-            z-index: 12;
-        }
-
-        @keyframes fluido {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        nav section:nth-last-of-type(1) {
-            display: flex;
-            justify-content: center;
-            height: 64px;
-            align-items: center;
-        }
-
-        header nav section ul {
-            order: 2;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        header nav section ul li {
-            list-style: none;
-            margin-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        header nav section ul li a {
-            padding: 1rem;
-            text-decoration: none;
-            color: #542557db;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out;
-        }
-
-        header nav section ul li a:hover {
-            color: #ffffff;
-            transition: color 0.3s ease-in-out;
-        }
-
-        header nav section h1 {
-            order: 1;
-            font-size: 2.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 905px) {
-            header nav {
-                opacity: 0.90;
-                height: 50px;
-                display: inline;
-            }
-
-            
-
-
-            header nav section input[type="checkbox"],
-            header nav section,
-            section .hamburger-lines {
-                display: block;
-            }
-
-            header nav section:nth-of-type(1) {
-                display: block;
-                position: relative;
-                height: 64px;
-            }
-
-            header nav section:nth-of-type(1) input[type="checkbox"] {
-                position: absolute;
-                display: block;
-                height: 32px;
-                width: 30px;
-                top: 20px;
-                left: 20px;
-                z-index: 5;
-                opacity: 0;
-            }
-
-            header nav section:nth-of-type(1).hamburger-lines {
-                display: block;
-                height: 23px;
-                width: 35px;
-                position: absolute;
-                top: 17px;
-                left: 20px;
-                z-index: 2;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
-            header nav section:nth-of-type(1) .hamburger-lines .line {
-                display: block;
-                height: 4px;
-                width: 100%;
-                border-radius: 10px;
-                background: #333;
-            }
-
-            header nav section:nth-of-type(1) .hamburger-lines .line1 {
-                transform-origin: 0% 0%;
-                transition: transform 0.4s ease-in-out;
-            }
-
-            header nav section:nth-of-type(1) .hamburger-lines .line2 {
-                transition: transform 0.2s ease-in-out;
-            }
-
-            header nav section:nth-of-type(1) .hamburger-lines .line3 {
-                transform-origin: 0% 100%;
-                transition: transform 0.4s ease-in-out;
-            }
-
-            header nav .menu-items {
-                padding-top: 100px;
-                background-image: radial-gradient(circle farthest-corner at 6.5% 15.3%, rgba(68, 231, 246, 1) 12%, rgba(216, 72, 248, 1) 90%);
-                height: 100vh;
-                max-width: 300px;
-                transform: translate(-150%);
-                display: flex;
-                flex-direction: column;
-                margin-left: -40px;
-                padding-left: 50px;
-                transition: transform 0.5s ease-in-out;
-                box-shadow: 5px 0px 10px 0px #aaa;
-            }
-
-            header nav section ul li {
-                margin-bottom: 1.5rem;
-                font-size: 1.3rem;
-                font-weight: 500;
-            }
-
-            header nav section ul li a:hover {
-                border-radius: 50px;
-                background-color: #ffffff93;
-                color: #4e4e4e;
-                transition: 0.3s;
-            }
-
-            header nav section h1 {
-                position: absolute;
-                top: 5px;
-                right: 15px;
-                font-size: 1.6rem;
-            }
-
-            header nav section:nth-of-type(1) input[type="checkbox"]:checked~.menu-items {
-                transform: translateX(0);
-            }
-
-            header nav section:nth-of-type(1) input[type="checkbox"]:checked~.hamburger-lines .line1 {
-                transform: rotate(35deg);
-            }
-
-            header nav section:nth-of-type(1) input[type="checkbox"]:checked~.hamburger-lines .line2 {
-                transform: scaleY(0);
-            }
-
-            header nav section:nth-of-type(1) input[type="checkbox"]:checked~.hamburger-lines .line3 {
-                transform: rotate(-35deg);
-            }
-        }
-
-        /*--------FIN NAVBAR-----------*/
-
-        /*banner*/
-        @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-        body {
-            background: #030321;
-            font-family: Arial;
-        }
-
-        .container {
-            display: flex;
-            /*   border:1px solid red; */
-            height: 100%;
-            align-items: center;
-        }
-
-        svg {
-            display: block;
-            font-family: 'Syncopate', sans-serif;
-            font-size: 4.4em;
-            width: 960px;
-            height: 290px;
-            margin: 0 auto;
-        }
-
-        .text-copy {
-            fill: none;
-            stroke: white;
-            stroke-dasharray: 6% 29%;
-            stroke-width: 3px;
-            stroke-dashoffset: 0%;
-            animation: stroke-offset 5.5s infinite linear;
-        }
-
-        .text-copy:nth-child(1) {
-            stroke: #ffffff;
-            animation-delay: -1;
-        }
-
-        .text-copy:nth-child(2) {
-            stroke: #007584;
-            animation-delay: -2s;
-        }
-
-        .text-copy:nth-child(3) {
-            stroke: #00b4bd;
-            animation-delay: -3s;
-        }
-
-        .text-copy:nth-child(4) {
-            stroke: #bd22c2;
-            animation-delay: -4s;
-        }
-
-        .text-copy:nth-child(5) {
-            stroke: #31fde5;
-            animation-delay: -5s;
-        }
-
-        @keyframes stroke-offset {
-            100% {
-                stroke-dashoffset: -35%;
-            }
-        }
-
-        /*fin banner*/
-        .img_width {
-            height: 190px;
-
-        }
-
-        figure {
-            display: flex;
-            justify-content: center;
-        }
-
-        main section ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-        }
-
-        main section ul li {
-            height: 70px;
-            width: 90px;
-        }
-
-        main section ul li img {
-            max-width: 60px;
-            transition: 0.3s;
-            border-radius: 50%;
-        }
-
-        main section ul li img:hover {
-            max-width: 60px;
-            border-radius: 50%;
-            transition: 0.3s;
-            filter: drop-shadow(0px 0px 16px rgba(246, 249, 249, 0.914));
-        }
-
-        .titulos {
-            text-align: center;
-            margin: 1%;
-            font-family: 'Syncopate', sans-serif;
-            color: white;
-            animation: fluido 30s ease-in-out infinite;
-            background: linear-gradient(90deg, rgb(1, 196, 210) 0%, rgb(161, 18, 169) 35%, rgb(24, 232, 255) 100%);
-            background-size: 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-
-
-        main section:nth-of-type(3) {
-
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        main section:nth-of-type(4) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-        }
-
-        main section:nth-of-type(4) section {
-            margin: 1.5%;
-
-            flex-basis: 300px;
-            height: 200px;
-
-        }
-
-        main section:nth-of-type(4) section figure img {
-            transition: 0.4s;
-            padding: 10px;
-            max-width: 300px;
-
-        }
-
-        main section:nth-of-type(4) section figure img:hover{
-            filter: drop-shadow(0px 0px 16px rgba(153, 234, 240, 0.767));
-        }
-
-
-
-
-
-
-
-
-        main section h1 {
-            font-size: 2em;
-
-            padding: 6px;
-
-        }
-
-        /* LOADER CONTAINER*/
-
-        .loader_bg {
-            position: fixed;
-            z-index: 9999999;
-            background: #2e1a34e4;
-            width: 100%;
-            height: 100%;
-        }
-
-        .loader {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .loader img {
-            width: 280px;
-        }
-
-        .loader h1 {
-            color: white;
-            font-size: 2.5em;
-            font-family: 'Syncopate', sans-serif;
-        }
-
-        /*Cartas*/
+        /*Cartas Sobre Aptitudes------------------------------------------------*/
 
         .contenedor_cartas {
             display: flex;
@@ -467,7 +41,7 @@
             gap: 12px;
             border-radius: 8px;
             cursor: pointer;
-            /* Nueva animación y retraso */
+
             animation: animateCard 2s infinite alternate;
         }
 
@@ -523,19 +97,29 @@
             transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
         }
 
+        /* BOTON  DE CONTACTO------------------------------------*/
 
-
-
-        /*    BOTON*/
-
-        main section:last-of-type{
+        main section:last-of-type {
             display: flex;
-            height:300px;
+            height: 300px;
             align-items: center;
             justify-content: center;
 
         }
-        .button {
+
+        main section button a {
+            font-size: 1.2em;
+            color: #e81cff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        main section button a:hover {
+            color: #1cf7ff;
+            transition: 0.3s;
+        }
+
+        .boton {
             position: relative;
             width: 220px;
             height: 40px;
@@ -552,7 +136,7 @@
             cursor: pointer;
         }
 
-        .button::before {
+        .boton::before {
             content: '';
             position: absolute;
             inset: 0;
@@ -568,7 +152,7 @@
             transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .button::after {
+        .boton::after {
             content: "";
             z-index: -1;
             position: absolute;
@@ -578,28 +162,19 @@
             filter: blur(20px);
         }
 
-        .button:hover::after {
+        .boton:hover::after {
             filter: blur(30px);
         }
 
-        .button:hover::before {
+        .boton:hover::before {
             transform: rotate(-180deg);
         }
 
-        .button:active::before {
+        .boton:active::before {
             scale: 0.7;
         }
 
         /*    FIN BOTON  */
-
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            text-align: center;
-        }
-    
     </style>
 </head>
 
@@ -625,7 +200,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">Portafolio</a></li>
                     <li><a href="#">Sobre Mi</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
 
                 </ul>
                 <div class="contenedor_nombre">
@@ -655,9 +230,18 @@
         </section>
         <section>
             <ul>
-                <li><a href="https://github.com/castronox/Curso-SOC-DAW" target="_blank"><img src="img/iconos/1.svg" alt=""></a></li>
-                <li><a href=""><img src="img/iconos/2.svg" alt=""></a></li>
-                <li><a href=""><img src="img/iconos/3.svg" alt=""></a></li>
+                <li><a href="https://github.com/castronox/Curso-SOC-DAW" target="_blank">
+                        <figure><img src="img/iconos/icono_GitHub.svg" title="Icono / Enlace GitHub"
+                                alt="Icono con enlace a GitHub"></figure>
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/devcristiancatro/">
+                        <figure><img src="img/iconos/icono_LinkedIn.svg" title="Icono / Enlace LinkedIn"
+                                alt="Icono con enlace a LinkedIn"></figure>
+                    </a></li>
+                <li><a href="tel:654303317">
+                        <figure><img src="img/iconos/icono_WhatsApp.svg" title="Icono / Enlace WhatsApp"
+                                alt="Icono con El teléfono de Desarrollador"></figure>
+                    </a></li>
 
             </ul>
         </section>
@@ -667,39 +251,49 @@
         <section>
             <section class="">
                 <figure>
-                    <a href=""><img src="img/iconos/wordpress-logo-png-transparent-4.png" alt=""></a>
+                    <a href=""><img src="img/iconos/logo_wordpress.png" title="Wordpress Enlace"
+                            alt="Enlace a resumen de mi trayectoria laboral con este CMS."></a>
                 </figure>
             </section>
             <section class="">
                 <figure>
-                    <a href=""><img src="img/iconos/woocommerce.png" alt=""></a>
+                    <a href=""><img src="img/iconos/logo_WooCommerce.png" title="WooCommerce Enlace"
+                            alt="Enlace a resumen de mi trayectoria laboral con este pluguin del CMS Wordpress para generar tiendas online."></a>
                 </figure>
             </section>
+
+            <section>
+                <figure>
+                    <a href=""><img class="img_width" src="img/iconos/logo_Java.webp" title="JAVA Enlace"
+                            alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <a href=""><img class="img_width" src="img/iconos/logo_PHP.png" title="PHP Enlace"
+                            alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
+                </figure>
+            </section>
+
             <section class="">
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/JavaScript-logo.png" alt=""></a>
+                    <a href=""><img class="img_width" src="img/iconos/logo_JS.png" title="JavaScript Enlace"
+                            alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
                 </figure>
             </section>
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/PHP-Transparent-PNG.png" alt=""></a>
+                    <a href=""><img class="img_width" src="img/iconos/logo_HTML5.png" title="HTML5 Enlace"
+                            alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de marcado de hyperTexto."></a>
                 </figure>
             </section>
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/HTML5_Badge.svg.png" alt=""></a>
+                    <a href=""><img class="img_width" src="img/iconos/logo_CSS3.png" title="CSS3 Enlace"
+                            alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Estilos en Cascada."></a>
                 </figure>
             </section>
-            <section>
-                <figure>
-                    <a href=""><img class="img_width" src="img/iconos/CSS3_logo.svg.png" alt=""></a>
-                </figure>
-            </section>
-            <section>
-                <figure>
-                    <a href=""><img class="img_width" src="img/iconos/java-logo-transparent-free-png.webp" alt=""></a>
-                </figure>
-            </section>
+
         </section>
         <section class="titulos">
             <h1>Aptitudes que impulsan mi viaje tecnológico</h1>
@@ -739,8 +333,8 @@
         </section>
 
         <section>
-            <button class="button">
-                Contacta conmigo
+            <button class="boton">
+                <a href="contacto.html">Contacta conmigo</a>
             </button>
         </section>
 
@@ -750,14 +344,7 @@
     </footer>
 
 
-    <script>
-        function loaded() {
-            "use strict";
-            setTimeout(function () {
-                $('.loader_bg').fadeToggle();
-            }, 900);
-        }
-    </script>
+    <script src="scripts/loader.js"></script>
 </body>
 
 </html>
