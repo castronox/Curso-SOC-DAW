@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilos_genericos.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/letras_animadas_inicio.css">
+    <title>Sobre Mi</title>
+
+    <style>
+        /*  {
+            border :1px solid white;
+        }*/
+        hr {
+            border: none;
+            height: 150px;
+        }
+
+        main section {
+            justify-content: center;
+        }
+
+        main section:nth-of-type(2) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+
+        }
+
+        main section:nth-of-type(2) section {
+            margin:2%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 300px;
+            background-color: rgba(50, 34, 64, 0.572);
+            border: 1px solid rgba(108, 47, 95, 0.475);
+            box-shadow: 0px 0px 12px rgb(191, 21, 191);
+        }
+
+
+
+        main p {
+            text-align:center;
+            margin: 1.5%;            
+            font-family: 'Syncopate', sans-serif;
+            color: rgb(164, 200, 248);
+            text-shadow: 0px 1px 6px rgb(50, 182, 239);
+            letter-spacing:  1px;
+            line-height:23px ;
+        }
+
+
+    </style>
+</head>
+
+<body onload="loaded()">
+    <div class="loader_bg">
+        <div class="loader">
+            <h1>Cristian DEV</h1>
+            <img src="https://i.gifer.com/XOsX.gif" alt="#" />
+            <h1>cargando..</h1>
+        </div>
+    </div>
+
+
+
+    <header>
+        <nav>
+            <section>
+                <input type="checkbox" name="hamburguesa" id="hamburguesa_desplegable">
+                <section class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </section>
+
+                <ul class="menu-items">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="sobre_mi.html">Sobre Mi</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+
+                </ul>
+                <div class="contenedor_nombre">
+                    <h2>Diseñador web</h2>
+                    <h1>Cristian Castro</h1><br />
+                </div>
+
+            </section>
+    </header>
+
+    <main>
+        <section>
+            <hr>
+            <h1 class="titulos">Hola y gracias por dedicarme tu valioso tiempo!</h1>
+        </section>
+
+        <section>
+            <section>
+                <h3 class="titulos">Presentacion</h3><br/><br/>
+                <p>Quiero ayudarte en el progreso de tu negocio! <br/>En el transcurso de mi vida profesional, he recorrido un camino que me ha llevado desde la producción en línea automotriz hasta la apasionante industria de la programación y desarrollo web.</p>
+            </section>
+            <section>
+                <h3 class="titulos">De la automoción a la programación</h3><br/><br/>
+                <p> A lo largo de siete años, fui testigo del ajetreo y la precisión necesaria en la producción de automóviles, una experiencia que me permitió desarrollar habilidades valiosas en trabajo en equipo, gestión del tiempo y resolución de problemas.</p>
+            </section>
+            <section>
+                <h3 class="titulos">Habilidades Transferibles</h3><br/><br/>
+                <p>Estas habilidades se han convertido en pilares fundamentales de mi enfoque hacia el desarrollo web. La capacidad para enfrentar desafíos con creatividad y determinación me ha permitido superar obstáculos en ambos sectores y encontrar soluciones innovadoras.</p>
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <p class="titulos ">Portafolio de Cristian castro. Todos los derechos reservados</p>
+    </footer>
+    <script src="scripts/loader.js"></script>
+</body>
+
+</html>

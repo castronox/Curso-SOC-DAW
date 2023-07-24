@@ -17,6 +17,48 @@
 
 
 
+
+        main section:nth-of-type(3) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main section:nth-of-type(4) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        main section:nth-of-type(4) section {
+            margin: 1.5%;
+            flex-basis: 150px;
+            height: 140px;
+
+        }
+
+        main section:nth-of-type(4) section figure img {
+            transition: 0.4s;
+            padding: 10px;
+            max-width: 300px;
+
+        }
+
+        main section:nth-of-type(4) section figure img:hover {
+            filter: drop-shadow(0px 0px 16px rgba(153, 234, 240, 0.767));
+        }
+
+        main section h1 {
+            font-size: 2em;
+            padding: 6px;
+
+        }
+
+
+
+
         /*Cartas Sobre Aptitudes------------------------------------------------*/
 
         .contenedor_cartas {
@@ -72,7 +114,6 @@
 
         .heading {
             font-size: 20px;
-            text-transform: capitalize;
             font-weight: 700;
         }
 
@@ -173,8 +214,8 @@
         .boton:active::before {
             scale: 0.7;
         }
-
         /*    FIN BOTON  */
+
     </style>
 </head>
 
@@ -199,7 +240,7 @@
                 <ul class="menu-items">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">Portafolio</a></li>
-                    <li><a href="#">Sobre Mi</a></li>
+                    <li><a href="sobre_mi.html">Sobre Mi</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
 
                 </ul>
@@ -245,56 +286,61 @@
 
             </ul>
         </section>
+        <hr>
+
         <section class="titulos">
+            
             <h1>Los cimientos sólidos de mi fortaleza tecnológica</h1>
         </section>
+        
         <section>
             <section class="">
                 <figure>
-                    <a href=""><img src="img/iconos/logo_wordpress.png" title="Wordpress Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_wordpress.svg" title="Wordpress Enlace"
                             alt="Enlace a resumen de mi trayectoria laboral con este CMS."></a>
                 </figure>
             </section>
             <section class="">
                 <figure>
-                    <a href=""><img src="img/iconos/logo_WooCommerce.png" title="WooCommerce Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_woocommerce.svg" title="WooCommerce Enlace"
                             alt="Enlace a resumen de mi trayectoria laboral con este pluguin del CMS Wordpress para generar tiendas online."></a>
                 </figure>
             </section>
 
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/logo_Java.webp" title="JAVA Enlace"
+                    <a href=""><img id="img_width" src="img/iconos/logo_java.svg" title="JAVA Enlace"
                             alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
                 </figure>
             </section>
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/logo_PHP.png" title="PHP Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_php.svg" title="PHP Enlace"
                             alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
                 </figure>
             </section>
 
             <section class="">
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/logo_JS.png" title="JavaScript Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_javascript.svg" title="JavaScript Enlace"
                             alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Programación."></a>
                 </figure>
             </section>
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/logo_HTML5.png" title="HTML5 Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_html5.svg" title="HTML5 Enlace"
                             alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de marcado de hyperTexto."></a>
                 </figure>
             </section>
             <section>
                 <figure>
-                    <a href=""><img class="img_width" src="img/iconos/logo_CSS3.png" title="CSS3 Enlace"
+                    <a href=""><img class="img_width" src="img/iconos/logo_css3.svg" title="CSS3 Enlace"
                             alt="Enlace a Resumen de mi Trayectoria laboral con Este Lenguaje de Estilos en Cascada."></a>
                 </figure>
             </section>
 
         </section>
+        <hr>
         <section class="titulos">
             <h1>Aptitudes que impulsan mi viaje tecnológico</h1>
         </section>

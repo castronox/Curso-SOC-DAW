@@ -2,23 +2,10 @@ body {
     background: #030321;
     font-family: Arial;
 }
-
-
-
-/*Tamaño modificado de algunos logos tecnológicos-------------*/
-
-.img_width {
-    height: 190px;
+hr{
+    border: none;
+    height: 150px;
 }
-
-/*Centrar las imagenes dentro de la caja de figure------------*/
-
-figure {
-    display: flex;
-    justify-content: center;
-}
-
-
         /*REDES SOCIALES*/
 
         main section ul {
@@ -46,44 +33,23 @@ figure {
             filter: drop-shadow(0px 0px 16px rgba(246, 249, 249, 0.914));
         }
 
-        main section:nth-of-type(3) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        main section:nth-of-type(4) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
 
-        }
+/*Tamaño modificado de algunos logos tecnológicos-------------*/
 
-        main section:nth-of-type(4) section {
-            margin: 1.5%;
+.img_width {
+    margin: 1%;
+    height: 130px;
+}
 
-            flex-basis: 300px;
-            height: 200px;
+/*Centrar las imagenes dentro de la caja de figure------------*/
 
-        }
+figure {
+    display: flex;
+    justify-content: center;
+}
 
-        main section:nth-of-type(4) section figure img {
-            transition: 0.4s;
-            padding: 10px;
-            max-width: 300px;
 
-        }
-
-        main section:nth-of-type(4) section figure img:hover {
-            filter: drop-shadow(0px 0px 16px rgba(153, 234, 240, 0.767));
-        }
-
-        main section h1 {
-            font-size: 2em;
-
-            padding: 6px;
-
-        }
 
 
 
