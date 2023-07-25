@@ -20,12 +20,19 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            
         }
 
         section:nth-of-type(2){
-            margin: 3% ;
+            margin: 2% ;
         }
+
+        section ul li a figure img {
+            padding:3px;
+            margin: 1%;
+        }
+
+
 
 
 
@@ -168,7 +175,7 @@
                 </ul>
                 <div class="contenedor_nombre">
                     <h2>Diseñador web</h2>
-                    <h1>Cristian Castro</h1><br />
+                    <h1><a href="index.html">Cristian Castro</a></h1><br />
                 </div>
 
             </section>
@@ -197,10 +204,10 @@
             </ul>
 
             <hr>
-            <form class="form">
-                <input class="input" type="text" placeholder="Nombre | Nombre de Empresa">
-                <input class="input" type="text" placeholder="Correo electrónico">
-                <textarea class="textarea" placeholder="Escribeme tu consulta!"></textarea>
+            <form class="form" method="post" action="php/mail.php">
+                <input class="input" type="text" name="nombre" placeholder="Nombre | Nombre de Empresa">
+                <input class="input" type="text" name="correo" placeholder="Correo electrónico">
+                <textarea class="textarea" name="mensaje" placeholder="Escribeme tu consulta!"></textarea>
                 <center><button class="button">Enviar Mensaje</button></center>
             </form>
         </section>

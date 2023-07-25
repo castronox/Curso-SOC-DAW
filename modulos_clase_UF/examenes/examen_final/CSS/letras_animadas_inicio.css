@@ -8,6 +8,7 @@
             /*   border:1px solid red; */
             height: 100%;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         svg {
@@ -19,13 +20,36 @@
             margin: 0 auto;
         }
 
+        .separacion_ocultar{
+        display: none;     
+        }
+
+
+
+        @media (max-width: 905px){
+
+            .separacion_ocultar{
+                display: block;     
+                }
+
+            svg {
+                display: none;
+                font-family: 'Syncopate', sans-serif;
+                font-size: 4.4em;
+                width: 960px;
+                height: 290px;
+                margin: 0 auto;
+            }
+
+        }
+
         .text-copy {
             fill: none;
             stroke: white;
-            stroke-dasharray: 6% 29%;
+            stroke-dasharray: 7% 29%;
             stroke-width: 3px;
             stroke-dashoffset: 0%;
-            animation: stroke-offset 5.5s infinite linear;
+            animation: stroke-offset 7.5s infinite linear;
         }
 
         .text-copy:nth-child(1) {
